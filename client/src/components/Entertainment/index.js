@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-const Landing = () => {
+const Entertainment = () => {
     const classes = useStyles();
     
 
@@ -30,7 +30,7 @@ const Landing = () => {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <Typography variant="h3" color="inherit" noWrap>
-            Landing
+            Entertainment
             </Typography>
           </Paper>
         </Grid>   
@@ -39,4 +39,4 @@ const Landing = () => {
 
 }
 
-export default Landing;
+export default Entertainment;
