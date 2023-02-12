@@ -30,7 +30,7 @@ const Landing = () => {
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <Typography variant="h3" color="inherit" noWrap>
-            Landing
+            Landing!!
             </Typography>
           </Paper>
         </Grid>   
