@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 import Home from '../Home';
-import Landing from "../Landing";
+import Landing from '../Landing';
 import PrivateRoute from '../Navigation/PrivateRoute.js';
-
-
 
 class App extends Component {
   constructor(props) {
@@ -24,19 +18,17 @@ class App extends Component {
     //
   }
 
-
   componentWillUnmount() {
     this.listener();
   }
 
-
   render() {
     return (
-	  <Router>
-	    <div>
-        <PrivateRoute exact path="/" component={Landing}/>
-	    </div>
-	  </Router>
+      <Router>
+        <div>
+          <PrivateRoute exact path="/" component={Landing} />
+        </div>
+      </Router>
     );
   }
 }
