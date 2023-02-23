@@ -8,6 +8,13 @@ import Entertainment from '../Entertainment';
 import Housing from '../Housing';
 import NavBar from '../Navbar';
 import Landing from '../Landing';
+import Info from '../Info';
+import InfoRestaurant from '../InfoRestaurant'
+import InfoEntertainment from '../InfoEntertainment'
+import InfoHousing from '../InfoHousing'
+
+
+
 
 export default function PrivateRoute(
   {
@@ -24,6 +31,10 @@ export default function PrivateRoute(
           <Route path="/Food" exact component={Food} />
           <Route path="/Entertainment" exact component={Entertainment} />
           <Route path="/Housing" exact component={Housing} />
+          <Route path="/Info" exact component={Info} />
+          <Route path="/InfoRestaurant" exact component={InfoRestaurant} />
+          <Route path="/InfoHousing" exact component={InfoHousing} />
+          <Route path="/InfoEntertainment" exact component={InfoEntertainment} />
           <Route path="*">
             <Redirect to="/Landing" />
           </Route>
