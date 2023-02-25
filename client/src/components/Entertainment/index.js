@@ -123,11 +123,7 @@ const Entertainment = () => {
       <Grid item xs={12}>
         <Paper className={classes.paper}>
           <Typography align="center"
-            variany="h1"
-            component="div"
-            gutterBottom
-            style={{fontFamily: "Impact"}}
-            color="inherit" noWrap>
+            variany="h3">
             Entertainment
           </Typography>
         </Paper>
