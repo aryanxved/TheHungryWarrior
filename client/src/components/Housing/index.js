@@ -31,6 +31,23 @@ const useStyles = makeStyles(theme => ({
 const Housing = () => {
   const classes = useStyles();
 
+  const SelectRoomType = () => {
+    return(
+      <FormControl fullWidth>
+        <InputLabel id="select-room-type">Select Room Type</InputLabel>
+          <Select
+            lableID="select-room-type"
+            id="select-room-type"
+            lable="Select Room Type"
+          >
+            <MenuItem value={10}>Single</MenuItem>
+            <MenuItem value={20}>Double</MenuItem>
+            <MenuItem value={30}>Suite</MenuItem>
+          </Select>
+      </FormControl>
+    );
+  };
+
   const SelectPeople = () => {
     return(
       <FormControl fullWidth>
@@ -121,6 +138,7 @@ const Housing = () => {
               <SelectBudget/>
               <SelectDistance/>
               <SelectPeople/>
+              <SelectRoomType/>
               <SubmitButton/>
         </Paper>
       </Grid>
