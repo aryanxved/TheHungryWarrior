@@ -12,6 +12,11 @@ import Info from '../Info';
 import InfoRestaurant from '../InfoRestaurant'
 import InfoEntertainment from '../InfoEntertainment'
 import InfoHousing from '../InfoHousing'
+import Review from '../Review'
+import ReviewEntertainment from '../ReviewEntertainment'
+import ReviewHousing from '../ReviewHousing'
+import ReviewRestaurant from '../ReviewRestaurant'
+
 
 
 
@@ -35,6 +40,10 @@ export default function PrivateRoute(
           <Route path="/InfoRestaurant" exact component={InfoRestaurant} />
           <Route path="/InfoHousing" exact component={InfoHousing} />
           <Route path="/InfoEntertainment" exact component={InfoEntertainment} />
+          <Route path="/Review" exact component={Review} />
+          <Route path="/ReviewEntertainment" exact component={ReviewEntertainment} />
+          <Route path="/ReviewHousing" exact component={ReviewHousing} />
+          <Route path="/ReviewRestaurant" exact component={ReviewRestaurant} />
           <Route path="*">
             <Redirect to="/Landing" />
           </Route>
