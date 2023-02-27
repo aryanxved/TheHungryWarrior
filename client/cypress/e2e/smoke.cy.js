@@ -3,4 +3,4 @@ describe('Smoke Test', () => {
     cy.visit('/');
     cy.contains('The Hungry Warrior');
   });
-  });
+  })
