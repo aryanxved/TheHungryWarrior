@@ -11,7 +11,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
+import Card from '@material-ui/core/Card';
 import Select from '@material-ui/core/Select';
 
 import { FormControl, MenuItem } from '@material-ui/core';
@@ -50,20 +50,70 @@ const InfoEntertainment = () => {
         </Paper>
       </Grid>
 
-
-      <Paper className={classes.paper}>
-          <Typography align = 'left' variant="h3" color="inherit" noWrap>
-          Toronto Raptors Game
-          </Typography>
-        </Paper>
+<div align='center'>
+      <Card style={{color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)"}}>
+<Grid container spacing={2} columns={12}>
+      <Grid item xs={5}>
+         <div align='left'> 
+        <Card style={{color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)"}}>
         <img src = "/images/Raptor.png"/>
-         <div>
+        </Card>
+      </div>
+      </Grid>
+      <Grid item xs={7}>
+          <div style={{marginTop: '20px'}}>
+          <Typography variant="h5" color="black" wrap>
+          Toronto Raptors Best Team! 
+          </Typography>
+          </div>
 
-         </div>
-
-         <Typography align = 'right' variant="h10" color="inherit">
-         A professional basketball team from Toronto playing in the NBA
+          <div style={{marginTop: '20px', marginRight: '30px', textAlign: 'Left'}}>
+         <Typography align = 'center' variant="h10" color="inherit" style={{marginLeft: '30px'}}>
+         A professional basketball team from Toronto playing in the NBA.
+         A professional basketball team from Toronto playing in the NBA.
+         A professional basketball team from Toronto playing in the NBA.
+         A professional basketball team from Toronto playing in the NBA.
+         A professional basketball team from Toronto playing in the NBA.
         </Typography>
+        </div>
+
+        <div align="center" style={{marginTop: '30px'}}>  
+            <Button
+              style={{
+                color: 'white',
+                backgroundColor: 'black',
+                height: '40px',
+                width: '150px',
+                fontSize: '20px',
+              }}
+              type="submit"
+              color="primary"
+              variant="contained"
+              href='https://www.raptors.com/'
+              >
+              Visit site
+            </Button>
+            <Button
+              style={{
+                color: 'white',
+                backgroundColor: 'black',
+                height: '40px',
+                width: '250px',
+                fontSize: '20px',
+                marginLeft: '20px'
+              }}
+              type="submit"
+              color="primary"
+              variant="contained"
+              href='/ReviewEntertainment'
+              >
+              Write A Review
+            </Button>
+          </div>
+      </Grid> 
+  </Grid>
+</Card>    
+</div>
 
 
 

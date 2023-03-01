@@ -20,6 +20,8 @@ import Request from '../Request'
 import RequestEnt from '../RequestEnt'
 import RequestH from '../RequestH'
 import RequestFood from '../RequestFood'
+import About from '../About'
+
 
 
 export default function PrivateRoute(
@@ -49,6 +51,8 @@ export default function PrivateRoute(
           <Route path="/RequestEnt" exact component={RequestEnt} />
           <Route path="/RequestH" exact component={RequestH} />
           <Route path="/RequestFood" exact component={RequestFood} />
+          <Route path="/About" exact component={About} />
+
   
          
           <Route path="*">
