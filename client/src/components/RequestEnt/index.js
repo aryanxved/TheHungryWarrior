@@ -79,7 +79,7 @@ export default function RequestEnt() {
                 align="center"
                 variant='h5'
               >
-                What do you rate the quality of your experience?
+                What do you rate the quality of your experience?!
               </Typography>
             
       <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
@@ -118,7 +118,7 @@ export default function RequestEnt() {
                 align="center"
                 variant='h5'
               >
-                Can we get your contact details?
+                Can we get your contact details???????????????????????????????????
               </Typography>
 
     <TextField style={{width: "33vh", marginTop: "30px"}}
