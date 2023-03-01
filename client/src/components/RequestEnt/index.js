@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function RequestEntertainment() {
+export default function RequestEnt() {
     const classes = useStyles();
     return (
       <div>

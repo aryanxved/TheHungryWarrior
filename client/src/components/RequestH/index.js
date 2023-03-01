@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function RequestHousing() {
+export default function RequestH() {
     const classes = useStyles();
     return (
       <div>
@@ -45,7 +45,7 @@ export default function RequestHousing() {
                 gutterBottom
                 style={{fontFamily: 'Roboto'}}
               >
-                Request A Housing Facility to be Added!
+                Review Entertainment
               </Typography>
             </Card>
           </div>
@@ -58,17 +58,19 @@ export default function RequestHousing() {
                 align="center"
                 variant='h5'
               >
-                What's the Housing name?
+                What's the Restaurant Name?
               </Typography>
-
-              <TextField style={{width: "100vh", marginTop: "30px"}}
-          id="outlined-multiline-static"
-          label="Name"
-          multiline
-          minRows={4}
-          variant="outlined"
-        />
             
+      <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
+        <InputLabel>Select an activity</InputLabel>
+        <Select        >
+                <MenuItem value ={1}> {'Arcade'} </MenuItem>
+                <MenuItem value ={2}> {'Rock climbing'} </MenuItem>
+                <MenuItem value ={3}> {'Basketball'} </MenuItem>
+                <MenuItem value ={4}> {'Gym'} </MenuItem>
+                <MenuItem value ={5}> {'Movies'} </MenuItem>
+        </Select>
+      </FormControl>
     </div>
     <p style={{marginTop: '25px'}}></p>
           <div align="center">
@@ -77,21 +79,37 @@ export default function RequestHousing() {
                 align="center"
                 variant='h5'
               >
-                What is the address of the Housing's location?
+                What do you rate the quality of your experience?
               </Typography>
-              <TextField style={{width: "100vh", marginTop: "30px"}}
-          id="outlined-multiline-static"
-          label="Address"
-          multiline
-          minRows={4}
-          variant="outlined"
-        />
-
+            
+      <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
+        <InputLabel>Select Quality Rating</InputLabel>
+        <Select        >
+                <MenuItem value ={1}> {'Amazing'} </MenuItem>
+                <MenuItem value ={2}> {'Good'} </MenuItem>
+                <MenuItem value ={3}> {'Satisfactory'} </MenuItem>
+                <MenuItem value ={4}> {'Disappointment'} </MenuItem>
+                <MenuItem value ={5}> {'Horrible'} </MenuItem>
+        </Select>
+      </FormControl>
     </div>
 
     <p style={{marginTop: '25px'}}></p>
     <div>
-    
+    <Typography
+                align="center"
+                variant='h5'
+              >
+                Please describe your experience.
+              </Typography>
+
+    <TextField style={{width: "100vh", marginTop: "30px"}}
+          id="outlined-multiline-static"
+          label="Describe your thoughts"
+          multiline
+          minRows={4}
+          variant="outlined"
+        />
   </div>
   <p style={{marginTop: '25px'}}></p>
 
@@ -144,3 +162,4 @@ export default function RequestHousing() {
       </div>
     );
   }
+  

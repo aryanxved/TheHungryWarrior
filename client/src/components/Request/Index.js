@@ -20,7 +20,7 @@ import {
   CssBaseline,
 } from '@material-ui/core/';
 import {makeStyles} from '@material-ui/styles';
-import './Index.js';
+//import './index.css';
 import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -34,6 +34,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Request() {
   const classes = useStyles();
+  
   return (
     <div style={{backgroundColor: '#FFFFFFF'}}>
       <div>
@@ -47,7 +48,7 @@ export default function Request() {
               gutterBottom
               style={{fontFamily: 'Roboto'}}
             >
-              Submit a Request!
+              Write a Review!
             </Typography>
           </Card>
         </div>
@@ -68,7 +69,7 @@ export default function Request() {
                 align: 'center',
               }}
             >
-              Request an additional location to be added!
+              Share your thoughts on our Review Board!
             </Typography>
           
         </div>
@@ -87,7 +88,7 @@ export default function Request() {
                 align: 'center',
               }}
             >
-              Select one of the options below to submit a request!
+              Select one of the options below to leave a review!
             </Typography>
 </div>
 
@@ -104,9 +105,9 @@ export default function Request() {
             type="submit"
             color="primary"
             variant="contained"
-            href="/RequestEntertainment"
+            href='/RequestEnt'
           >
-            Request Entertainment
+            Review Entertainment
           </Button>
           <Button
             style={{
@@ -120,10 +121,9 @@ export default function Request() {
             type="submit"
             color="primary"
             variant="contained"
-            href="/RequestHousing"
-
+            href='/RequestH'
           >
-            Request Housing
+            Review Housing
           </Button>
           <Button
             style={{
@@ -137,10 +137,9 @@ export default function Request() {
             type="submit"
             color="primary"
             variant="contained"
-            href="/RequestFood"
-
+            href='/RequestFood'
           >
-            Request Restaurant
+            Review Restaurant
           </Button>
         </div>
       </div>
