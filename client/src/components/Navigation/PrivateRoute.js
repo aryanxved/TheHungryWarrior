@@ -16,10 +16,10 @@ import Review from '../Review'
 import ReviewEntertainment from '../ReviewEntertainment'
 import ReviewHousing from '../ReviewHousing'
 import ReviewRestaurant from '../ReviewRestaurant'
-
-
-
-
+import Request from '../Request/Index'
+import RequestEntertainment from '../RequestEntertainment'
+import RequestHousing from '../RequestHousing'
+import RequestFood from '../RequestFood'
 
 export default function PrivateRoute(
   {
@@ -44,6 +44,12 @@ export default function PrivateRoute(
           <Route path="/ReviewEntertainment" exact component={ReviewEntertainment} />
           <Route path="/ReviewHousing" exact component={ReviewHousing} />
           <Route path="/ReviewRestaurant" exact component={ReviewRestaurant} />
+          <Route path="/Request" exact component={Request}/>
+          <Route path="/RequestEntertainment" exact compontent={RequestEntertainment}/>
+          <Route path="/RequestHousing" exact compontent={RequestHousing}/>
+          <Route path="/RequestFood" exact compontent={RequestFood}/>
+          
+         
           <Route path="*">
             <Redirect to="/Landing" />
           </Route>
