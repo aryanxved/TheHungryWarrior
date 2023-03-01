@@ -1,130 +1,146 @@
-
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
+import NavBar from '../Navbar';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
-import history from '../Navigation/history';
-import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import {makeStyles} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import InputLabel from '@material-ui/core/InputLabel';
-import Select from '@material-ui/core/Select';
-
-import { FormControl, MenuItem } from '@material-ui/core';
-
+import {
+  Card,
+  CardActions,
+  CardContent,
+  Grid,
+  Button,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  TextField,
+  Radio,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  FormHelperText,
+  CssBaseline,
+} from '@material-ui/core/';
+import {makeStyles} from '@material-ui/styles';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+    minHeight: '100vh',
+    backgroundImage: `url(${process.env.PUBLIC_URL + '../images/E7Pic.jpg'})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
   },
 }));
 
-
-const Info = () => {
+export default function Info() {
   const classes = useStyles();
-
-  
-  const SubmitButtonHousing = () => {
-    
-    return(
-        <div align="left" marginTop="250px">
-        <Button
-        style={{
-          color: 'white',
-          backgroundColor: '#001833',
-          height: '75px',
-          width: '300px',
-          fontSize: '20px',
-        }}
-        type="submit"
-        color="primary"
-        variant="contained"
-      >
-        Housing
-      </Button>
-      </div>
-    );
-  };
-
-  const SubmitButtonRestaurant = () => {
-    
-    return(
-        <div align="centre" marginTop="250px">
-          <Button
-            style={{
-              color: 'white',
-              backgroundColor: '#001833',
-              height: '75px',
-              width: '300px',
-              fontSize: '20px',
-            }}
-            type="submit"
-            color="primary"
-            variant="contained"
-          >
-        Restaurant
-      </Button>
-      </div>
-    );
-  };
-
-
-  const SubmitButtonEntertainment = () => {
-    
-    return(
-        <div align="right" marginTop="250px">
-          <Button
-            style={{
-              color: 'white',
-              backgroundColor: '#001833',
-              height: '75px',
-              width: '300px',
-              fontSize: '20px',
-            }}
-            type="submit"
-            color="primary"
-            variant="contained"
-          >
-        Entertainment
-      </Button>
-      </div>
-    );
-  };
-
-
-
   return (
-    <div>
-      <Grid item xs={12}>
-        <Paper className={classes.paper}>
-          <Typography variant="h3" color="inherit" noWrap>
-            Info
-          </Typography>
-        </Paper>
-      </Grid>
+    <div style={{backgroundColor: '#FFFFFFF'}}>
+      <div>
+        <CssBaseline />
+        <div>
+          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+            <Typography
+              align="center"
+              variant="h3"
+              component="div"
+              gutterBottom
+              style={{fontFamily: 'Roboto'}}
+            >
+              Find Information!
+            </Typography>
+          </Card>
+        </div>
+        <p style={{marginTop: '75px'}}></p>
+        <div align="center">
+          
+         
+          
+            <Typography
+              align="center"
+              variant="h4"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              Learn about information near you!
+            </Typography>
+          
+        </div>
+<div>
+<p style={{marginTop: '25px'}}></p>
 
-      
-      <Grid item xs={12}>
-        <Paper className={classes.paper}> 
-              <SubmitButtonHousing/>
-              <SubmitButtonRestaurant/>
-              <SubmitButtonEntertainment/>
-        </Paper>
-      </Grid>
+<Typography
+              align="center"
+              variant="h5"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              Select one of the options to view a category!
+            </Typography>
+</div>
+
+
+        <div align="center" marginTop="250px">
+          <Button
+            style={{
+              color: 'white',
+              backgroundColor: '#001833',
+              height: '75px',
+              width: '300px',
+              fontSize: '20px',
+            }}
+            type="submit"
+            color="primary"
+            variant="contained"
+            href='/InfoEntertainment'
+          >
+            Info Entertainment
+          </Button>
+          <Button
+            style={{
+              color: 'white',
+              backgroundColor: '#001833',
+              height: '75px',
+              width: '300px',
+              fontSize: '20px',
+              marginLeft: '20px'
+            }}
+            type="submit"
+            color="primary"
+            variant="contained"
+            href='/InfoHousing'
+          >
+            Info Housing
+          </Button>
+          <Button
+            style={{
+              color: 'white',
+              backgroundColor: '#001833',
+              height: '75px',
+              width: '300px',
+              fontSize: '20px',
+              marginLeft: '20px'
+            }}
+            type="submit"
+            color="primary"
+            variant="contained"
+            href='/Info Restaurant'
+          >
+            Info Restaurant
+          </Button>
+        </div>
+      </div>
     </div>
   );
-};
-
-
-
-
-export default Info;
+}

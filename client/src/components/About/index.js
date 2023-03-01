@@ -20,7 +20,7 @@ import {
   CssBaseline,
 } from '@material-ui/core/';
 import {makeStyles} from '@material-ui/styles';
-import './index.css';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,70 +31,67 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Landing() {
+export default function About() {
   const classes = useStyles();
   return (
-    <div className="backdroplanding">
+    <div style={{backgroundColor: '#FFFFFFF'}}>
       <div>
         <CssBaseline />
         <div>
           <Card style={{color: 'white', backgroundColor: '#001833'}}>
             <Typography
               align="center"
-              variant="h1"
+              variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Impact'}}
+              style={{fontFamily: 'Roboto'}}
             >
-              The Hungry Warrior
+              About!
             </Typography>
           </Card>
         </div>
         <p style={{marginTop: '75px'}}></p>
         <div align="center">
-          <Card
-            style={{
-              color: 'white',
-              backgroundColor: '#001833',
-              height: '60px',
-              width: '900px',
-              opacity: '75%',
-              marginBottom: '50px',
-            }}
-          >
+          
+         
+          
             <Typography
               align="center"
-              variant="h3"
+              variant="h4"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
             >
-              Redefining How UW Students Budget.
+              This is the About Page!
             </Typography>
-          </Card>
+          
         </div>
-        <div align="center" marginTop="250px">
-          <Button
-            style={{
-              color: 'white',
-              backgroundColor: '#001833',
-              height: '75px',
-              width: '300px',
-              fontSize: '20px',
-            }}
-            type="submit"
-            color="primary"
-            variant="contained"
-            href='/About'
-          >
-            Learn More
-          </Button>
-        </div>
+<div>
+<p style={{marginTop: '25px'}}></p>
+
+<Typography
+              align="center"
+              variant="h5"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              About page coming soon!
+            </Typography>
+</div>
+
+
+     
       </div>
     </div>
   );
