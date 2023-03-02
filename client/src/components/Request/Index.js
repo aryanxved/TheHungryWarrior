@@ -48,7 +48,7 @@ export default function Request() {
               gutterBottom
               style={{fontFamily: 'Roboto'}}
             >
-              Write a Review!
+              Submit a Request!
             </Typography>
           </Card>
         </div>
@@ -69,7 +69,7 @@ export default function Request() {
                 align: 'center',
               }}
             >
-              Share your thoughts on our Review Board!
+              Submit your additional suggestions!
             </Typography>
           
         </div>
@@ -88,7 +88,7 @@ export default function Request() {
                 align: 'center',
               }}
             >
-              Select one of the options below to leave a review!
+              Select one of the options below to submit a request!
             </Typography>
 </div>
 
@@ -107,7 +107,7 @@ export default function Request() {
             variant="contained"
             href='/RequestEnt'
           >
-            Review Entertainment
+            Request Entertainment
           </Button>
           <Button
             style={{
@@ -123,7 +123,7 @@ export default function Request() {
             variant="contained"
             href='/RequestH'
           >
-            Review Housing
+            Request Housing
           </Button>
           <Button
             style={{
@@ -139,7 +139,7 @@ export default function Request() {
             variant="contained"
             href='/RequestFood'
           >
-            Review Restaurant
+            Request Restaurant
           </Button>
         </div>
       </div>
