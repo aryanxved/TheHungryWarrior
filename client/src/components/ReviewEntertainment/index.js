@@ -58,17 +58,17 @@ export default function ReviewEntertainment() {
                 align="center"
                 variant='h5'
               >
-                What's the Restaurant Name?
+                What's the Entertainment Name?
               </Typography>
             
-      <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
-        <InputLabel>Select an activity</InputLabel>
-        <Select        >
-                <MenuItem value ={1}> {'Arcade'} </MenuItem>
-                <MenuItem value ={2}> {'Rock climbing'} </MenuItem>
-                <MenuItem value ={3}> {'Basketball'} </MenuItem>
-                <MenuItem value ={4}> {'Gym'} </MenuItem>
-                <MenuItem value ={5}> {'Movies'} </MenuItem>
+              <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
+              <InputLabel>Select a Location</InputLabel>
+                <Select        >
+                <MenuItem value ={1}> {'Toronto Raptors Game'} </MenuItem>
+                <MenuItem value ={2}> {'Kitchener Rangers Game'} </MenuItem>
+                <MenuItem value ={3}> {'King Pin Bowlounge'} </MenuItem>
+                <MenuItem value ={4}> {'Adventure Rooms'} </MenuItem>
+                <MenuItem value ={5}> {'Clay and Glass Museum'} </MenuItem>
         </Select>
       </FormControl>
     </div>

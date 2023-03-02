@@ -45,7 +45,7 @@ export default function RequestH() {
                 gutterBottom
                 style={{fontFamily: 'Roboto'}}
               >
-                Review Entertainment
+                Request Entertainment
               </Typography>
             </Card>
           </div>
@@ -58,19 +58,16 @@ export default function RequestH() {
                 align="center"
                 variant='h5'
               >
-                What's the Restaurant Name?
+                What's the Housing Name?
               </Typography>
             
-      <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
-        <InputLabel>Select an activity</InputLabel>
-        <Select        >
-                <MenuItem value ={1}> {'Arcade'} </MenuItem>
-                <MenuItem value ={2}> {'Rock climbing'} </MenuItem>
-                <MenuItem value ={3}> {'Basketball'} </MenuItem>
-                <MenuItem value ={4}> {'Gym'} </MenuItem>
-                <MenuItem value ={5}> {'Movies'} </MenuItem>
-        </Select>
-      </FormControl>
+              <TextField style={{width: "100vh", marginTop: "30px"}}
+                id="outlined-multiline-static"
+                label="Enter the name here"
+                multiline
+                minRows={4}
+                variant="outlined"
+                />
     </div>
     <p style={{marginTop: '25px'}}></p>
           <div align="center">
@@ -79,19 +76,16 @@ export default function RequestH() {
                 align="center"
                 variant='h5'
               >
-                What do you rate the quality of your experience?
+                What is the Housing location?
               </Typography>
             
-      <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
-        <InputLabel>Select Quality Rating</InputLabel>
-        <Select        >
-                <MenuItem value ={1}> {'Amazing'} </MenuItem>
-                <MenuItem value ={2}> {'Good'} </MenuItem>
-                <MenuItem value ={3}> {'Satisfactory'} </MenuItem>
-                <MenuItem value ={4}> {'Disappointment'} </MenuItem>
-                <MenuItem value ={5}> {'Horrible'} </MenuItem>
-        </Select>
-      </FormControl>
+              <TextField style={{width: "100vh", marginTop: "30px"}}
+                id="outlined-multiline-static"
+                label="Enter the address here"
+                multiline
+                minRows={4}
+                variant="outlined"
+                />
     </div>
 
     <p style={{marginTop: '25px'}}></p>
@@ -100,12 +94,12 @@ export default function RequestH() {
                 align="center"
                 variant='h5'
               >
-                Please describe your experience.
+                Do you have any additional information for us?
               </Typography>
 
     <TextField style={{width: "100vh", marginTop: "30px"}}
           id="outlined-multiline-static"
-          label="Describe your thoughts"
+          label="Addtional Information"
           multiline
           minRows={4}
           variant="outlined"

@@ -58,14 +58,14 @@ export default function ReviewHousing() {
                 align="center"
                 variant='h5'
               >
-                What's the Restaurant Name?
+                What's the Housing Name?
               </Typography>
             
       <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
         <InputLabel>Select a Location</InputLabel>
         <Select        >
                 <MenuItem value ={1}> {'Elora'} </MenuItem>
-                <MenuItem value ={2}> {'Furgus'} </MenuItem>
+                <MenuItem value ={2}> {'Fergus'} </MenuItem>
                 <MenuItem value ={3}> {'UWP'} </MenuItem>
                 <MenuItem value ={4}> {'WCRI'} </MenuItem>
                 <MenuItem value ={5}> {'Icon'} </MenuItem>
