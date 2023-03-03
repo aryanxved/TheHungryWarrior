@@ -125,7 +125,7 @@ const InfoHousing = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                        Fergus House features the standard range of comforts and amenities that our tenants have come to expect from Rez-One properties. 4-bedroom units make this residence the ideal setting for students who enjoy living, studying and socializing together.
+                        Fergus House features the standard range of comforts and amenities that our tenants have come to expect from Rez-One properties. 4-bedroom units make this residence the ideal setting for students who enjoy living, studying and socializing together!
                         </Typography>
                     </div>
 
