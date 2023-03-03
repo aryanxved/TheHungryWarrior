@@ -36,13 +36,14 @@ app.post('/api/loadUserSettings', (req, res) => {
 	connection.end();
 });
 
-app.post('/api/addReview', (req, res) => {
+app.post('/api/addReviewRestaurant', (req, res) => {
 	let connection = mysql.createConnection(config);
 
-	let sql = `INSERT INTO Review_Entertainment(ReviewTitle, ReviewLocation, ReviewDescription, ReviewQuality) VALUES (?, ?, ?, ?)`;
-	let data = [req.body.reviewTitle, req.body.reviewLocation, req.body.reviewDescription, req.body.reviewQuality];
-
+	let sql = `INSERT INTO Review_Restaurants(ReviewTitle, ReviewLocation, ReviewQuality, ReviewDescription) VALUES (?, ?, ?, ?)`;
 	console.log(sql)
+	
+	let data = [req.body.ReviewTitle, req.body.ReviewLocation, req.body.ReviewQuality, req.body.ReviewDescription];
+
 	console.log(data)
 	connection.query(sql, data, (error, results, fields) => {
 		if (error) {
@@ -57,5 +58,49 @@ app.post('/api/addReview', (req, res) => {
 	connection.end();
 });
 
-//app.listen(port, () => console.log(`Listening on port ${port}`)); //for the dev version
-app.listen(port, '129.97.25.211'); //for the deployed version, specify the IP address of the server
+app.post('/api/addReviewHousing', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `INSERT INTO Review_Housing(ReviewTitle, ReviewLocation, ReviewQuality, ReviewDescription) VALUES (?, ?, ?, ?)`;
+	console.log(sql)
+	
+	let data = [req.body.ReviewTitle, req.body.ReviewLocation, req.body.ReviewQuality, req.body.ReviewDescription];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/addReview', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `INSERT INTO Review_Entertainment(ReviewTitle, ReviewLocation, ReviewQuality, ReviewDescription) VALUES (?, ?, ?, ?)`;
+	console.log(sql)
+	
+	let data = [req.body.ReviewTitle, req.body.ReviewLocation, req.body.ReviewQuality, req.body.ReviewDescription];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.listen(port, () => console.log(`Listening on port ${port}`)); //for the dev version
+//app.listen(port, '129.97.25.211'); //for the deployed version, specify the IP address of the server

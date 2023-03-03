@@ -265,12 +265,12 @@ function ReviewEntertainment() {
   const callApiAddReview = async () => {
 
     const url = serverURL + "/api/addReview";
-    
-    var submittedReview = {
-      "ReviewLocation": reviewLocation,
+
+    const submittedReview = {
       "ReviewTitle": reviewTitle,
-      "ReviewDescription": reviewDescription,
-      "ReviewQuality": reviewQuality
+      "ReviewLocation": reviewLocation,
+      "ReviewQuality": reviewQuality,
+      "ReviewDescription": reviewDescription
     }
 
     const response = await fetch(url, {
@@ -290,7 +290,8 @@ function ReviewEntertainment() {
   const submitButton = () => {
     
       setReviewInfo(
-        <div className = "ReviewPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Thank you for your review: 
+        <div className = "ReviewPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Your review has been successfully submitted! 
+        <div style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center"> Thank you for your review: 
         <div style={{fontSize: "14px", marginTop: "10px"}}>The location you selected is: <br/>{reviewLocation}</div>
         <br/>
         <div style={{fontSize: "14px", marginTop: "10px"}}>What is this experience about? <br/>{reviewTitle}</div>
@@ -298,6 +299,7 @@ function ReviewEntertainment() {
         <div style={{fontSize: "14px", marginTop: "10px"}}>What the details behind your experience are? <br/>{reviewDescription}</div>
         <br/>
         <div style={{fontSize: "14px", marginTop: "10px"}}>What your overall quality of your experience? <br/>{reviewQuality}</div>
+        </div>
         </div>)
         handleAddReview();
     
@@ -316,7 +318,7 @@ function ReviewEntertainment() {
         <Button variant="outlined" align="center" onClick={submitButton} style={{backgroundColor: "black", height: '50px', width: '200px', color: 'white'}}>Submit</Button>
         </div>
         <div align='center'>
-        <Typography variant="h5" component="div" gutterBottom align='center'>
+        <Typography variant="h5" component="div" gutterBottom>
         {reviewInfo}
       </Typography>
       </div>
