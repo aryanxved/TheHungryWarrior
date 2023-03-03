@@ -135,7 +135,7 @@ export default function Info() {
             type="submit"
             color="primary"
             variant="contained"
-            href='/Info Restaurant'
+            href='/InfoRestaurant'
           >
             Info Restaurant
           </Button>
