@@ -12,7 +12,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'react-router-dom';
 
-const pages = ['Landing', 'About', 'Food', 'Entertainment', 'Housing', 'Info', 'Review', "Request"];
+const pages = ['About', 'Food', 'Entertainment', 'Housing', 'Info', 'Review', "Request"];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const NavBar = () => {
