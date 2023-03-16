@@ -46,7 +46,7 @@ export default function About() {
               gutterBottom
               style={{fontFamily: 'Roboto'}}
             >
-              About!
+              About Us
             </Typography>
           </Card>
         </div>
@@ -67,7 +67,7 @@ export default function About() {
                 align: 'center',
               }}
             >
-              This is the About Page!
+              About the Tool
             </Typography>
           
         </div>
@@ -86,7 +86,68 @@ export default function About() {
                 align: 'center',
               }}
             >
-              About page coming soon!
+              What does the Hungry Warrior do?
+            </Typography>
+
+            <Typography
+              align="center"
+              variant="h7"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              This web tool is your one-stop budget calculator for navigating your term 
+              at the University of Waterloo. We focus on making educated recommendations 
+              based on your preferences and available budget. The Hungry Warrior allows 
+              you to plan your housing, food, and entertainment choices over the next 4 
+              months. Additional filters allow you to fine tune the results to get results 
+              tailored to your liking. 
+
+            </Typography>
+
+            <p style={{marginTop: '25px'}}></p>
+            <Typography
+              align="center"
+              variant="h5"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              How is our tool dfferent from others?
+            </Typography>
+
+            <Typography
+              align="center"
+              variant="h7"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              We admit, there are other budget calculators out there. However, 
+              many fail to address the needs of university students, particularly 
+              those at the University of Waterloo. The Hungry Warrior is made for 
+              students by students. As a result, we are more receptive to understanding how students 
+              such as yourself think and the issues faced. Most calculators are too generic and do 
+              not provide specific recommendations. Our app takes budgeting to the next level by 
+              showing students actual restaurant, entertainment and living options within their 
+              expense range. Furthermore, The Hungry Warrior considers the user’s preferences 
+              and works to optimize their happiness throughout the term. Overall, this tool 
+              will allow you to properly forecast your finances to save time and money.
             </Typography>
 </div>
 
