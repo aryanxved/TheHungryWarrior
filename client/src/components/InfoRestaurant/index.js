@@ -788,7 +788,7 @@ const InfoRestaurant = () => {
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         At the Pita Pit, we’re proud of what we put into our pitas, and equally proud of what we don’t. Nothing’s deep-fried, battered or grilled in fat. 
                         We don’t add salt unless you tell us you want it. And we don’t stuff our good-for-you, great-tasting fillings in big wads of bread as thick as a mattress. Welcome to fresh thinking and healthy eating at the Pita Pit, a proudly Canadian, no b.s. place to eat.
-                        <p>Address: SLC Great Hall, 200 University Ave W, Waterloo</p>
+                        <p>Address: SLC Great Hall, 200 University Ave, Waterloo</p>
                             <p>Cost: $7</p>
                             <p>Distance from E7: 800M</p>
                             <p>Rating: 2.9/5</p>
