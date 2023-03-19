@@ -199,7 +199,7 @@ const InfoEntertainment = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             With twenty-eight state of the art 10 pin lanes including a separate section for private parties, Kingpin Bowlounge is the biggest bowling venue in the Waterloo Region. Whether you want to celebrate a birthday, are looking for a place to hold your next corporate event or want to be part of a bowling league, Kingpin is the perfect place.
-                            <p>425 Bingemans Centre Dr, Kitchener</p>
+                            <p>Address: 425 Bingemans Centre Dr, Kitchener</p>
                             <p>Cost: $35</p>
                             <p>Distance from Campus: 11 KM</p>
                             <p>Rating: 3.9/5</p>
@@ -266,7 +266,7 @@ const InfoEntertainment = () => {
                             The Adventure Rooms are “real life escape room games” – which are awesome group activities.  The basic idea is that the team must solve a variety of puzzles in order to “break free” from an escape room containing locked doors before a 60 minute countdown reaches zero.
                             To do so, they have to use not brute force, but skill and cunning.
                             This is a fun and challenging game that requires searching for clues, codes, keys and using objects in strange ways.  Escape games are a great option for group activities for all ages, team building events, and special occasions.
-                            <p>283 Duke St W #102, Kitchener</p>
+                            <p>Address: 283 Duke St W #102, Kitchener</p>
                             <p>Cost: $25</p>
                             <p>Distance from Campus: 5 KM</p>
                             <p>Rating: 4.7/5</p>
@@ -333,7 +333,7 @@ const InfoEntertainment = () => {
                             The Canadian Clay & Glass Gallery celebrates contemporary ceramic and glass artists engaged in conceptual, technical or material research.
                             Located in Waterloo, Ontario, we are a not-for-profit institution that aims to collect, exhibit, research, promote, and preserve work by Canadian artists and makers in clay, glass, and copper enameling to represent the diversity of the Canadian landscape.
                             Our rotating exhibitions celebrate and support diverse artists from across Canada working in these mediums and present their work to the public.
-                            <p>25 Caroline St N, Waterloo</p>
+                            <p>Address: 25 Caroline St N, Waterloo</p>
                             <p>Cost: $40</p>
                             <p>Distance from Campus: 2 KM</p>
                             <p>Rating: 4.6/5</p>
@@ -398,7 +398,7 @@ const InfoEntertainment = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Known as the jewel of the city, Waterloo Park has a lake, animal farm, picnic areas, splash pad, sport fields, playgrounds and more.
-                            <p>100 Father David Bauer Dr, Waterloo</p>
+                            <p>Address: 100 Father David Bauer Dr, Waterloo</p>
                             <p>Cost: $0</p>
                             <p>Distance from Campus: 500 m</p>
                             <p>Rating: 4.6/5</p>
@@ -464,7 +464,7 @@ const InfoEntertainment = () => {
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             It's simple: VR is fun, easy and accessible. Unlike conventional gaming, VR offers a new way to play together with your family, friends and your mortal enemies! Most games only require the use of one or two buttons, so if you can flick a light switch while flushing the toilet, you can play VR!
                             Ctrl V is the ideal venue to host your next birthday party, team building event, corporate event, or just a simple night out with your friends!
-                            <p>170 Columbia St W #5, Waterloo</p>
+                            <p>Address: 170 Columbia St W #5, Waterloo</p>
                             <p>Cost: $28</p>
                             <p>Distance from Campus: 1 KM</p>
                             <p>Rating: 4.8/5</p>
@@ -529,7 +529,7 @@ const InfoEntertainment = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Cineplex is a leading Canadian company that operates in the Film Entertainment and Content, Amusement and Leisure, and Media sectors. It offers a unique escape through its theatres and entertainment venues, and is a joint venture partner in Scene+.
-                            <p>550 King St N, Waterloo</p>
+                            <p>Address: 550 King St N, Waterloo</p>
                             <p>Cost: $15</p>
                             <p>Distance from Campus: 4 KM</p>
                             <p>Rating: 4.3/5</p>
@@ -594,7 +594,7 @@ const InfoEntertainment = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Come out, enjoy a beer, and play the best selection of pinball and classic arcade games around!
-                            <p>247 King St N Unit 8, Waterloo</p>
+                            <p>Address: 247 King St N Unit 8, Waterloo</p>
                             <p>Cost: $8</p>
                             <p>Distance from Campus: 2 KM</p>
                             <p>Rating: 4.5/5</p>
@@ -659,7 +659,7 @@ const InfoEntertainment = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Whether you're planning a family adventure, school trip, or just looking to spend some time hitting the slopes with friends, Chicopee has you covered. Come visit us for the day and see what we have to offer!
-                            <p>1600 River Rd E, Kitchener</p>
+                            <p>Address: 1600 River Rd E, Kitchener</p>
                             <p>Cost: $50</p>
                             <p>Distance from Campus: 18 KM</p>
                             <p>Rating: 4.2/5</p>
@@ -725,7 +725,7 @@ const InfoEntertainment = () => {
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Situated on a 107 acre site which includes the environmentally sensitive Kossuth Bog, the 25,000 square foot facility includes a 10,800 square foot indoor tropical garden featuring thousands of free-flying butterflies.
                             Our conservatory also hosts a variety of tropical plants, birds, and animals, along with several water features. Witness butterflies emerge from their chrysalis and take their first flight, followed by a walk-through of our mounted and live-insect galleries.
-                            <p>2500 Kossuth Rd, Cambridge</p>
+                            <p>Address: 2500 Kossuth Rd, Cambridge</p>
                             <p>Cost: $20</p>
                             <p>Distance from Campus: 26 KM</p>
                             <p>Rating: 4.2/5</p>
@@ -793,7 +793,7 @@ const InfoEntertainment = () => {
                         Canoeing the Grand is an experience that is both iconic and peaceful. As you quietly paddle our beautiful heritage river you will discover our region from a whole new vantage point.
                         We provide daily trips to several access points along the Walter Bean Trail as well as several custom trips that are available by request.
                         Pack your picnic basket, a good book, fishing tackle and your loved ones for a local adventure you won’t soon forget!
-                        <p>3734 King St E, Kitchener</p>
+                        <p>Address: 3734 King St E, Kitchener</p>
                         <p>Cost: $120</p>
                         <p>Distance from Campus: 18 KM</p>
                         <p>Rating: 4.4/5</p>

@@ -65,6 +65,10 @@ const InfoHousing = () => {
                 <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                     <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                     Appealing to students who like their own space, Elora House possess’ the largest rooms ALL with private ensuite washrooms in luxury 3, 4, and 5 bedroom layouts. Elora offers a number of building and suite amenities that provide the comforts and benefits of independent living.
+                        <p>Address: 250 Phillip St, Waterloo (300M from E7)</p>
+                        <p>Rent per Month: $1000</p>
+                        <p>Roommates: 3, 4, 5</p>
+                        <p>Rating: 1.6/5</p>
                     </Typography>
                 </div>
 
@@ -126,6 +130,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         Fergus House features the standard range of comforts and amenities that our tenants have come to expect from Rez-One properties. 4-bedroom units make this residence the ideal setting for students who enjoy living, studying and socializing together!
+                        <p>Address: 254 Phillip St, Waterloo (280M from E7)</p>
+                        <p>Rent per Month: $1000</p>
+                        <p>Roommates: 4</p>
+                        <p>Rating: 3.0/5</p>
                         </Typography>
                     </div>
 
@@ -168,7 +176,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '53vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -187,6 +195,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         Meet ICON, Waterloo's largest and most dynamic modern living development at the intersection of Phillip St. and Columbia St. Composed of two, twenty-five storey towers with an unparalleled view of the evolving Waterloo skyline and conveniently located directly across the street from the University of Waterloo, ICON is the ideal place to call home. 
+                        <p>Address: 330 Phillip St, Waterloo (500M from E7)</p>
+                        <p>Rent per Month: $950</p>
+                        <p>Roommates: 2, 3, 4</p>
+                        <p>Rating: 3.0/5</p>
                         </Typography>
                     </div>
 
@@ -229,7 +241,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -249,6 +261,10 @@ const InfoHousing = () => {
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         Composed of two towers rising 20 and 23 storeys high, Society145 provides modern elegance, first class amenities and beautifully designed suites. Each space has been carefully thought through to create an exceptional living experience for each individual.
                         Experience the luxuries and convenience that Society Condos has to offer, which include the state-of-the-art fitness centre, business lounge, multi-media theatre, and rooftop patio with panoramic views of Waterloo. All mere steps from your suite.
+                        <p>Address: 145 Columbia St, Waterloo (800M from E7)</p>
+                        <p>Rent per Month: $950</p>
+                        <p>Roommates: 2, 3, 4</p>
+                        <p>Rating: 3.5/5</p>
                         </Typography>
                     </div>
 
@@ -310,6 +326,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         Designed to offer residents ease of access to Waterloo’s University District, 250 Lester Street offers innovative luxury living. Conveniently located just steps away from all of the action University Avenue West has to offer, this stunning building stands out among the surrounding properties and pushes the bounds of luxury living in Waterloo.
+                        <p>Address: 250 Lester St, Waterloo (600M from E7)</p>
+                        <p>Rent per Month: $700</p>
+                        <p>Roommates: 2, 3, 4</p>
+                        <p>Rating: 2.7/5</p>
                         </Typography>
                     </div>
 
@@ -371,6 +391,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Our spacious three, four, or five bedroom apartments come fully furnished with everything you need to be comfortable. Every apartment has a bedroom for each student resident, a dining area, kitchen and living room. The majority of bedrooms have en-suite washrooms, and many suites have private balconies!
+                            <p>Address: 339 King Street N, Waterloo (1900M from E7)</p>
+                            <p>Rent per Month: $800</p>
+                            <p>Roommates: 3, 4, 5</p>
+                            <p>Rating: 3.7/5</p>
                         </Typography>
                     </div>
 
@@ -413,7 +437,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '53vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -432,6 +456,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         Our clean and spacious five bedroom apartments come fully furnished with everything you need to be comfortable. Every apartment has a bedroom for each individual student, a dining area, kitchen, living room, and one or two shared bathrooms, depending on the size of the unit. Student housing in Waterloo doesn’t get better than MyRez!
+                        <p>Address: 181 Lester St, Waterloo (800M from E7)</p>
+                        <p>Rent per Month: $900</p>
+                        <p>Roommates: 5</p>
+                        <p>Rating: 4.1/5</p>
                         </Typography>
                     </div>
 
@@ -493,6 +521,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         UWP consists of 4 courts and 2 halls. All floors are co-ed, with 20 - 50 residents and 1 don living on each floor. Each suite is single gender. Upper-years can request a mixed-gender suite. 
+                        <p>Address: 161 University Ave W, Waterloo (450M from E7)</p>
+                        <p>Rent per Month: $700</p>
+                        <p>Roommates: 1, 2, 3, 4</p>
+                        <p>Rating: 3.9/5</p>
                         </Typography>
                     </div>
 
@@ -535,7 +567,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -555,6 +587,10 @@ const InfoHousing = () => {
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             VIP Student Housing is a family owned-operated rental company offering the finest student suites in Waterloo. From first-year undergraduate students to PhD graduates, VIP Student Housing is sure to have a suite that will accommodate your needs.
                             VIP Student takes pride in delivering exceptional services for all tenants; such as same-day maintenance repairs and flexible appointment scheduling. All suites come fully furnished to provide a hassle-free and comfortable living experience.
+                            <p>Address: 110 University Ave W, Waterloo (650M from E7)</p>
+                            <p>Rent per Month: $750</p>
+                            <p>Roommates: 5</p>
+                            <p>Rating: 3.4/5</p>
                         </Typography>
                     </div>
 
@@ -616,6 +652,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             REV consists of 4 quads. Each quad has 5 floors, with 48 residents and 1 don living on each floor. Floors are co-ed, but each wing on the floor are single gender.
+                            <p>Address: 200 University Ave W, Waterloo (1500M from E7)</p>
+                            <p>Rent per Month: $700</p>
+                            <p>Roommates: 1, 2</p>
+                            <p>Rating: 3.1/5</p>
                         </Typography>
                     </div>
 
@@ -677,6 +717,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         MKV consists of 2 wings. Each wing has 4 floors, with 40 residents and 1 don living on each floor. Most floors are co-ed, but each suite is single gender. MKV is the only suite-style residence with air conditioning available. Multi faith room icon.
+                            <p>Address: 200 University Ave W, Waterloo (1500M from E7)</p>
+                            <p>Rent per Month: $700</p>
+                            <p>Roommates: 2</p>
+                            <p>Rating: 3.0/5</p>
                         </Typography>
                     </div>
 
@@ -739,6 +783,10 @@ const InfoHousing = () => {
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                             Village 1 consists of 4 quads separated into 26 houses. Each house has 3 or 4 floors with 14-16 students per floor. There is 1 Don per house. Houses and lounges are co-ed, but floors and bathrooms are single-gender.
+                            <p>Address: 200 University Ave W, Waterloo (1500M from E7)</p>
+                            <p>Rent per Month: $700</p>
+                            <p>Roommates: 1, 2</p>
+                            <p>Rating: 2.9/5</p>
                         </Typography>
                     </div>
 
