@@ -13,6 +13,8 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import Select from '@material-ui/core/Select';
+import './index.css';
+
 
 import { FormControl, MenuItem } from '@material-ui/core';
 
@@ -24,7 +26,9 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    backgroundColor: '#001833',
+    color: 'white'
+
   },
 }));
 
@@ -32,16 +36,8 @@ const useStyles = makeStyles(theme => ({
 const InfoEntertainment = () => {
   const classes = useStyles();
 
-  
-  
-
-  
-
-
-  
-
   return (
-    <><><><><><><><><><><><div align='center'>
+    <><><><><><><><><><><><div align='center' className='backdropinfoEntertainment'>
          <Grid item xs={12}>
         <Paper className={classes.paper}>
           <Typography variant="h3" color="inherit" noWrap>
