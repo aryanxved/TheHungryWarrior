@@ -14,6 +14,8 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import Select from '@material-ui/core/Select';
 import { FormControl, MenuItem } from '@material-ui/core';
+import './index.css';
+
 
 
 
@@ -25,7 +27,8 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    backgroundColor: '#001833',
+    color: 'white'
   },
 }));
 
@@ -35,7 +38,7 @@ const InfoRestaurant = () => {
 
 
   return (
-    <div>
+    <div className='backdropinfoRestaurant'>
       <Grid item xs={12}>
         <Paper className={classes.paper}>
           <Typography variant="h3" color="inherit" noWrap>
