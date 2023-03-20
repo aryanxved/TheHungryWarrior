@@ -130,3 +130,4 @@ test('Renders the InfoRestaurant Page', () => {
   render(<InfoRestaurant/>)
 });
 
+
