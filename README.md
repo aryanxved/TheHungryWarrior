@@ -16,14 +16,21 @@ This web tool is your one-stop budget calculator for navigating your term at the
 We admit, there are other budget calculators out there. However, many fail to address the needs of university students, particularly those at the University of Waterloo. The Hungry Warrior is made for students by students. As a result, we are more receptive to understanding how students such as yourself think and the issues faced. Most calculators are too generic and do not provide specific recommendations. Our app takes budgeting to the next level by showing students actual restaurant, entertainment and living options within their expense range. Furthermore, The Hungry Warrior considers the user’s preferences and works to optimize their happiness throughout the term. Overall, this tool will allow you to properly forecast your finances to save time and money.
 
 
-Instructions to utilize this project:
-# git pull origin main
+# Instructions to utilize this project:
+### 1. Clone the project from this repository
+### 2. Open the project in your preferred IDE
+### 3. Open terminal in your IDE and navigate to the path below
 
+'../TheHungryWarrior'
+
+### 4. Run the command "Node server"
+
+### 5. Open another terminal in your IDE and navigate to the path below
 from TheHungryWarrior cd to this path:
 TheHungryWarrior/Warrior/client 
 
-After, being on that path. Run the code, by using the command:
-# npm start 
+### 6. After, being on that path. Run the code, by using the command:
+"npm start" or "yarn dev"
 
 
 
