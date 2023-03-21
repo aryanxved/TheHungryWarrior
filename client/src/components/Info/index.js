@@ -21,6 +21,7 @@ import {
 } from '@material-ui/core/';
 import {makeStyles} from '@material-ui/styles';
 import {Link} from 'react-router-dom';
+import './index.css';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 export default function Info() {
   const classes = useStyles();
   return (
-    <div style={{backgroundColor: '#FFFFFFF'}}>
+    <div style={{backgroundColor: '#FFFFFFF'}} className='backdropInfo'>
       <div>
         <CssBaseline />
         <div>
@@ -62,7 +63,7 @@ export default function Info() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'black',
+                color: 'white',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -81,7 +82,7 @@ export default function Info() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'black',
+                color: 'white',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -91,11 +92,11 @@ export default function Info() {
 </div>
 
 
-        <div align="center" marginTop="250px">
+        <div align="center" style={{marginTop: "50px"}}>
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#001833',
+              backgroundColor: '#3f51b5',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -110,7 +111,7 @@ export default function Info() {
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#001833',
+              backgroundColor: '#3f51b5',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -126,7 +127,7 @@ export default function Info() {
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#001833',
+              backgroundColor: '#3f51b5',
               height: '75px',
               width: '300px',
               fontSize: '20px',
