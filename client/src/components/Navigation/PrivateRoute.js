@@ -21,6 +21,7 @@ import RequestEnt from '../RequestEnt'
 import RequestH from '../RequestH'
 import RequestFood from '../RequestFood'
 import About from '../About'
+import SignUp from '../SignUp'
 
 import MapEnt from '../MapEnt'
 import MapHarveys from '../MapHarveys'
@@ -35,6 +36,7 @@ import MapLazeez from '../MapLazeez'
 import MapTims from '../MapTims'
 import MapMels from '../MapMels'
 import MapPita from '../MapPita'
+import { AuthProvider } from '../Firebase/context';
 
 export default function PrivateRoute(
   {
@@ -44,6 +46,7 @@ export default function PrivateRoute(
 ) {
   return (
     <>
+    <AuthProvider>
       <Router history={history}>
         <NavBar />
         <Switch>
@@ -64,6 +67,7 @@ export default function PrivateRoute(
           <Route path="/RequestH" exact component={RequestH} />
           <Route path="/RequestFood" exact component={RequestFood} />
           <Route path="/About" exact component={About} />
+          <Route path="/SignUp" exact component={SignUp} />
           <Route path="/MapEnt" exact component={MapEnt} />
           <Route path="/MapHarveys" exact component={MapHarveys} />
           <Route path="/MapLobster" exact component={MapLobster} />
@@ -83,6 +87,7 @@ export default function PrivateRoute(
           </Route>
         </Switch>
       </Router>
+      </AuthProvider>
     </>
   );
 }
