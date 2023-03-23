@@ -39,13 +39,13 @@ export default function Info() {
       <div>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+          <Card style={{color: 'white', backgroundColor: 'black'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Roboto'}}
+              style={{fontFamily: 'Impact', letterSpacing: '2px'}}
             >
               Find Information!
             </Typography>
@@ -96,7 +96,7 @@ export default function Info() {
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#3f51b5',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -111,7 +111,7 @@ export default function Info() {
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#3f51b5',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -127,7 +127,7 @@ export default function Info() {
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#3f51b5',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
