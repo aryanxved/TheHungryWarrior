@@ -176,6 +176,7 @@ const InfoEntertainment = () => {
     </div></>
 
     <div align='center'>
+    <Box>
         <Card style={{ color: 'black', backgroundColor: 'white', height: '53vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
@@ -185,6 +186,7 @@ const InfoEntertainment = () => {
                         </Card>
                     </div>
                 </Grid>
+                
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
@@ -237,7 +239,9 @@ const InfoEntertainment = () => {
                     </div>
                 </Grid>
             </Grid>
+           
         </Card>
+        </Box>  
     </div></>
 
     <div align='center'>
