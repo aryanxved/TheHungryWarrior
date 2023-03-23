@@ -105,6 +105,23 @@ const InfoRestaurant = () => {
                     >
                         Write A Review
                     </Button>
+
+                    <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapHarveys'
+                    >
+                        View on Map
+                    </Button>
                 </div>
             </Grid>
         </Grid>
@@ -170,6 +187,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapLobster'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -235,6 +269,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapWilliams'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -300,6 +351,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapSubway'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -367,6 +435,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapPub'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -431,6 +516,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapKorner'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -496,6 +598,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapFresco'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -562,6 +681,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapShawerma'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -628,6 +764,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapLazeez'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -694,6 +847,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapTims'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -758,6 +928,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapMels'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -825,6 +1012,23 @@ const InfoRestaurant = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapMels'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>

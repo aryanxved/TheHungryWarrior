@@ -23,6 +23,18 @@ import RequestFood from '../RequestFood'
 import About from '../About'
 
 import MapEnt from '../MapEnt'
+import MapHarveys from '../MapHarveys'
+import MapLobster from '../MapLobster'
+import MapWilliams from '../MapWilliams'
+import MapSubway from '../MapSubway'
+import MapPub from '../MapPub'
+import MapKorner from '../MapKorner'
+import MapFresco from '../MapFresco'
+import MapShawerma from '../MapShawerma'
+import MapLazeez from '../MapLazeez'
+import MapTims from '../MapTims'
+import MapMels from '../MapMels'
+import MapPita from '../MapPita'
 
 export default function PrivateRoute(
   {
@@ -53,8 +65,18 @@ export default function PrivateRoute(
           <Route path="/RequestFood" exact component={RequestFood} />
           <Route path="/About" exact component={About} />
           <Route path="/MapEnt" exact component={MapEnt} />
-
-  
+          <Route path="/MapHarveys" exact component={MapHarveys} />
+          <Route path="/MapLobster" exact component={MapLobster} />
+          <Route path="/MapWilliams" exact component={MapWilliams} />
+          <Route path="/MapSubway" exact component={MapSubway} />
+          <Route path="/MapPub" exact component={MapPub} />
+          <Route path="/MapKorner" exact component={MapKorner} />
+          <Route path="/MapFresco" exact component={MapFresco} />
+          <Route path="/MapShawerma" exact component={MapShawerma} />
+          <Route path="/MapLazeez" exact component={MapLazeez} />
+          <Route path="/MapTims" exact component={MapTims} />
+          <Route path="/MapMels" exact component={MapMels} />
+          <Route path="/MapPita" exact component={MapPita} />
          
           <Route path="*">
             <Redirect to="/Landing" />
