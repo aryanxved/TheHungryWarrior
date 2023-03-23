@@ -364,7 +364,7 @@ const Entertainment = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.entertainmentBudget}
+                   {"$" + option.entertainmentBudget + " CAD"}
                 </Typography>
                 </Card>
                 </Grid>
