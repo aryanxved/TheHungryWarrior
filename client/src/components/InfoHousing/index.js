@@ -53,7 +53,7 @@ const InfoHousing = () => {
             <Grid item xs={5}>
                 <div align='left'>
                     <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                        <img src="/images/elora.png" />
+                        <img src="/images/elora.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                     </Card>
                 </div>
             </Grid>
@@ -118,7 +118,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Fergus.png" />
+                            <img src="/images/Fergus.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -183,7 +183,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/icon.png" />
+                            <img src="/images/icon.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -248,7 +248,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/145.png" />
+                            <img src="/images/145.png" style={{WebkitTransform: 'scale(1.8)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -314,7 +314,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Accomodate8u.png" />
+                            <img src="/images/Accomodate8u.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -379,7 +379,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/KingStreet.png" />
+                            <img src="/images/KingStreet.png" style={{WebkitTransform: 'scale(3.5)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -444,7 +444,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/MyRez.png" />
+                            <img src="/images/MyRez.png" style={{WebkitTransform: 'scale(3.5)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -509,7 +509,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/uwp.png" />
+                            <img src="/images/uwp.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -574,7 +574,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/viphousing.png" />
+                            <img src="/images/viphousing.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -640,7 +640,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Rev.png" />
+                            <img src="/images/Rev.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -705,7 +705,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/MKV.png" />
+                            <img src="/images/MKV.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -771,7 +771,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/v1.png" />
+                            <img src="/images/v1.png" style={{WebkitTransform: 'scale(4.5)'}}/>
                         </Card>
                     </div>
                 </Grid>
