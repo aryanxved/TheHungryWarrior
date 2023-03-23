@@ -22,7 +22,32 @@ import RequestH from '../RequestH'
 import RequestFood from '../RequestFood'
 import About from '../About'
 
-import MapEnt from '../MapEnt'
+import MapRaptors from '../MapRaptors'
+import MapRangers from '../MapRangers'
+import MapKingPin from '../MapKingPin'
+import MapAdventureRoom from '../MapAdventureRoom'
+import MapClay from '../MapClay'
+import MapPark from '../MapPark'
+import MapCtrlV from '../MapCtrlV'
+import MapGalaxy from '../MapGalaxy'
+import MapPinUp from '../MapPinUp'
+import MapChicopee from '../MapChicopee'
+import MapButterfly from '../MapButterfly'
+import MapCanoeing from '../MapCanoeing'
+
+import MapElora from '../MapElora'
+import MapFergus from '../MapFergus'
+import MapIcon from '../MapIcon'
+import MapSociety from '../MapSociety'
+import MapAccomod8u from '../MapAccomod8u'
+import MapMyRez from '../MapMyRez'
+import MapKingST from '../MapKingST'
+import MapUWP from '../MapUWP'
+import MapVIP from '../MapVIP'
+import MapREV from '../MapREV'
+import MapMKV from '../MapMKV'
+import MapV1 from '../MapV1'
+
 import MapHarveys from '../MapHarveys'
 import MapLobster from '../MapLobster'
 import MapWilliams from '../MapWilliams'
@@ -35,6 +60,7 @@ import MapLazeez from '../MapLazeez'
 import MapTims from '../MapTims'
 import MapMels from '../MapMels'
 import MapPita from '../MapPita'
+
 
 export default function PrivateRoute(
   {
@@ -64,7 +90,33 @@ export default function PrivateRoute(
           <Route path="/RequestH" exact component={RequestH} />
           <Route path="/RequestFood" exact component={RequestFood} />
           <Route path="/About" exact component={About} />
-          <Route path="/MapEnt" exact component={MapEnt} />
+
+          <Route path="/MapRaptors" exact component={MapRaptors} />
+          <Route path="/MapRangers" exact component={MapRangers} />
+          <Route path="/MapKingPin" exact component={MapKingPin} />
+          <Route path="/MapAdventureRoom" exact component={MapAdventureRoom} />
+          <Route path="/MapClay" exact component={MapClay} />
+          <Route path="/MapPark" exact component={MapPark} />
+          <Route path="/MapCtrlV" exact component={MapCtrlV} />
+          <Route path="/MapGalaxy" exact component={MapGalaxy} />
+          <Route path="/MapPinUp" exact component={MapPinUp} />
+          <Route path="/MapChicopee" exact component={MapChicopee} />
+          <Route path="/MapButterfly" exact component={MapButterfly} />
+          <Route path="/MapCanoeing" exact component={MapCanoeing} />
+          
+          <Route path="/MapElora" exact component={MapElora} />
+          <Route path="/MapFergus" exact component={MapFergus} />
+          <Route path="/MapIcon" exact component={MapIcon} />
+          <Route path="/MapSociety" exact component={MapSociety} />
+          <Route path="/MapAccomod8u" exact component={MapAccomod8u} />
+          <Route path="/MapMyRez" exact component={MapMyRez} />
+          <Route path="/MapKingST" exact component={MapKingST} />
+          <Route path="/MapUWP" exact component={MapUWP} />
+          <Route path="/MapVIP" exact component={MapVIP} />
+          <Route path="/MapREV" exact component={MapREV} />
+          <Route path="/MapMKV" exact component={MapMKV} />
+          <Route path="/MapV1" exact component={MapV1} />
+
           <Route path="/MapHarveys" exact component={MapHarveys} />
           <Route path="/MapLobster" exact component={MapLobster} />
           <Route path="/MapWilliams" exact component={MapWilliams} />
