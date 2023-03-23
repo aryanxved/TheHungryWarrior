@@ -151,6 +151,8 @@ export default function About() {
               and works to optimize their happiness throughout the term. Overall, this tool 
               will allow you to properly forecast your finances to save time and money.
             </Typography>
+
+            
 </div>
 
 
