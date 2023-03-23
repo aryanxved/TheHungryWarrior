@@ -104,6 +104,22 @@ const InfoEntertainment = () => {
                     >
                         Write A Review
                     </Button>
+
+                    <Button
+                            style={{
+                                color: 'white',
+                                backgroundColor: 'black',
+                                height: '40px',
+                                width: '150px',
+                                fontSize: '20px',
+                            }}
+                            type="submit"
+                            color="primary"
+                            variant="contained"
+                            href='/MapEnt'
+                        >
+                            Find Location
+                        </Button>
                 </div>
             </Grid>
         </Grid>
@@ -236,6 +252,8 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                       
                     </div>
                 </Grid>
             </Grid>
