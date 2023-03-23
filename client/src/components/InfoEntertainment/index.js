@@ -50,7 +50,7 @@ const InfoEntertainment = () => {
             <Grid item xs={5}>
                 <div align='left'>
                     <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                        <img src="/images/Raptor.png" />
+                        <img src="/images/Raptor.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                     </Card>
                 </div>
             </Grid>
@@ -116,7 +116,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Rangergame.png" />
+                            <img src="/images/Rangergame.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -182,7 +182,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/KingPin.png" />
+                            <img src="/images/KingPin.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -250,7 +250,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/AdventureRooms.png" />
+                            <img src="/images/AdventureRooms.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -317,7 +317,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Clay.png" />
+                            <img src="/images/Clay.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -384,7 +384,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/waterloopark.png" />
+                            <img src="/images/waterloopark.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -449,7 +449,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/ctrlv.png" />
+                            <img src="/images/ctrlv.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -515,7 +515,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/galaxy.png" />
+                            <img src="/images/galaxy.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -580,7 +580,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/pinclub.png" />
+                            <img src="/images/pinclub.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -645,7 +645,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/ski.png" />
+                            <img src="/images/ski.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -710,7 +710,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Butterfly.png" />
+                            <img src="/images/Butterfly.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -777,7 +777,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/cannoe.png" />
+                            <img src="/images/cannoe.png" style={{WebkitTransform: 'scale(1.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
