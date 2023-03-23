@@ -106,20 +106,22 @@ const InfoEntertainment = () => {
                     </Button>
 
                     <Button
-                            style={{
-                                color: 'white',
-                                backgroundColor: 'black',
-                                height: '40px',
-                                width: '150px',
-                                fontSize: '20px',
-                            }}
-                            type="submit"
-                            color="primary"
-                            variant="contained"
-                            href='/MapEnt'
-                        >
-                            Find Location
-                        </Button>
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapEnt'
+                    >
+                        View on Map
+                    </Button>
+
                 </div>
             </Grid>
         </Grid>
