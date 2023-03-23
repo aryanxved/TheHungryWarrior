@@ -173,10 +173,13 @@ app.post('/api/addRequestEntertainment', (req, res) => {
 app.post('/api/getEntertainment', (req, res) => {
 	let connection = mysql.createConnection(config);
 
-	let sql = `INSERT INTO Entertianment(Email, FullName, PhoneNumber, EntAddress, EntInfo, EntName) VALUES (?, ?, ?, ?, ?, ?)`;
+	let sql = `SELECT * FROM Entertainment 
+	WHERE entertainmentBudget <= ?
+	and entertainmentDistance <= ?
+	and entertainmentActivity = ? and entertainmentLevel = ?`;
 	console.log(sql)
 	
-	let data = [req.body.Email, req.body.FullName, req.body.PhoneNumber, req.body.EntAddress, req.body.EntInfo, req.body.EntName];
+	let data = [req.body.entertainmentBudget, req.body.entertainmentDistance, req.body.entertainmentActivity, req.body.entertainmentLevel];
 
 	console.log(data)
 	connection.query(sql, data, (error, results, fields) => {

@@ -1,7 +1,7 @@
 .backdropEnt::before{
     content: "";
     position: fixed;
-    background: grey url(../Images/BlackBlurred.jpg) center center no-repeat;
+    background: grey url(../Images/BlackSwirl.png) center center no-repeat;
     background-size: cover;
     opacity: 1;
     height: 100vh;
