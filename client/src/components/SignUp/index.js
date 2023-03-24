@@ -22,11 +22,11 @@ const theme = createTheme();
 
 export default function SignUp() {
     
-    const [firstnameRef, setFirstNameRef] = useState()
-    const [lastnameRef, setLastNameRef] = useState()
-    const [emailRef, setEmailRef] = useState()
-    const [passwordRef, setPasswordRef] = useState()
-    const [passwordConfirmRef, setPasswordConfirmRef] = useState()
+    const [firstnameRef, setFirstNameRef] = useState(null)
+    const [lastnameRef, setLastNameRef] = useState(null)
+    const [emailRef, setEmailRef] = useState(null)
+    const [passwordRef, setPasswordRef] = useState(null)
+    const [passwordConfirmRef, setPasswordConfirmRef] = useState(null)
     const { signup } = useAuth()
     const [error, setError] = useState()
     const [loading, setLoading] = useState(false)
@@ -34,10 +34,6 @@ export default function SignUp() {
   
     async function handleSubmit (event) {
     event.preventDefault();
-    
-    if (passwordRef !== passwordConfirmRef){
-    return setError('Passwords are not matching. Please Re-enter same password')
-    }
 
     try {
     setError('')
@@ -45,7 +41,23 @@ export default function SignUp() {
     await signup(emailRef, passwordRef)
     }
     catch {
-        setError('Sign-up Failed')
+        
+        if (!passwordRef || !passwordConfirmRef || !firstnameRef || !lastnameRef || !emailRef){
+            return setError('Fields cannot be left blank')
+        }
+        
+    
+        else if (passwordRef !== passwordConfirmRef){
+        return setError('Passwords are not matching. Please Re-enter same password')
+        }
+    
+        else if (passwordRef && passwordRef.length <= 8){
+            return setError('Password too short. Please enter a password greater than 8 characters long')
+        }
+        else {
+            setError('Sign-up Failed. Please try again')
+        }
+        
     }
     setLoading(false)
 
@@ -72,7 +84,10 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          {error && <Typography>{error}</Typography>}
+          {error && <Card style={{backgroundColor: 'red'}}>
+          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error Occurred.</Typography>
+            <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
+            </Card>}
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -155,7 +170,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/SignIn" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>

@@ -16,6 +16,7 @@ export const withFirebase = Component => props =>
 
   export function AuthProvider({children}){
     const [currentUser, setCurrentUser] = useState()
+    const [loading, setLoading] = useState(true)
     
     function signup(email, password) {
       return (
@@ -23,8 +24,23 @@ export const withFirebase = Component => props =>
       )
     }
 
+    function signin(email, password) {
+      return (
+        auth.signInWithEmailAndPassword(email, password)
+      )
+    }
+
+    function signout(email, password) {
+      return (
+        auth.signOut()
+      )
+    }
+
+
+
     useEffect(() => {
       const unsubscribe = auth.onAuthStateChanged(user => {
+        setLoading(false)
         setCurrentUser(user)
       })
 
@@ -34,12 +50,14 @@ export const withFirebase = Component => props =>
     
     const value = {
       currentUser,
+      signin,
+      signout,
       signup
     }
     
     return (
       <FirebaseContext.Provider value={value}>
-      {children}
+      {!loading && children}
       </FirebaseContext.Provider>
     )
   }
