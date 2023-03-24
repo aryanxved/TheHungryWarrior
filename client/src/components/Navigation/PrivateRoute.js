@@ -103,8 +103,6 @@ export default function PrivateRoute(
           <Route path="/SignIn" exact component={SignIn} />
           <Route path="/SignOut" exact component={SignOut} />
 
-          <Route path="/MapEnt" exact component={MapEnt} />
-
           <Route path="/MapRaptors" exact component={MapRaptors} />
           <Route path="/MapRangers" exact component={MapRangers} />
           <Route path="/MapKingPin" exact component={MapKingPin} />

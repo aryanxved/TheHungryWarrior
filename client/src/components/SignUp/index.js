@@ -29,6 +29,7 @@ export default function SignUp() {
     const [passwordConfirmRef, setPasswordConfirmRef] = useState(null)
     const { signup } = useAuth()
     const [error, setError] = useState()
+    const [success, setSuccess] = useState()
     const [loading, setLoading] = useState(false)
 
   
@@ -38,6 +39,7 @@ export default function SignUp() {
     try {
     setError('')
     setLoading(true)
+    setSuccess('Signup Success')
     await signup(emailRef, passwordRef)
     }
     catch {
@@ -56,6 +58,8 @@ export default function SignUp() {
         }
         else {
             setError('Sign-up Failed. Please try again')
+            setSuccess('')
+
         }
         
     }
@@ -87,6 +91,10 @@ export default function SignUp() {
           {error && <Card style={{backgroundColor: 'red'}}>
           <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error Occurred.</Typography>
             <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
+            </Card>}
+            {success && <Card style={{backgroundColor: 'green'}}>
+          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Woo Hoo! Welcome to THW!</Typography>
+            <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{success}</Typography>
             </Card>}
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
