@@ -1,6 +1,7 @@
 import React from 'react';
 import {Router, Switch, Route} from 'react-router-dom';
 import {Redirect} from 'react-router';
+import PrivateRouteAuth from "./PrivateRoute-authenticated"
 import Home from '../Home';
 import history from './history';
 import Food from '../Food';
@@ -22,6 +23,8 @@ import RequestH from '../RequestH'
 import RequestFood from '../RequestFood'
 import About from '../About'
 import SignUp from '../SignUp'
+import SignIn from '../SignIn'
+import SignOut from '../SignOut'
 
 import MapRaptors from '../MapRaptors'
 import MapRangers from '../MapRangers'
@@ -61,7 +64,7 @@ import MapLazeez from '../MapLazeez'
 import MapTims from '../MapTims'
 import MapMels from '../MapMels'
 import MapPita from '../MapPita'
-import { AuthProvider } from '../Firebase/context';
+import { AuthProvider, useAuth } from '../Firebase/context';
 
 
 export default function PrivateRoute(
@@ -70,31 +73,36 @@ export default function PrivateRoute(
     //...rest
   },
 ) {
+
+  const { currentUser } = useAuth();
   return (
     <>
-    <AuthProvider>
+      <AuthProvider>
       <Router history={history}>
-        <NavBar />
+      <NavBar></NavBar>
         <Switch>
           <Route path="/Landing" exact component={Landing} />
-          <Route path="/Food" exact component={Food} />
-          <Route path="/Entertainment" exact component={Entertainment} />
-          <Route path="/Housing" exact component={Housing} />
-          <Route path="/Info" exact component={Info} />
+          <PrivateRouteAuth path="/Food" exact component={Food} />
+          <PrivateRouteAuth path="/Entertainment" exact component={Entertainment} />
+          <PrivateRouteAuth path="/Housing" exact component={Housing} />
+          <PrivateRouteAuth path="/Info" exact component={Info} />
           <Route path="/InfoRestaurant" exact component={InfoRestaurant} />
           <Route path="/InfoHousing" exact component={InfoHousing} />
           <Route path="/InfoEntertainment" exact component={InfoEntertainment} />
-          <Route path="/Review" exact component={Review} />
+          <PrivateRouteAuth path="/Review" exact component={Review} />
           <Route path="/ReviewEntertainment" exact component={ReviewEntertainment} />
           <Route path="/ReviewHousing" exact component={ReviewHousing} />
           <Route path="/ReviewRestaurant" exact component={ReviewRestaurant} />
-          <Route path="/Request" exact component={Request} />
+          <PrivateRouteAuth path="/Request" exact component={Request} />
           <Route path="/RequestEnt" exact component={RequestEnt} />
           <Route path="/RequestH" exact component={RequestH} />
           <Route path="/RequestFood" exact component={RequestFood} />
           <Route path="/About" exact component={About} />
 
           <Route path="/SignUp" exact component={SignUp} />
+          <Route path="/SignIn" exact component={SignIn} />
+          <Route path="/SignOut" exact component={SignOut} />
+
           <Route path="/MapEnt" exact component={MapEnt} />
 
           <Route path="/MapRaptors" exact component={MapRaptors} />
@@ -138,7 +146,7 @@ export default function PrivateRoute(
           <Route path="/MapPita" exact component={MapPita} />
          
           <Route path="*">
-            <Redirect to="/Landing" />
+            <Redirect to="/Landing"/>
           </Route>
         </Switch>
       </Router>
