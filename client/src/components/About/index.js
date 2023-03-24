@@ -21,13 +21,11 @@ import {
 } from '@material-ui/core/';
 import {makeStyles} from '@material-ui/styles';
 import {Link} from 'react-router-dom';
-import './index.css';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '100vh',
-    backgroundImage: `url(${process.env.PUBLIC_URL + '../images/BlackBlurred.jpg'})`,
+    backgroundImage: `url(${process.env.PUBLIC_URL + '../images/E7Pic.jpg'})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
@@ -36,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 export default function About() {
   const classes = useStyles();
   return (
-    <div className='backdroplandingAbout'>
+    <div style={{backgroundColor: '#FFFFFFF'}}>
       <div>
         <CssBaseline />
         <div>
@@ -64,7 +62,7 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -83,7 +81,7 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -98,7 +96,7 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -120,7 +118,7 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -135,7 +133,7 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -151,9 +149,8 @@ export default function About() {
               and works to optimize their happiness throughout the term. Overall, this tool 
               will allow you to properly forecast your finances to save time and money.
             </Typography>
-
-            
 </div>
+
 
 
      

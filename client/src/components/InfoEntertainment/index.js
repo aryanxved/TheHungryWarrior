@@ -64,10 +64,10 @@ const InfoEntertainment = () => {
                 <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                     <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
                         <center>The Toronto Raptors are a Canadian professional basketball team based in Toronto. The Raptors compete in the National Basketball Association as a member of the league's Eastern Conference Atlantic Division. They play their home games at Scotiabank Arena. In 2019, the Raptors won their first ever NBA championship.
-                        
                         <p></p>
-                        <b>Address:</b> 40 Bay St., Toronto &nbsp;&nbsp; <b>Cost:</b> $80 &nbsp;&nbsp; <b>Distance from UW:</b> 116 kM  &nbsp;&nbsp; <b>Rating: </b> 4.5/5
-                     </center> 
+                        <b>Address:</b> 40 Bay St., Toronto &nbsp;&nbsp; <b>Cost:</b> $80 &nbsp;&nbsp; <b>Distance from UW:</b> 116 KM  &nbsp;&nbsp; <b>Rating: </b> 4.5/5
+                        </center>
+                        
                     </Typography>
 
                 </div>
@@ -117,7 +117,7 @@ const InfoEntertainment = () => {
                         type="submit"
                         color="primary"
                         variant="contained"
-                        href='/MapEnt'
+                        href='/MapRaptors'
                     >
                         View on Map
                     </Button>
@@ -147,11 +147,12 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                           <center>The Kitchener Rangers are a major junior ice hockey team based in Kitchener, Ontario, Canada. They are members of the Midwest Division of the Western Conference of the Ontario Hockey League. The Rangers have won the J. Ross Robertson Cup as OHL champions in 1981, 1982, 2003 and 2008.
+                            <center>The Kitchener Rangers are a major junior ice hockey team based in Kitchener, Ontario, Canada. They are members of the Midwest Division of the Western Conference of the Ontario Hockey League. The Rangers have won the J. Ross Robertson Cup as OHL champions in 1981, 1982, 2003 and 2008.
+                            <p> </p>
+                            <b>Address:</b> 400 East Ave, Kitchener &nbsp;&nbsp; <b>Cost:</b> $23 &nbsp;&nbsp; <b>Distance from UW:</b> 12 KM  &nbsp;&nbsp; <b>Rating: </b> 4.4/5
+                
+                                </center>
                             
-                            <p></p>
-                        <b>Address:</b> 400 East Ave, Kitchener &nbsp;&nbsp; <b>Cost:</b> $30 &nbsp;&nbsp; <b>Distance from UW:</b> 12 kM  &nbsp;&nbsp; <b>Rating: </b> 4.4/5
-                    </center> 
                         </Typography>
                     </div>
 
@@ -187,6 +188,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapRangers'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -214,11 +232,12 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                           <center>With twenty-eight state of the art 10 pin lanes including a separate section for private parties, Kingpin Bowlounge is the biggest bowling venue in the Waterloo Region. Whether you want to celebrate a birthday, are looking for a place to hold your next corporate event or want to be part of a bowling league, Kingpin is the perfect place.
+                            <center>
+                                With twenty-eight state of the art 10 pin lanes including a separate section for private parties, Kingpin Bowlounge is the biggest bowling venue in the Waterloo Region. Whether you want to celebrate a birthday, are looking for a place to hold your next corporate event or want to be part of a bowling league, Kingpin is the perfect place.
+                                <p> </p>
+                                <b>Address:</b> 425 Bingemans Centre Dr, Kitchener &nbsp;&nbsp; <b>Cost:</b> $35 &nbsp;&nbsp; <b>Distance from UW:</b> 11 KM  &nbsp;&nbsp; <b>Rating: </b> 3.9/5
+                                </center>
                             
-                            <p></p>
-                        <b>Address:</b> 425 Bingemans Centre Dr, Kitchener &nbsp;&nbsp; <b>Cost:</b> $35 &nbsp;&nbsp; <b>Distance from UW:</b> 11 kM  &nbsp;&nbsp; <b>Rating: </b> 3.9/5
-                   </center> 
                         </Typography>
                     </div>
 
@@ -255,6 +274,23 @@ const InfoEntertainment = () => {
                             Write A Review
                         </Button>
 
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapKingPin'
+                    >
+                        View on Map
+                    </Button>
+
                        
                     </div>
                 </Grid>
@@ -283,13 +319,13 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                          <center>The Adventure Rooms are “real life escape room games” – which are awesome group activities.  The basic idea is that the team must solve a variety of puzzles in order to “break free” from an escape room containing locked doors before a 60 minute countdown reaches zero.
+                            <center>The Adventure Rooms are “real life escape room games” – which are awesome group activities.  The basic idea is that the team must solve a variety of puzzles in order to “break free” from an escape room containing locked doors before a 60 minute countdown reaches zero.
                             To do so, they have to use not brute force, but skill and cunning.
                             This is a fun and challenging game that requires searching for clues, codes, keys and using objects in strange ways.  Escape games are a great option for group activities for all ages, team building events, and special occasions.
+                           <p> </p>
+                            <b>Address:</b> 283 Duke St W #102, Kitchener &nbsp;&nbsp; <b>Cost:</b> $25 &nbsp;&nbsp; <b>Distance from UW:</b> 5 KM  &nbsp;&nbsp; <b>Rating: </b> 4.7/5
+                                </center>
                             
-                            <p></p>
-                        <b>Address:</b> 283 Duke St. W, Kitchener &nbsp;&nbsp; <b>Cost:</b> $25 &nbsp;&nbsp; <b>Distance from UW:</b> 5 kM  &nbsp;&nbsp; <b>Rating: </b> 4.7/5
-                 </center>  
                         </Typography>
                     </div>
 
@@ -325,6 +361,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapAdventureRoom'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -350,13 +403,13 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                           <center>The Canadian Clay & Glass Gallery celebrates contemporary ceramic and glass artists engaged in conceptual, technical or material research.
+                            <center>The Canadian Clay & Glass Gallery celebrates contemporary ceramic and glass artists engaged in conceptual, technical or material research.
                             Located in Waterloo, Ontario, we are a not-for-profit institution that aims to collect, exhibit, research, promote, and preserve work by Canadian artists and makers in clay, glass, and copper enameling to represent the diversity of the Canadian landscape.
                             Our rotating exhibitions celebrate and support diverse artists from across Canada working in these mediums and present their work to the public.
-                           
-                            <p></p>
-                        <b>Address:</b> 25 Caroline St. N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $40 &nbsp;&nbsp; <b>Distance from UW:</b> 2 kM  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
-                </center> 
+                            <p> </p>
+                            <b>Address:</b> 25 Caroline St N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $40 &nbsp;&nbsp; <b>Distance from UW:</b> 2 KM  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
+                                </center>
+                            
                         </Typography>
                     </div>
 
@@ -392,6 +445,24 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapClay'
+                    >
+                        View on Map
+                    </Button>
+
                     </div>
                 </Grid>
             </Grid>
@@ -417,9 +488,10 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                           <center> Known as the jewel of the city, Waterloo Park has a lake, animal farm, picnic areas, splash pad, sport fields, playgrounds and more.
-                           <p></p>
-                            <b>Address:</b> 100 Father David Bauer Dr., Waterloo &nbsp;&nbsp; <b>Cost:</b> $0 &nbsp;&nbsp; <b>Distance from UW:</b> 500 m  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
+                            <center>Known as the jewel of the city, Waterloo Park has a lake, animal farm, picnic areas, splash pad, sport fields, playgrounds and more.
+                            <p> </p>
+                            <b>Address:</b> 100 Father David Bauer Dr, Waterloo &nbsp;&nbsp; <b>Cost:</b> $0 &nbsp;&nbsp; <b>Distance from UW:</b> 500 m  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
+                
                             </center>
                         </Typography>
                     </div>
@@ -456,6 +528,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapPark'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -481,12 +570,13 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                          <center>It's simple: VR is fun, easy and accessible. Unlike conventional gaming, VR offers a new way to play together with your family, friends and your mortal enemies! Most games only require the use of one or two buttons, so if you can flick a light switch while flushing the toilet, you can play VR!
+                            <center>It's simple: VR is fun, easy and accessible. Unlike conventional gaming, VR offers a new way to play together with your family, friends and your mortal enemies! Most games only require the use of one or two buttons, so if you can flick a light switch while flushing the toilet, you can play VR!
                             Ctrl V is the ideal venue to host your next birthday party, team building event, corporate event, or just a simple night out with your friends!
+                            <p> </p>
+                            <b>Address:</b> Address: 170 Columbia St W #5, Waterloo &nbsp;&nbsp; <b>Cost:</b> $28 &nbsp;&nbsp; <b>Distance from UW:</b> 1 KM  &nbsp;&nbsp; <b>Rating: </b> 4.8/5
                             
-                            <p></p>
-                            <b>Address:</b> 170 Columbia St W, Waterloo &nbsp;&nbsp; <b>Cost:</b> $28 &nbsp;&nbsp; <b>Distance from UW:</b> 1 kM  &nbsp;&nbsp; <b>Rating: </b> 4.8/5
-                            </center>  
+                            </center>
+                           
                         </Typography>
                     </div>
 
@@ -522,6 +612,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapCtrlV'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -547,11 +654,10 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                           <center>Cineplex is a leading Canadian company that operates in the Film Entertainment and Content, Amusement and Leisure, and Media sectors. It offers a unique escape through its theatres and entertainment venues, and is a joint venture partner in Scene+.
-                           
-                           <p></p>
-                           <b>Address:</b> 550 King St. N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $15 &nbsp;&nbsp; <b>Distance from UW:</b> 4 kM  &nbsp;&nbsp; <b>Rating: </b> 4.3/5
-                           </center> 
+                            <center>Cineplex is a leading Canadian company that operates in the Film Entertainment and Content, Amusement and Leisure, and Media sectors. It offers a unique escape through its theatres and entertainment venues, and is a joint venture partner in Scene+.
+                            <p> </p>
+                            <b>Address:</b> 550 King St N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $15 &nbsp;&nbsp; <b>Distance from UW:</b> 4 KM  &nbsp;&nbsp; <b>Rating: </b> 4.3/5
+                            </center>
                         </Typography>
                     </div>
 
@@ -587,6 +693,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapGalaxy'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -612,11 +735,10 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                           <center> Come out, enjoy a beer, and play the best selection of pinball and classic arcade games around!
-                            
-                            <p></p>
-                           <b>Address:</b> 247 King St. N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $8 &nbsp;&nbsp; <b>Distance from UW:</b> 2 kM  &nbsp;&nbsp; <b>Rating: </b> 4.5/5
-                           </center>
+                            <center>Come out, enjoy a beer, and play the best selection of pinball and classic arcade games around!
+                            <p> </p>
+                            <b>Address:</b> 247 King St N Unit 8, Waterloo &nbsp;&nbsp; <b>Cost:</b> $8 &nbsp;&nbsp; <b>Distance from UW:</b> 2 KM  &nbsp;&nbsp; <b>Rating: </b> 4.5/5
+                            </center>
                         </Typography>
                     </div>
 
@@ -652,6 +774,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapPinUp'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -677,11 +816,10 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                          <center> Whether you're planning a family adventure, school trip, or just looking to spend some time hitting the slopes with friends, Chicopee has you covered. Come visit us for the day and see what we have to offer!
-                            
-                            <p></p>
-                           <b>Address:</b> 1600 River Rd. E, Kitchener &nbsp;&nbsp; <b>Cost:</b> $50 &nbsp;&nbsp; <b>Distance from UW:</b> 18 kM  &nbsp;&nbsp; <b>Rating: </b> 4.2/5
-                           </center> 
+                            <center>Whether you're planning a family adventure, school trip, or just looking to spend some time hitting the slopes with friends, Chicopee has you covered. Come visit us for the day and see what we have to offer!
+                            <p> </p>
+                            <b>Address:</b> 1600 River Rd E, Kitchener &nbsp;&nbsp; <b>Cost:</b> $50 &nbsp;&nbsp; <b>Distance from UW:</b> 18 KM  &nbsp;&nbsp; <b>Rating: </b> 4.2/5
+                            </center>
                         </Typography>
                     </div>
 
@@ -717,6 +855,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapChicopee'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -742,12 +897,11 @@ const InfoEntertainment = () => {
 
                     <div style={{ marginTop: '20px', marginRight: '30px', textAlign: 'Left' }}>
                         <Typography align='center' variant="h10" color="inherit" style={{ marginLeft: '30px' }}>
-                          <center>Situated on a 107 acre site which includes the environmentally sensitive Kossuth Bog, the 25,000 square foot facility includes a 10,800 square foot indoor tropical garden featuring thousands of free-flying butterflies.
+                            <center>Situated on a 107 acre site which includes the environmentally sensitive Kossuth Bog, the 25,000 square foot facility includes a 10,800 square foot indoor tropical garden featuring thousands of free-flying butterflies.
                             Our conservatory also hosts a variety of tropical plants, birds, and animals, along with several water features. Witness butterflies emerge from their chrysalis and take their first flight, followed by a walk-through of our mounted and live-insect galleries.
-                           
-                            <p></p>
-                           <b>Address:</b> 2500 Kossuth Rd., Cambridge &nbsp;&nbsp; <b>Cost:</b> $20 &nbsp;&nbsp; <b>Distance from UW:</b> 26 kM  &nbsp;&nbsp; <b>Rating: </b> 4.2/5
-                     </center>  
+                            <p> </p>
+                            <b>Address:</b> 2500 Kossuth Rd, Cambridge &nbsp;&nbsp; <b>Cost:</b> $20 &nbsp;&nbsp; <b>Distance from UW:</b> 26 KM  &nbsp;&nbsp; <b>Rating: </b> 4.2/5   
+                            </center>
                         </Typography>
                     </div>
 
@@ -783,6 +937,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapButterfly'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
@@ -812,10 +983,10 @@ const InfoEntertainment = () => {
                         <center>Canoeing the Grand is an experience that is both iconic and peaceful. As you quietly paddle our beautiful heritage river you will discover our region from a whole new vantage point.
                         We provide daily trips to several access points along the Walter Bean Trail as well as several custom trips that are available by request.
                         Pack your picnic basket, a good book, fishing tackle and your loved ones for a local adventure you won’t soon forget!
-                        
-                        <p></p>
-                           <b>Address:</b> 3734 King St. E, Kitchener &nbsp;&nbsp; <b>Cost:</b> $120 &nbsp;&nbsp; <b>Distance from UW:</b> 18 kM  &nbsp;&nbsp; <b>Rating: </b> 4.4/5
-                    </center> 
+                        <p> </p>
+                        <b>Address:</b> 3734 King St E, Kitchener &nbsp;&nbsp; <b>Cost:</b> $120 &nbsp;&nbsp; <b>Distance from UW:</b> 18 KM  &nbsp;&nbsp; <b>Rating: </b> 4.4/5   
+                            
+                        </center>
                         </Typography>
                     </div>
 
@@ -851,6 +1022,23 @@ const InfoEntertainment = () => {
                         >
                             Write A Review
                         </Button>
+
+                        <Button
+                        style={{
+                            color: 'white',
+                            backgroundColor: 'black',
+                            height: '40px',
+                            width: '250px',
+                            fontSize: '20px',
+                            marginLeft: '20px'
+                        }}
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        href='/MapCanoeing'
+                    >
+                        View on Map
+                    </Button>
                     </div>
                 </Grid>
             </Grid>
