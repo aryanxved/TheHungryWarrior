@@ -329,7 +329,7 @@ function ReviewEntertainment() {
               width: '900px',
               marginBottom: '50px'}}>
 
-        <       ReviewLocation handler={setReviewLocation}></ReviewLocation>
+                <ReviewLocation handler={setReviewLocation}></ReviewLocation>
                 <ReviewTitle handler={setReviewTitle}></ReviewTitle>
                 <ReviewQuality handler={setReviewQuality}></ReviewQuality>
                 <ReviewDescription handler={setReviewDescription}></ReviewDescription>

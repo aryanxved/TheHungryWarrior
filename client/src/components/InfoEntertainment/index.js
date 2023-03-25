@@ -37,14 +37,18 @@ const InfoEntertainment = () => {
   const classes = useStyles();
 
   return (
-    <><><><><><><><><><><><div align='center' className='backdropinfoEntertainment'>
-         <Grid item xs={12}>
-        <Paper className={classes.paper}>
-          <Typography variant="h3" color="inherit" noWrap>
-          Information About Entertainment 
-          </Typography>
-        </Paper>
-      </Grid>
+    <><><><><><><><><><><><div align='center' className='backdropEnt'>
+         <Card style={{color: 'white', backgroundColor: '#ffd500'}}>
+            
+                  
+                    <Typography variant="h3" color="inherit" noWrap 
+                    style={{fontFamily: 'Impact', letterSpacing: '2px', color: 'black'}}>
+                    Information About Entertainment 
+                    </Typography>
+            
+                
+         </Card>
+         
     <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
         <Grid container spacing={2} columns={12}>
             <Grid item xs={5}>
