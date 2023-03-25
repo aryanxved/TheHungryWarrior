@@ -66,6 +66,10 @@ import MapMels from '../MapMels'
 import MapPita from '../MapPita'
 import Help from '../Help'
 import Team from '../Team'
+import Post from '../Post'
+import PostEntertainment from '../PostEntertainment'
+import PostHousing from '../PostHousing'
+import PostFood from '../PostFood'
 import { AuthProvider, useAuth } from '../Firebase/context';
 
 
@@ -102,6 +106,11 @@ export default function PrivateRoute(
           <Route path="/About" exact component={About} />
           <Route path="/Help" exact component={Help} />
           <Route path="/Team" exact component={Team} />
+          <PrivateRouteAuth path="/Post" exact component={Post} />
+          <Route path="/PostEntertainment" exact component={PostEntertainment} />
+          <Route path="/PostHousing" exact component={PostHousing} />
+          <Route path="/PostFood" exact component={PostFood} />
+
 
           <Route path="/SignUp" exact component={SignUp} />
           <Route path="/SignIn" exact component={SignIn} />

@@ -115,7 +115,7 @@ const Entertainment = () => {
             <MenuItem value={40} >$40 & Under</MenuItem>
             <MenuItem value={50} >$50 & Under</MenuItem>
             <MenuItem value={60} >$60 & Under</MenuItem>
-            <MenuItem value={10000}>$80 or More</MenuItem>
+            <MenuItem value={10000}>$60 or More</MenuItem>
           </Select>
       </FormControl>
     );
@@ -168,6 +168,8 @@ const Entertainment = () => {
             <MenuItem value={'Education'}>Education</MenuItem>
             <MenuItem value={'Gaming'}>Gaming</MenuItem>
             <MenuItem value={'Sporting Event'}>Sporting Event</MenuItem>
+            <MenuItem value={'Museum'}>Museum</MenuItem>
+            <MenuItem value={'Visual'}>Visual</MenuItem>
           </Select>
       </FormControl>
     );
