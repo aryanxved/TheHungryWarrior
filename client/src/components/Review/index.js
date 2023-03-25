@@ -54,16 +54,7 @@ export default function Review() {
         <p style={{marginTop: '75px'}}></p>
         <div align="center">
         <div align="center">
-          <Card
-            style={{
-              color: 'white',
-              backgroundColor: 'white',
-              height: '60px',
-              width: '900px',
-              opacity: '75%',
-              marginBottom: '50px',
-            }}
-          >
+          
             <Typography
               align="center"
               variant="h3"
@@ -71,14 +62,14 @@ export default function Review() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'Black',
+                color: 'white',
                 opacity: '100%',
                 align: 'center',
               }}
             >
               Share your thoughts on our review board.
             </Typography>
-          </Card>
+
         </div>
           
         </div>
@@ -86,16 +77,7 @@ export default function Review() {
 <p style={{marginTop: '25px'}}></p>
 
 <div align='center'>
-<Card
-            style={{
-              color: 'white',
-              backgroundColor: 'white',
-              height: '40px',
-              width: '900px',
-              opacity: '75%',
-              marginBottom: '50px',
-            }}
-          >
+
             <Typography
               align="center"
               variant="h5"
@@ -103,14 +85,13 @@ export default function Review() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'Black',
+                color: 'white',
                 opacity: '100%',
                 align: 'center',
               }}
             >
               Select one of the options below to leave a review.
             </Typography>
-          </Card>
 </div>
 
 </div>

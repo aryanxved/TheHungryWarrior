@@ -44,13 +44,13 @@ function Title() {
       <div>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+          <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Roboto'}}
+              style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
               Review A Restaurant
             </Typography>
@@ -74,17 +74,18 @@ function ReviewTitle(props) {
     <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black'}}
               >
-                What is the title of this review?
+                <b>What is the title of this review?</b>
               </Typography>
 
-    <TextField style={{width: "100vh", marginTop: "30px"}}
+    <TextField style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}}
           onChange={handleChange}
           
           id="outlined-multiline-static"
           label="Review Title"
           multiline
-          minRows={4}
+          minRows={1}
           variant="outlined"
           align="center"
         />
@@ -111,11 +112,12 @@ function ReviewLocation(props) {
     <Typography
       align="center"
       variant='h5'
+      style={{fontFamily: 'roboto', color: 'black'}}
     >
-      What's the Restaurant Name?
+      <b>What's the Restaurant Name?</b>
     </Typography>
   
-    <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh"}}>
+    <FormControl variant="outlined" style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}}>
     <InputLabel>Select a Restaurant</InputLabel>
       <Select onChange={handleChange}    >
       <MenuItem value ={'Subway'}> {'Subway'} </MenuItem>
@@ -145,11 +147,12 @@ function ReviewQuality(props) {
               <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black'}}
               >
-                What do you rate the quality of your experience?
+                <b>What do you rate the quality of your experience?</b>
               </Typography>
             
-              <FormControl variant="outlined" style={{marginTop: "30px", width: "100vh",}} >
+              <FormControl variant="outlined" style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}} >
               <InputLabel>Select Quality Rating</InputLabel>
                 <Select onChange={handleChange}>
                   
@@ -178,11 +181,12 @@ function ReviewDescription(props) {
     <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black'}}
               >
-                Please describe your experience.
+                <b>Please describe your experience.</b>
               </Typography>
 
-    <TextField style={{width: "100vh", marginTop: "30px"}}
+    <TextField style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}}
           onChange={handleChange}
           
           id="outlined-multiline-static"
@@ -306,22 +310,50 @@ function ReviewRestaurant() {
   }
 
   return (
-    <div>
+    <div className='backdropEnt'>
       <div>
-        <CssBaseline />
-        <Title></Title>
-        <ReviewLocation handler={setReviewLocation}></ReviewLocation>
+        <div>
+          <Card>
+          <CssBaseline style={{color: 'white',
+              backgroundColor: '#001833'}}/>
+              <Title></Title>
+
+          </Card>
+
+        </div>
+
+        <p style={{marginTop: '75px'}}></p>
+        <div align='center'>
+          <Card style={{color: 'white',
+              backgroundColor: '#ffd500',
+              height: '800px',
+              width: '900px',
+              marginBottom: '50px'}}>
+                <ReviewLocation handler={setReviewLocation}></ReviewLocation>
         <ReviewTitle handler={setReviewTitle}></ReviewTitle>
         <ReviewQuality handler={setReviewQuality}></ReviewQuality>
         <ReviewDescription handler={setReviewDescription}></ReviewDescription>
         <div align='center' style={{marginTop: '20px'}}>
         <Button variant="outlined" align="center" onClick={submitButton} style={{backgroundColor: "black", height: '50px', width: '200px', color: 'white'}}>Submit</Button>
         </div>
+              </Card>
+        </div>
+        
         <div align='center'>
-        <Typography variant="h5" component="div" gutterBottom>
-        {reviewInfo}
-      </Typography>
-      </div>
+          <Card style={{color: 'white',
+              backgroundColor: '#ffd500',
+              height: '400px',
+              width: '900px',
+              marginBottom: '50px'}}>
+                  <div align='center'>
+                  <Typography variant="h5" component="div" gutterBottom
+                style={{fontFamily: 'roboto', color: 'black'}}>
+                {reviewInfo}
+              </Typography>
+             </div>
+              </Card>
+        </div>
+        
       </div>
       
     </div>

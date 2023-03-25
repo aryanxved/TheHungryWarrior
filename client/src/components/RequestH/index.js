@@ -43,13 +43,13 @@ function Title() {
       <div>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+          <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Roboto'}}
+              style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
               Request Housing
             </Typography>
@@ -73,16 +73,17 @@ function RequestTitle(props) {
               <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black'}}
               >
-                What's the Housing Name?
+                <b>What's the Housing Name?</b>
               </Typography>
             
-              <TextField style={{width: "100vh", marginTop: "30px"}}
+              <TextField style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}}
                 onChange={handleChange}
                 id="outlined-multiline-static"
                 label="Enter the name here"
                 multiline
-                minRows={4}
+                minRows={1}
                 variant="outlined"
                 />
   </div>
@@ -107,17 +108,18 @@ function RequestLocation(props) {
     <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black'}}
               >
-                What is the address of the Housing?
+                <b>What is the address of the Housing?</b>
               </Typography>
             
-              <TextField style={{width: "100vh", marginTop: "30px"}}
+              <TextField style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}}
                 onChange={handleChange}
 
                 id="outlined-multiline-static"
                 label="Enter the address here"
                 multiline
-                minRows={4}
+                minRows={1}
                 variant="outlined"
                 />
 </div>
@@ -173,11 +175,12 @@ function RequestDescription(props) {
     <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black'}}
               >
-                Do you have any additional information for us.
+                <b>Do you have any additional information for us.</b>
               </Typography>
 
-    <TextField style={{width: "100vh", marginTop: "30px"}}
+    <TextField style={{width: "100vh", marginTop: "30px", backgroundColor: "white"}}
           onChange={handleChange}
           
           id="outlined-multiline-static"
@@ -206,8 +209,9 @@ function ContactTitle(props) {
     <Typography
                 align="center"
                 variant='h5'
+                style={{fontFamily: 'roboto', color: 'black', }}
               >
-                Can we get your contact details?
+                <b>Can we get your contact details?</b>
               </Typography>
   </div>
 
@@ -225,7 +229,7 @@ function RequestContactName(props) {
 
   return (
    
-  <TextField style={{width: "33vh", marginTop: "30px"}}
+  <TextField style={{width: "33vh", marginTop: "30px", backgroundColor: "white"}}
         onChange={handleChange}
         id="outlined-multiline-static"
         label="Full Name"
@@ -249,7 +253,7 @@ function RequestContactEmail(props) {
     
  
 
-<TextField style={{width: "33vh", marginLeft: "30px", marginTop: "30px"}}
+<TextField style={{width: "33vh", marginLeft: "30px", marginTop: "30px", backgroundColor: "white"}}
         onChange={handleChange}
         id="outlined-multiline-static"
         label="Email"
@@ -274,8 +278,9 @@ function RequestContactPhone(props) {
 
  
 
-<TextField style={{width: "33vh", marginLeft: "30px", marginTop: "30px"}}
+<TextField style={{width: "33vh", marginLeft: "30px", marginTop: "30px", backgroundColor: "white"}}
         onChange={handleChange}
+        
         id="outlined-multiline-static"
         label="Phone Number"
         variant="outlined"
@@ -366,10 +371,23 @@ function RequestH() {
   }
 
   return (
-    <div>
+    <div className='backdropEnt'>
       <div>
+        <div>
+        <Card style={{color: 'white',
+              backgroundColor: '#001833'}}>
         <CssBaseline />
         <Title></Title>
+        </Card>
+        </div>
+        
+        <p style={{marginTop: '75px'}}></p>
+        <div align='center'>
+        <Card  style={{color: 'white',
+              backgroundColor: '#ffd500',
+              height: '750px',
+              width: '900px',
+              marginBottom: '50px'}}>
         <RequestTitle handler={setRequestTitle}></RequestTitle>
         <RequestLocation handler={setRequestLocation}></RequestLocation>
         <RequestDescription handler={setRequestDescription}></RequestDescription>
@@ -382,11 +400,28 @@ function RequestH() {
         <div align='center' style={{marginTop: '20px'}}>
         <Button variant="outlined" align="center" onClick={submitButton} style={{backgroundColor: "black", height: '50px', width: '200px', color: 'white'}}>Submit</Button>
         </div>
+        
+
+        </Card>
+
+        </div>
+
         <div align='center'>
-        <Typography variant="h5" component="div" gutterBottom>
+        <Card style={{color: 'white',
+              backgroundColor: '#ffd500',
+              height: '550px',
+              width: '900px',
+              marginBottom: '50px'}}>
+      <div align='center'>
+        <Typography variant="h5" component="div" gutterBottom
+        style={{fontFamily: 'roboto', color: 'black'}}>
         {requestInfo}
       </Typography>
       </div>
+      </Card>
+        </div>
+        
+        
       </div>
       
     </div>
