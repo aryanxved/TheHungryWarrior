@@ -12,16 +12,27 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import Select from '@material-ui/core/Select';
-import { TextField } from '@material-ui/core';
+import { TextField, InputAdornment } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import { createTheme, ThemeProvider, CssBaseline} from '@material-ui/core';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { useAuth } from '../Firebase/context'
+import './index.css';
 
 
 const theme = createTheme();
 
 export default function SignUp() {
-    
+ 
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
     const [firstnameRef, setFirstNameRef] = useState(null)
     const [lastnameRef, setLastNameRef] = useState(null)
     const [emailRef, setEmailRef] = useState(null)
@@ -39,27 +50,35 @@ export default function SignUp() {
     try {
     setError('')
     setLoading(true)
-    setSuccess('Signup Success')
     await signup(emailRef, passwordRef)
+    setSuccess('Signup Success')
     }
     catch {
         
         if (!passwordRef || !passwordConfirmRef || !firstnameRef || !lastnameRef || !emailRef){
-            return setError('Fields cannot be left blank')
+            return (setError('Fields cannot be left blank'),
+            setSuccess('')
+            )
         }
         
     
         else if (passwordRef !== passwordConfirmRef){
-        return setError('Passwords are not matching. Please Re-enter same password')
+        return (
+          setError('Passwords are not matching. Please Re-enter same password'),
+        setSuccess('')
+        )
+
         }
     
-        else if (passwordRef && passwordRef.length <= 8){
-            return setError('Password too short. Please enter a password greater than 8 characters long')
+        else if (passwordRef && passwordRef.length < 6){
+            return (setError('Password too short. Please enter a password greater than 6 characters long'),
+            setSuccess('')
+            )
         }
+        
         else {
             setError('Sign-up Failed. Please try again')
             setSuccess('')
-
         }
         
     }
@@ -75,8 +94,25 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
+      <div className='backdropSignUp'>
+        <CssBaseline />
+        <div>
+          <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
+            <Typography
+              align="center"
+              variant="h3"
+              component="div"
+              gutterBottom
+              style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
+            >
+              Sign Up
+            </Typography>
+          </Card>
+        </div>
+        </div>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
+        <Card style={{marginTop:'70px', marginBottom:'40px', backgroundColor: '#FFD500'}}>
         <Box
           sx={{
             marginTop: 8,
@@ -85,18 +121,20 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Typography component="h1" variant="h5">
-            Sign up
-          </Typography>
-          {error && <Card style={{backgroundColor: 'red'}}>
+          <Card style={{backgroundColor: 'black', marginTop: '20px', display: 'flex', borderRadius: '30px'}}>
+            <Typography style={{color: 'white', fontSize: '20px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>
+              Register with your details below:
+            </Typography>
+            </Card>
+          {error && <Card style={{backgroundColor: 'red', marginTop: '20px'}}>
           <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error Occurred.</Typography>
             <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
             </Card>}
-            {success && <Card style={{backgroundColor: 'green'}}>
+            {success && <Card style={{backgroundColor: 'green', marginTop: '20px'}}>
           <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Woo Hoo! Welcome to THW!</Typography>
             <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{success}</Typography>
             </Card>}
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3, marginLeft: '30px', marginRight:'30px' }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -108,6 +146,7 @@ export default function SignUp() {
                   label="First Name"
                   autoFocus
                   variant='outlined'
+                  style={{backgroundColor: 'white', borderRadius: '50px'}}
                   onChange={(event) => setFirstNameRef(event.target.value)}
                 />
               </Grid>
@@ -120,6 +159,7 @@ export default function SignUp() {
                   name="lastName"
                   autoComplete="family-name"
                   variant='outlined'
+                  style={{backgroundColor: 'white', borderRadius: '50px'}}
                   onChange={(event) => setLastNameRef(event.target.value)}
                 />
               </Grid>
@@ -132,6 +172,7 @@ export default function SignUp() {
                   name="email"
                   autoComplete="email"
                   variant='outlined'
+                  style={{backgroundColor: 'white', borderRadius: '50px'}}
                   onChange={(event) => setEmailRef(event.target.value)}
 
                 />
@@ -146,6 +187,7 @@ export default function SignUp() {
                   id="password"
                   autoComplete="new-password"
                   variant='outlined'
+                  style={{backgroundColor: 'white', borderRadius: '50px'}}
                   onChange={(event) => setPasswordRef(event.target.value)}
 
                 />
@@ -161,6 +203,7 @@ export default function SignUp() {
                   id="passwordConfirm"
                   autoComplete="new-password"
                   variant='outlined'
+                  style={{backgroundColor: 'white', borderRadius: '50px', borderWidth: 0, outline: 'none'}}
                   onChange={(event) => setPasswordConfirmRef(event.target.value)}
 
                 />
@@ -172,7 +215,8 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              disabled={loading}
+              //disabled={loading}
+              style={{backgroundColor: 'black', borderRadius: '50px', marginTop: '20px', color: 'white'}}
             >
               Sign Up
             </Button>
@@ -185,6 +229,7 @@ export default function SignUp() {
             </Grid>
           </Box>
         </Box>
+        </Card>
       </Container>
     </ThemeProvider>
   );
