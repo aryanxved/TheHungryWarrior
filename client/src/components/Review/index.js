@@ -36,16 +36,16 @@ export default function Review() {
   const classes = useStyles();
   return (
     <div style={{backgroundColor: '#FFFFFFF'}}>
-      <div>
+      <div className='backdropEnt'>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+          <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Roboto'}}
+              style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
               Write a Review!
             </Typography>
@@ -53,50 +53,74 @@ export default function Review() {
         </div>
         <p style={{marginTop: '75px'}}></p>
         <div align="center">
-          
-         
-          
+        <div align="center">
+          <Card
+            style={{
+              color: 'white',
+              backgroundColor: 'white',
+              height: '60px',
+              width: '900px',
+              opacity: '75%',
+              marginBottom: '50px',
+            }}
+          >
             <Typography
               align="center"
-              variant="h4"
+              variant="h3"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'black',
+                color: 'Black',
                 opacity: '100%',
                 align: 'center',
               }}
             >
-              Share your thoughts on our Review Board!
+              Share your thoughts on our review board.
             </Typography>
+          </Card>
+        </div>
           
         </div>
 <div>
 <p style={{marginTop: '25px'}}></p>
 
-<Typography
+<div align='center'>
+<Card
+            style={{
+              color: 'white',
+              backgroundColor: 'white',
+              height: '40px',
+              width: '900px',
+              opacity: '75%',
+              marginBottom: '50px',
+            }}
+          >
+            <Typography
               align="center"
               variant="h5"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'black',
+                color: 'Black',
                 opacity: '100%',
                 align: 'center',
               }}
             >
-              Select one of the options below to leave a review!
+              Select one of the options below to leave a review.
             </Typography>
+          </Card>
+</div>
+
 </div>
 
 
         <div align="center" marginTop="250px">
           <Button
             style={{
-              color: 'white',
-              backgroundColor: '#001833',
+              color: 'black',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -110,8 +134,8 @@ export default function Review() {
           </Button>
           <Button
             style={{
-              color: 'white',
-              backgroundColor: '#001833',
+              color: 'black',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -126,8 +150,8 @@ export default function Review() {
           </Button>
           <Button
             style={{
-              color: 'white',
-              backgroundColor: '#001833',
+              color: 'black',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
