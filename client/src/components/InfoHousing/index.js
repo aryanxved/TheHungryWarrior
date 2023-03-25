@@ -38,14 +38,16 @@ const InfoHousing = () => {
 
 
   return (
-    <div className='backdropinfoHousing'>
-      <Grid item xs={12}>
-        <Card className={classes.paper}>
-          <Typography variant="h3" color="black" noWrap>
-          Information About Housing 
-          </Typography>
+    <div align='center' className='backdropEnt'>
+        <Card style={{color: 'white', backgroundColor: '#ffd500'}}>
+            <Typography variant="h3" color="black" noWrap 
+                style={{fontFamily: 'Impact', letterSpacing: '2px', color: 'black'}}>
+                Information About Housing 
+            </Typography>
         </Card>
-      </Grid>
+      
+          
+        
 
       <><><><><><><><><><><><div align='center'>
     <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>

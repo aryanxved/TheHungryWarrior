@@ -35,17 +35,17 @@ const useStyles = makeStyles(theme => ({
 export default function Info() {
   const classes = useStyles();
   return (
-    <div style={{backgroundColor: '#FFFFFFF'}} className='backdropInfo'>
+    <div style={{backgroundColor: '#FFFFFFF'}} className='backdropEnt'>
       <div>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: 'black'}}>
+          <Card style={{color: 'white', backgroundColor: '#ffd500'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Impact', letterSpacing: '2px'}}
+              style={{fontFamily: 'Impact', letterSpacing: '2px', color: 'black'}}
             >
               Find Information!
             </Typography>
@@ -95,7 +95,7 @@ export default function Info() {
         <div align="center" style={{marginTop: "50px"}}>
           <Button
             style={{
-              color: 'white',
+              color: 'black',
               backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
@@ -110,7 +110,7 @@ export default function Info() {
           </Button>
           <Button
             style={{
-              color: 'white',
+              color: 'black',
               backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
@@ -126,7 +126,7 @@ export default function Info() {
           </Button>
           <Button
             style={{
-              color: 'white',
+              color: 'black',
               backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
