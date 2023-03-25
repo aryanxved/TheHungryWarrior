@@ -192,10 +192,10 @@ const Entertainment = () => {
             color= 'white'
             onChange={handleChange}
           >
-            <MenuItem value={5}>0 - 5km</MenuItem>
-            <MenuItem value={15}>5km - 15km</MenuItem>
-            <MenuItem value={30}>15km - 30km</MenuItem>
-            <MenuItem value={10000}>30km or More</MenuItem>
+            <MenuItem value={5}> Within 5 km</MenuItem>
+            <MenuItem value={15}>Within 15 km</MenuItem>
+            <MenuItem value={30}>Within 30 km</MenuItem>
+            <MenuItem value={10000}>Within 30 km or Further</MenuItem>
           </Select>
       </FormControl>
     );
