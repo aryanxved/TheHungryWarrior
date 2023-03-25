@@ -25,6 +25,7 @@ export default function SignIn() {
     const { signin, currentUser } = useAuth()
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
+    const [status, setStatus] = useState()
     const [loading, setLoading] = useState(false)
 
   
@@ -51,6 +52,7 @@ export default function SignIn() {
     });
   };
 
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -66,8 +68,8 @@ export default function SignIn() {
         >
           <Typography component="h1" variant="h5">
             Sign in
-            {currentUser && currentUser.email}
           </Typography>
+          
           {error && <Card style={{backgroundColor: 'red'}}>
           <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error Occurred.</Typography>
             <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
