@@ -109,13 +109,13 @@ const Entertainment = () => {
             onChange={handleChange}
           >
             <MenuItem value={0} >$0</MenuItem>
-            <MenuItem value={10} >$10</MenuItem>
-            <MenuItem value={20} >$20</MenuItem>
-            <MenuItem value={30} >$30</MenuItem>
-            <MenuItem value={40} >$40</MenuItem>
-            <MenuItem value={50} >$50</MenuItem>
-            <MenuItem value={60} >$60</MenuItem>
-            <MenuItem value={10000}>$80 or more</MenuItem>
+            <MenuItem value={10} >$10 & Under</MenuItem>
+            <MenuItem value={20} >$20 & Under</MenuItem>
+            <MenuItem value={30} >$30 & Under</MenuItem>
+            <MenuItem value={40} >$40 & Under</MenuItem>
+            <MenuItem value={50} >$50 & Under</MenuItem>
+            <MenuItem value={60} >$60 & Under</MenuItem>
+            <MenuItem value={10000}>$80 or More</MenuItem>
           </Select>
       </FormControl>
     );
@@ -129,18 +129,18 @@ const Entertainment = () => {
   
     return(
       <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-activity-level" style={{color: '#001833', marginLeft: '10px'}}>Select Activity Level</InputLabel>
+        <InputLabel id="select-activity-level" style={{color: '#001833', marginLeft: '10px'}}>Select Physical Activity Level</InputLabel>
           <Select
             value={entertainmentLevel}
             labelID="select-activity-level"
             id="select-activity-level"
-            label="Select Activity Level"
+            label="Select Physical Activity Level"
             variant="outlined"
             onChange={handleChange}
           >
-            <MenuItem value={'Low'}>Low</MenuItem>
-            <MenuItem value={'Medium'}>Medium</MenuItem>
-            <MenuItem value={'High'}>High</MenuItem>
+            <MenuItem value={'Low'}>Low (Sitting in Seat)</MenuItem>
+            <MenuItem value={'Medium'}>Medium (Some Moving Around)</MenuItem>
+            <MenuItem value={'High'}>High (Very Intensive)</MenuItem>
           </Select>
       </FormControl>
     );

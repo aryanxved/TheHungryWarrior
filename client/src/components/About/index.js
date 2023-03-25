@@ -72,6 +72,43 @@ export default function About() {
           
         </div>
 <div>
+
+<p style={{marginTop: '25px'}}></p>
+            <Typography
+              align="center"
+              variant="h5"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              Budgeting for your term can be a pain...
+            </Typography>
+
+            <Typography
+              align="center"
+              variant="h7"
+              component="div"
+              gutterBottom
+              style={{
+                fontFamily: 'Roboto',
+                color: 'black',
+                opacity: '100%',
+                align: 'center',
+              }}
+            >
+              We know that Waterloo students undergo a tedious preparation process before classes 
+              start for the term. Everything from finding a place, paying thousands in tuition to having 
+              to figure out what they want for lunch. Planning a budget that includes residence, food, entertainment, 
+              and even travel can take time. Currently, many students have to calculate their term budget by hand, 
+              often leading to a suboptimal solution. This is where our proposed tool, “The Hungry Warrior,” comes in. 
+              We created this program with the goal of helping University of Waterloo students just like you. 
+            </Typography>
+            
 <p style={{marginTop: '25px'}}></p>
 
 <Typography
@@ -149,6 +186,10 @@ export default function About() {
               and works to optimize their happiness throughout the term. Overall, this tool 
               will allow you to properly forecast your finances to save time and money.
             </Typography>
+
+            
+
+            
 </div>
 
 

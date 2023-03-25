@@ -38,7 +38,7 @@ export default function Landing() {
       <div>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+          <Card style={{color: 'black', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
               variant="h1"
@@ -55,7 +55,7 @@ export default function Landing() {
           <Card
             style={{
               color: 'white',
-              backgroundColor: '#001833',
+              backgroundColor: 'black',
               height: '60px',
               width: '900px',
               opacity: '75%',
@@ -82,7 +82,7 @@ export default function Landing() {
           <Button
             style={{
               color: 'white',
-              backgroundColor: '#001833',
+              backgroundColor: 'black',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -94,40 +94,43 @@ export default function Landing() {
           >
             Learn More
           </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <Button
+            style={{
+              color: 'white',
+              backgroundColor: 'black',
+              height: '75px',
+              width: '300px',
+              fontSize: '20px',
+            }}
+            type="submit"
+            color="primary"
+            variant="contained"
+            href='/SignIn'
+          >
+            Sign In
+          </Button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <Button
+            style={{
+              color: 'white',
+              backgroundColor: 'black',
+              height: '75px',
+              width: '300px',
+              fontSize: '20px',
+            }}
+            type="submit"
+            color="primary"
+            variant="contained"
+            href='/SignUp'
+          >
+            Sign Up
+          </Button>
         </div>
         
         <p style={{marginTop: '75px'}}></p>
         <div align="center">
-          <Card
-            style={{
-              color: 'white',
-              backgroundColor: '#001833',
-              height: '90px',
-              width: '900px',
-              opacity: '75%',
-              marginBottom: '50px',
-            }}
-          >
-            <Typography
-              align="center"
-              variant="h7"
-              component="div"
-              gutterBottom
-              style={{
-                fontFamily: 'Roboto',
-                color: 'white',
-                opacity: '100%',
-                align: 'center',
-              }}
-            >
-              We know that Waterloo students undergo a tedious preparation process before classes 
-              start for the term. Everything from finding a place, paying thousands in tuition to having 
-              to figure out what they want for lunch. Planning a budget that includes residence, food, entertainment, 
-              and even travel can take time. Currently, many students have to calculate their term budget by hand, 
-              often leading to a suboptimal solution. This is where our proposed tool, “The Hungry Warrior,” comes in. 
-              We created this program with the goal of helping University of Waterloo students just like you. 
-            </Typography>
-          </Card>
+          
         </div>
           
       </div>

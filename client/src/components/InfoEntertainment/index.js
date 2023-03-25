@@ -57,7 +57,7 @@ const InfoEntertainment = () => {
             <Grid item xs={7}>
                 <div style={{ marginTop: '20px' }}>
                     <Typography variant="h5" color="black" wrap>
-                        Toronto Raptors Game
+                        <b>Toronto Raptors Game</b>
                     </Typography>
                 </div>
 
@@ -141,7 +141,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Kitchener Rangers Game
+                            <b>Kitchener Rangers Game</b>
                         </Typography>
                     </div>
 
@@ -226,7 +226,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            King Pin Bowlounge
+                            <b>King Pin Bowlounge</b>
                         </Typography>
                     </div>
 
@@ -313,7 +313,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Adventure Rooms
+                            <b>Adventure Rooms</b>
                         </Typography>
                     </div>
 
@@ -397,7 +397,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Canadian Clay & Glass Gallery
+                            <b>Canadian Clay & Glass Gallery</b>
                         </Typography>
                     </div>
 
@@ -407,7 +407,7 @@ const InfoEntertainment = () => {
                             Located in Waterloo, Ontario, we are a not-for-profit institution that aims to collect, exhibit, research, promote, and preserve work by Canadian artists and makers in clay, glass, and copper enameling to represent the diversity of the Canadian landscape.
                             Our rotating exhibitions celebrate and support diverse artists from across Canada working in these mediums and present their work to the public.
                             <p> </p>
-                            <b>Address:</b> 25 Caroline St N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $40 &nbsp;&nbsp; <b>Distance from UW:</b> 2 KM  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
+                            <b>Address:</b> 25 Caroline St N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $0 &nbsp;&nbsp; <b>Distance from UW:</b> 2 KM  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
                                 </center>
                             
                         </Typography>
@@ -482,7 +482,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Waterloo Park
+                            <b>Waterloo Park</b>
                         </Typography>
                     </div>
 
@@ -564,7 +564,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Ctrl V Waterloo
+                            <b>Ctrl V Waterloo</b>
                         </Typography>
                     </div>
 
@@ -648,7 +648,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Galaxy Cinemas Waterloo
+                            <b>Galaxy Cinemas Waterloo</b>
                         </Typography>
                     </div>
 
@@ -729,7 +729,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Pin Up Arcade Bar
+                            <b>Pin Up Arcade Bar</b>
                         </Typography>
                     </div>
 
@@ -810,7 +810,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Chicopee Ski Resort & Tube Park
+                            <b>Chicopee Ski Resort & Tube Park</b>
                         </Typography>
                     </div>
 
@@ -891,7 +891,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Cambridge Butterfly Conservatory
+                            <b>Cambridge Butterfly Conservatory</b>
                         </Typography>
                     </div>
 
@@ -974,7 +974,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Canoeing The Grand
+                            <b>Canoeing The Grand</b>
                         </Typography>
                     </div>
 
