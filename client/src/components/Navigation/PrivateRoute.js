@@ -105,7 +105,7 @@ export default function PrivateRoute(
 
           <Route path="/SignUp" exact component={SignUp} />
           <Route path="/SignIn" exact component={SignIn} />
-          <Route path="/SignOut" exact component={SignOut} />
+          <Route path="/Profile" exact component={SignOut} />
 
           <Route path="/MapRaptors" exact component={MapRaptors} />
           <Route path="/MapRangers" exact component={MapRangers} />
