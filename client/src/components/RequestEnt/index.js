@@ -406,6 +406,7 @@ function RequestEntertainment() {
 
         </Card>
       </div>
+      
       <div align='center'>
 
       <Card style={{color: 'white',
