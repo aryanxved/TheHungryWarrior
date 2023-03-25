@@ -64,6 +64,8 @@ import MapLazeez from '../MapLazeez'
 import MapTims from '../MapTims'
 import MapMels from '../MapMels'
 import MapPita from '../MapPita'
+import Help from '../Help'
+import Team from '../Team'
 import { AuthProvider, useAuth } from '../Firebase/context';
 
 
@@ -98,6 +100,8 @@ export default function PrivateRoute(
           <Route path="/RequestH" exact component={RequestH} />
           <Route path="/RequestFood" exact component={RequestFood} />
           <Route path="/About" exact component={About} />
+          <Route path="/Help" exact component={Help} />
+          <Route path="/Team" exact component={Team} />
 
           <Route path="/SignUp" exact component={SignUp} />
           <Route path="/SignIn" exact component={SignIn} />
