@@ -37,16 +37,16 @@ export default function Request() {
   
   return (
     <div style={{backgroundColor: '#FFFFFFF'}}>
-      <div>
+      <div className='backdropEnt'>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#001833'}}>
+          <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Roboto'}}
+              style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
               Submit a Request!
             </Typography>
@@ -56,48 +56,54 @@ export default function Request() {
         <div align="center">
           
          
+        <div align="center">
           
             <Typography
               align="center"
-              variant="h4"
+              variant="h3"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'black',
+                color: 'white',
                 opacity: '100%',
                 align: 'center',
               }}
             >
-              Submit your additional suggestions!
+              Submit your additional suggestions.
             </Typography>
+        
+        </div>
           
         </div>
 <div>
 <p style={{marginTop: '25px'}}></p>
 
-<Typography
+<div align="center">
+         
+            <Typography
               align="center"
               variant="h5"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'black',
+                color: 'white',
                 opacity: '100%',
                 align: 'center',
               }}
             >
-              Select one of the options below to submit a request!
+              Select one of the options below to make a suggestion.
             </Typography>
+        </div>
 </div>
 
 
         <div align="center" marginTop="250px">
           <Button
             style={{
-              color: 'white',
-              backgroundColor: '#001833',
+              color: 'black',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -106,13 +112,14 @@ export default function Request() {
             color="primary"
             variant="contained"
             href='/RequestEnt'
+           
           >
             Request Entertainment
           </Button>
           <Button
             style={{
-              color: 'white',
-              backgroundColor: '#001833',
+              color: 'black',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
@@ -127,12 +134,13 @@ export default function Request() {
           </Button>
           <Button
             style={{
-              color: 'white',
-              backgroundColor: '#001833',
+              color: 'black',
+              backgroundColor: '#FFD500',
               height: '75px',
               width: '300px',
               fontSize: '20px',
               marginLeft: '20px'
+              
             }}
             type="submit"
             color="primary"
