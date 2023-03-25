@@ -60,7 +60,7 @@ const InfoHousing = () => {
             <Grid item xs={7}>
                 <div style={{ marginTop: '20px' }}>
                     <Typography variant="h5" color="black" wrap>
-                        Elora House
+                       <b>Elora House</b> 
                     </Typography>
                 </div>
 
@@ -140,7 +140,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Fergus House
+                            <b>Fergus House</b>
                         </Typography>
                     </div>
 
@@ -221,7 +221,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Icon
+                            <b>Icon</b>
                         </Typography>
                     </div>
 
@@ -303,7 +303,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Society 145
+                            <b>Society 145</b>
                         </Typography>
                     </div>
 
@@ -385,7 +385,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            Accommod8u
+                            <b>Accommod8u</b>
                         </Typography>
                     </div>
 
@@ -466,7 +466,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            King Street Towers
+                            <b>King Street Towers</b>
                         </Typography>
                     </div>
 
@@ -548,7 +548,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            My Rez on Lester
+                            <b>My Rez on Lester</b>
                         </Typography>
                     </div>
 
@@ -630,7 +630,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            UWP
+                            <b>UWP</b>
                         </Typography>
                     </div>
 
@@ -711,7 +711,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            VIP Student Housing
+                            <b>VIP Student Housing</b>
                         </Typography>
                     </div>
 
@@ -794,7 +794,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            REV
+                            <b>REV</b>
                         </Typography>
                     </div>
 
@@ -876,7 +876,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            MKV
+                            <b>MKV</b>
                         </Typography>
                     </div>
 
@@ -957,7 +957,7 @@ const InfoHousing = () => {
                 <Grid item xs={7}>
                     <div style={{ marginTop: '20px' }}>
                         <Typography variant="h5" color="black" wrap>
-                            V1
+                            <b>V1</b>
                         </Typography>
                     </div>
 

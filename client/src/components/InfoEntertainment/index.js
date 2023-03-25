@@ -407,7 +407,7 @@ const InfoEntertainment = () => {
                             Located in Waterloo, Ontario, we are a not-for-profit institution that aims to collect, exhibit, research, promote, and preserve work by Canadian artists and makers in clay, glass, and copper enameling to represent the diversity of the Canadian landscape.
                             Our rotating exhibitions celebrate and support diverse artists from across Canada working in these mediums and present their work to the public.
                             <p> </p>
-                            <b>Address:</b> 25 Caroline St N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $40 &nbsp;&nbsp; <b>Distance from UW:</b> 2 KM  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
+                            <b>Address:</b> 25 Caroline St N, Waterloo &nbsp;&nbsp; <b>Cost:</b> $0 &nbsp;&nbsp; <b>Distance from UW:</b> 2 KM  &nbsp;&nbsp; <b>Rating: </b> 4.6/5
                                 </center>
                             
                         </Typography>
