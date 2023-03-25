@@ -106,7 +106,7 @@ export default function Info() {
             variant="contained"
             href='/InfoEntertainment'
           >
-            Info Entertainment
+            Entertainment Info
           </Button>
           <Button
             style={{
@@ -122,7 +122,7 @@ export default function Info() {
             variant="contained"
             href='/InfoHousing'
           >
-            Info Housing
+            Housing Info
           </Button>
           <Button
             style={{
@@ -138,7 +138,7 @@ export default function Info() {
             variant="contained"
             href='/InfoRestaurant'
           >
-            Info Restaurant
+            Restaurant Info
           </Button>
         </div>
       </div>
