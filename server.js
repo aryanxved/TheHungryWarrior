@@ -170,6 +170,78 @@ app.post('/api/addRequestEntertainment', (req, res) => {
 	connection.end();
 });
 
+app.post('/api/addPostEntertainment', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `INSERT INTO Entertainment(entertainmentBudget, entertainmentDistance, entertainmentActivity, entertainmentLevel, entertainmentName,
+		entertainmentDest, entertainmentAddress, entertainmentUserName,
+		entertainmentUserEmail, entertainmentUserPhone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+	console.log(sql)
+	
+	let data = [req.body.entertainmentBudget, req.body.entertainmentDistance, req.body.entertainmentActivity, req.body.entertainmentLevel, req.body.entertainmentName, req.body.entertainmentDest, req.body.entertainmentAddress, req.body.entertainmentUserName, req.body.entertainmentUserEmail, req.body.entertainmentUserPhone];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/addPostHousing', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `INSERT INTO Housing(housingBudget,housingDistance, housingPeople, housingRoomType, housingName,
+		housingDesc, housingAddress, housingUserName, 
+		housingUserEmail, housingUserPhone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+	console.log(sql)
+	
+	let data = [req.body.housingBudget, req.body.housingDistance, req.body.housingPeople, req.body.housingRoomType, req.body.housingName, req.body.housingDesc, req.body.housingAddress, req.body.housingUserName, req.body.housingUserEmail, req.body.housingUserPhone];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/addPostFood', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `INSERT INTO Food(foodBudget,foodDistance, foodCuisine, foodDesc, foodName,
+		foodAddress, foodUserName, foodUserEmail, foodUserPhone 
+		 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+	console.log(sql)
+	
+	let data = [req.body.foodBudget, req.body.foodDistance, req.body.foodCuisine, req.body.foodDesc, req.body.foodName, req.body.foodAddress, req.body.foodUserName, req.body.foodUserEmail, req.body.foodUserPhone];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
 app.post('/api/getEntertainment', (req, res) => {
 	let connection = mysql.createConnection(config);
 
