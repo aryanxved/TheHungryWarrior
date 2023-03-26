@@ -46,43 +46,45 @@ export default function SignUp() {
   
     async function handleSubmit (event) {
     event.preventDefault();
+    
+    if (!passwordRef || !passwordConfirmRef || !firstnameRef || !lastnameRef || !emailRef){
+      return (setError('Fields cannot be left blank'),
+      setSuccess('')
+      )
+  }
+  
 
+  else if (passwordRef !== passwordConfirmRef){
+  return (
+    setError('Passwords are not matching. Please Re-enter same password'),
+  setSuccess('')
+  )
+
+  }
+
+  else if (passwordRef && passwordRef.length < 6){
+      return (setError('Password too short. Please enter a password greater than 6 characters long'),
+      setSuccess('')
+      )
+  }
+  
+  else {
     try {
-    setError('')
-    setLoading(true)
-    await signup(emailRef, passwordRef)
-    setSuccess('Signup Success')
-    }
-    catch {
-        
-        if (!passwordRef || !passwordConfirmRef || !firstnameRef || !lastnameRef || !emailRef){
-            return (setError('Fields cannot be left blank'),
-            setSuccess('')
-            )
-        }
-        
-    
-        else if (passwordRef !== passwordConfirmRef){
-        return (
-          setError('Passwords are not matching. Please Re-enter same password'),
+      setError('')
+      setLoading(true)
+      await signup(emailRef, passwordRef)
+      setSuccess('Signup Success')
+      }
+      catch {
+          
+        setError('Sign-up Failed. Please try again')
         setSuccess('')
-        )
+          
+      }
+      setLoading(false)  
+  }
 
-        }
     
-        else if (passwordRef && passwordRef.length < 6){
-            return (setError('Password too short. Please enter a password greater than 6 characters long'),
-            setSuccess('')
-            )
-        }
-        
-        else {
-            setError('Sign-up Failed. Please try again')
-            setSuccess('')
-        }
-        
-    }
-    setLoading(false)
 
 
     //const data = new FormData(event.currentTarget);

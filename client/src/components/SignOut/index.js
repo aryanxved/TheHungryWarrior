@@ -38,6 +38,17 @@ export default function SignOut(){
         }
     }
     
+    async function handleUpdate(){
+        setError('')
+
+        try {
+            history.push('/ProfileUpdate')
+        }
+        catch {
+            setError('Unauthorized. Please try again later')
+        }
+    }
+
     return (
         <ThemeProvider theme={theme}>
            <div className='backdropSignIn'>
@@ -72,7 +83,7 @@ export default function SignOut(){
                 
               
               <Box component="form" noValidate sx={{ mt: 1 }}>
-              <Box component="form" noValidate sx={{ mt: 1 }}>
+              <Box component="form" onSubmit={handleUpdate} noValidate sx={{ mt: 1 }}>
               <Typography component="h1" variant="h4" style={{ color: 'white'}}>
             Currently Signed in as:
           </Typography>

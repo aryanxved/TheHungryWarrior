@@ -42,6 +42,18 @@ export const withFirebase = Component => props =>
       )
     }
 
+    function updateEmail(email) {
+      return (
+        currentUser.updateEmail(email)
+      )
+    }
+
+    function updatePassword(password) {
+      return (
+        currentUser.updatePassword(password)
+      )
+    }
+
 
 
     useEffect(() => {
@@ -59,7 +71,9 @@ export const withFirebase = Component => props =>
       signin,
       signout,
       signup,
-      forgotPassword
+      forgotPassword,
+      updateEmail,
+      updatePassword
     }
     
     return (

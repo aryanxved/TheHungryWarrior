@@ -350,12 +350,12 @@ function PostFood() {
       
         return(
           <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-            <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Select Activity Type</InputLabel>
+            <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Select Cuisine Type</InputLabel>
               <Select
                 value={foodCuisine}
                 labelID="select-type"
                 id="selectType"
-                label="Select Activity Type"
+                label="Select Cuisine Type"
                 variant="outlined"
                 name='selectType'
                 onChange={handleChange}
@@ -469,7 +469,7 @@ function PostFood() {
           <br/>
           <div style={{fontSize: "14px", marginTop: "10px"}}>Food Budget <br/>{foodBudget}</div>
           <br/>
-          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Activity <br/>{foodCuisine}</div>
+          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Cuisine <br/>{foodCuisine}</div>
         </div>
         </div>)
         handleAddPost();
