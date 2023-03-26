@@ -112,7 +112,7 @@ const Food = () => {
             <MenuItem value={10}>$10 & Under</MenuItem>
             <MenuItem value={15}>$15 & Under</MenuItem>
             <MenuItem value={20}>$20 & Under</MenuItem>
-            <MenuItem value={25}>$20 or more</MenuItem>
+            <MenuItem value={25}>Unrestricted</MenuItem>
           </Select>
       </FormControl>
     );
@@ -170,7 +170,7 @@ const Food = () => {
             <MenuItem value={800}>Within 800m</MenuItem>
             <MenuItem value={1000}>Within 1km</MenuItem>
             <MenuItem value={5000}>Within 5km</MenuItem>
-            <MenuItem value={50001}>5km or more</MenuItem>
+            <MenuItem value={50001}>Unrestricted</MenuItem>
           </Select>
       </FormControl>
     );
@@ -359,7 +359,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
                 >
-                   {option.foodDistance + "KM"}
+                   {option.foodDistance + "M"}
                 </Typography>
                 </Card>
                 </Grid>

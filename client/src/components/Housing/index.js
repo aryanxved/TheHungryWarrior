@@ -108,13 +108,13 @@ const Housing = () => {
             align="center"
             onChange={handleChange}
           >
-            <MenuItem value={10}>$500 & Under</MenuItem>
-            <MenuItem value={20}>$600 & Under</MenuItem>
-            <MenuItem value={30}>$700 & Under</MenuItem>
-            <MenuItem value={40}>$800 & Under</MenuItem>
-            <MenuItem value={50}>$900 & Under</MenuItem>
-            <MenuItem value={60}>$1000 & Under</MenuItem>
-            <MenuItem value={10000}>$1100 or More</MenuItem>
+            <MenuItem value={500}>$500 & Under</MenuItem>
+            <MenuItem value={600}>$600 & Under</MenuItem>
+            <MenuItem value={700}>$700 & Under</MenuItem>
+            <MenuItem value={800}>$800 & Under</MenuItem>
+            <MenuItem value={900}>$900 & Under</MenuItem>
+            <MenuItem value={1000}>$1000 & Under</MenuItem>
+            <MenuItem value={10000}>Unrestricted</MenuItem>
           </Select>
       </FormControl>
     );
@@ -142,7 +142,7 @@ const Housing = () => {
             <MenuItem value={3}>3</MenuItem>
             <MenuItem value={4}>4</MenuItem>
             <MenuItem value={5}>5</MenuItem>
-            <MenuItem value={5}>6</MenuItem>
+            <MenuItem value={6}>6</MenuItem>
           </Select>
       </FormControl>
     );
@@ -199,7 +199,7 @@ const Housing = () => {
             <MenuItem value={800}>Within 800m</MenuItem>
             <MenuItem value={1000}>Within 1km</MenuItem>
             <MenuItem value={5000}>Within 5km</MenuItem>
-            <MenuItem value={500000}>5km or more</MenuItem>
+            <MenuItem value={500000}>Unrestricted</MenuItem>
           </Select>
       </FormControl>
     );
@@ -392,7 +392,7 @@ const Housing = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
                 >
-                   {option.housingDistance + "KM"}
+                   {option.housingDistance + "M"}
                 </Typography>
                 </Card>
                 </Grid>
