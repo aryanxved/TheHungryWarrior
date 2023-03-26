@@ -292,5 +292,9 @@ app.post('/api/getHousing', (req, res) => {
 	connection.end();
 });
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> c5180772e8fafa1bde2b0664ce3253f0f8b1f997
 app.listen(port, () => console.log(`Listening on port ${port}`)); //for the dev version
 //app.listen(port, '129.97.25.211'); //for the deployed version, specify the IP address of the server
