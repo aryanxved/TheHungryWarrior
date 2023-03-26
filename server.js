@@ -292,9 +292,31 @@ app.post('/api/getHousing', (req, res) => {
 	connection.end();
 });
 
-<<<<<<< HEAD
+app.post('/api/getFood', (req, res) => {
+	let connection = mysql.createConnection(config);
 
-=======
->>>>>>> c5180772e8fafa1bde2b0664ce3253f0f8b1f997
+	let sql = `SELECT * FROM Food 
+	WHERE foodBudget <= ?
+	and foodDistance <= ?
+	and foodCuisine = ?`;
+	console.log(sql)
+	
+	let data = [req.body.foodBudget, req.body.foodDistance, req.body.foodCuisine];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+
 app.listen(port, () => console.log(`Listening on port ${port}`)); //for the dev version
 //app.listen(port, '129.97.25.211'); //for the deployed version, specify the IP address of the server
