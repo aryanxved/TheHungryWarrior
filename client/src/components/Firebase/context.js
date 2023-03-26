@@ -54,6 +54,12 @@ export const withFirebase = Component => props =>
       )
     }
 
+    function userEmailCurrent(){
+      return (
+        auth.currentUser.email
+      )
+    }
+
 
 
     useEffect(() => {
@@ -73,7 +79,8 @@ export const withFirebase = Component => props =>
       signup,
       forgotPassword,
       updateEmail,
-      updatePassword
+      updatePassword,
+      userEmailCurrent
     }
     
     return (

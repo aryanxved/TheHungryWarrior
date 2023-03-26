@@ -18,11 +18,17 @@ import { createTheme, ThemeProvider, CssBaseline} from '@material-ui/core';
 import { useAuth } from '../Firebase/context'
 import { useHistory } from 'react-router-dom';
 
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
 const theme = createTheme();
+const serverURL = ""
 
 export default function SignOut(){
     const [error, setError] = useState("")
-    const { currentUser, signout } = useAuth()
+    const { currentUser, signout, userEmailCurrent } = useAuth()
+    const [posts, setPosts] = useState([])
+    const [user, setUser] = useState([])
     const history = useHistory()
     
     
@@ -48,6 +54,40 @@ export default function SignOut(){
             setError('Unauthorized. Please try again later')
         }
     }
+
+    
+    const handlePosts = () => {
+        callApiGetPosts()
+          .then(res => {
+            var parsed = JSON.parse(res.express);
+            console.log("getPosts returned" + JSON.stringify(parsed))
+            setPosts(parsed)
+          });
+      }
+    
+      const userEmailCurr = currentUser.email;
+
+      const callApiGetPosts = async () => {
+    
+        const url = serverURL + "/api/getPosts";
+        
+        const submittedPosts = {
+          "entertainmentUserEmail": userEmailCurr
+        }
+        
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              //authorization: `Bearer ${this.state.token}`
+            },
+            body: JSON.stringify(submittedPosts)
+          });
+          const body = await response.json();
+          if (response.status !== 200) throw Error(body.message);
+          console.log("Found Posts: ", body);
+          return body;
+        }
 
     return (
         <ThemeProvider theme={theme}>
@@ -101,6 +141,19 @@ export default function SignOut(){
                   <strong>Update Profile</strong>
                 </Button>
                 </Box>
+                
+                <Box component="form" onSubmit={handlePosts} noValidate sx={{ mt: 1 }}>
+          <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  style={{backgroundColor: '#FFD500', borderRadius: '50px', height: '50px', marginTop: '30px', fontSize: '18px'}}
+                  sx={{ mt: 3, mb: 2 }}
+                >
+                  <strong>View My Posts</strong>
+                </Button>
+                </Box>
+
                 <Box component="form" onSubmit={handleLogout} noValidate sx={{ mt: 1 }}>
                 <Button
                   type="submit"
@@ -127,6 +180,8 @@ export default function SignOut(){
           </Container>
         </ThemeProvider>
       );
+
+      
 }
 
 

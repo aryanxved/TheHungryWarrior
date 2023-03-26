@@ -86,17 +86,16 @@ function Title() {
             )
         }
 
-
-
 const Food = () => {
   const classes = useStyles();
 
   const SelectBudget = (props) => {
-
+    
     const handleChange = (event) => {
       props.handler(event.target.value);
     };
-
+  
+    console.log(foodBudget);
     return(
       <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', textAlign: "center"}} onChange={handleChange}>
         <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select your Budget</InputLabel>
@@ -106,7 +105,7 @@ const Food = () => {
             id="select-budget"
             label="Select your Budget"
             variant="outlined"
-            align='canter'
+            align="center"
             onChange={handleChange}
           >
             <MenuItem value={5}>$5 & Under</MenuItem>
@@ -119,19 +118,50 @@ const Food = () => {
     );
   };
 
-  const SelectDistance = (props) => {
+  const SelectCuisine = (props) => {
+    
     const handleChange = (event) => {
       props.handler(event.target.value);
     };
+  
     return(
       <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select Your Preferred Distance</InputLabel>
+        <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Select Activity Type</InputLabel>
+          <Select
+            value={foodCuisine}
+            labelID="select-type"
+            id="selectType"
+            label="Select Activity Type"
+            variant="outlined"
+            name='selectType'
+            onChange={handleChange}
+          >
+            <MenuItem value={'Fast Food'}>Fast Food</MenuItem>
+            <MenuItem value={'Casual Dine-In'}>Casual Dine-In</MenuItem>
+            <MenuItem value={'Specialty'}>Specialty </MenuItem>
+            <MenuItem value={'Mediterranean Food'}>Mediterranean Food</MenuItem>
+          </Select>
+      </FormControl>
+    );
+  };
+
+  const SelectDistance = (props) => {
+    
+    const handleChange = (event) => {
+      props.handler(event.target.value);
+    };
+
+  return(
+      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
+        <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select Distance from E7</InputLabel>
           <Select
             value={foodDistance}
-            lableID="select-distance"
+            labelID="select-distance"
             id="select-distance"
-            label="Select Your Preffered Distance"
+            label="Select Distance from E7"
             variant='outlined'
+            align='center'
+            color= 'white'
             onChange={handleChange}
           >
             <MenuItem value={200}>Within 200m</MenuItem>
@@ -146,46 +176,21 @@ const Food = () => {
     );
   };
 
-  const SelectCuisine = (props) => {
-
-    const handleChange = (event) => {
-      props.handler(event.target.value);
-    };
-
-    return(
-      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-cuisine" style={{color: '#001833', marginLeft: '10px'}}>Select Cuisine</InputLabel>
-          <Select
-            value={foodCuisine}
-            lableID="select-cuisine"
-            id="select-cuisine"
-            label="Select Cuisine"
-            variant='outlined'
-            onChange={handleChange}
-          >
-            <MenuItem value={'Fast Food'}>Fast Food</MenuItem>
-            <MenuItem value={'Casual Dine-In'}>Casual Dine-In</MenuItem>
-            <MenuItem value={'Specialty'}>Specialty </MenuItem>
-            <MenuItem value={'Mediterranean Food'}>Mediterranean Food</MenuItem>
-          </Select>
-      </FormControl>
-    );
-  };
-
+  
   const SubmitButton = (props) => {
-
+    
     const handleChange = (event) => {
       props.handler(event.target.value);
-    }; 
-    
+    };  
+
     return(
       <Button 
       onChange={handleChange}
-      variant="contained" 
+      variant="outlined" 
       onClick={submitButton}
       style={{backgroundColor: 'green', color: '#FFFFFF'}}
       >
-      Submit Your Filters
+      Search with Filters
       </Button>
     );
   };
@@ -203,67 +208,70 @@ const Food = () => {
     );
   };
 
-  //--------------------API---------------------
-  const [foodDistance, setFoodDistance] = useState();
-
-  const [foodBudget, setFoodBudget] = useState();
-
-  const [foodCuisine, setFoodCuisine] = useState("");
-
-  const [foods, setFoods] = useState([]);
-
-  const [foodInfo, setFoodInfo] = useState("");
-
-  const handleAddFood = () => {
-    callApiAddFood()
-      .then(res => {
-        var parsed = JSON.parse(res.express);
-        console.log("getFoods returned" + JSON.stringify(parsed))
-        setFoods(parsed)
-      });
-  }
-
-  const callApiAddFood = async () => {
+  //----------------------API---------------
+    const [foodDistance, setFoodDistance] = useState()
+    
+    const [foodBudget, setFoodBudget] = useState()
   
-    const url = serverURL + "/api/getFood";
+    const [foodLevel, setFoodLevel] = useState("")
+    
+    const [foodCuisine, setFoodCuisine] = useState("")
+  
+    const [foods, setFoods] = useState([])
 
-    const submittedFood = {
-      "foodBudget": foodBudget,
-      "foodDistance": foodDistance,
-      "foodCuisine": foodCuisine
+    const [entInfo, setEntInfo] = useState("")
+  
+    
+    const handleAddFood = () => {
+      callApiAddFood()
+        .then(res => {
+          var parsed = JSON.parse(res.express);
+          console.log("getFoods returned" + JSON.stringify(parsed))
+          setFoods(parsed)
+        });
     }
-
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        //authorization: `Bearer ${this.state.token}`
-      },
-      body: JSON.stringify(submittedFood)
-    });
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-    console.log("Found Food: ", body);
-    return body;
-  }
-
-  const submitButton = () => {
+  
+    const callApiAddFood = async () => {
+  
+      const url = serverURL + "/api/getFood";
+  
+      const submittedFood = {
+        "foodBudget": foodBudget,
+        "foodDistance": foodDistance,
+        "foodCuisine": foodCuisine
+      }
+  
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          //authorization: `Bearer ${this.state.token}`
+        },
+        body: JSON.stringify(submittedFood)
+      });
+      const body = await response.json();
+      if (response.status !== 200) throw Error(body.message);
+      console.log("Found Food: ", body);
+      return body;
+    }
+  
+    const submitButton = () => {
       
-    setFoodInfo(
-      <div className = "FoodPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Your review has been successfully submitted! 
-      <div style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center"> Heres what we're searching: 
-      <div style={{fontSize: "14px", marginTop: "10px"}}>Food Distance<br/>{foodDistance}</div>
-      <br/>
-      <div style={{fontSize: "14px", marginTop: "10px"}}>Food Budget <br/>{foodBudget}</div>
-      <br/>
-      <div style={{fontSize: "14px", marginTop: "10px"}}>Food Cuisine <br/>{foodCuisine}</div>
-      <br/>
-      </div>
-      </div>)
-      handleAddFood();
-      console.log(foods);
-  }
-
+        setEntInfo(
+          <div className = "FoodPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Your review has been successfully submitted! 
+          <div style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center"> Heres what we're searching: 
+          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Distance<br/>{foodDistance}</div>
+          <br/>
+          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Budget <br/>{foodBudget}</div>
+          <br/>
+          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Cuisine <br/>{foodCuisine}</div>
+          </div>
+          </div>)
+          handleAddFood();
+          console.log(foods);
+      }
+    
+  
   return (
     <div className='backdropEnt'>
       <Grid item xs={12}>
@@ -286,12 +294,11 @@ const Food = () => {
       </Typography>
         </Card>
         </div>
-
-        {foods.map(option => {
-          return(
-            <>
-
-<div style={{marginTop: '20px'}}>
+  
+          {foods.map(option => {
+      return(
+        <>
+          <div style={{marginTop: '20px'}}>
         <div style={{marginTop: '50px'}}>
           <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: "100%"}}>
           <div style={{marginTop: '20px'}}>
@@ -310,7 +317,7 @@ const Food = () => {
               <Grid container spacing={24} justifyContent='center'>
                 
               <Grid item md={3}>
-              <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginBottom:'20px', marginLeft: '20px', backgroundColor: 'white'}}>
+              <Card style={{width: "300px", height: '150px', borderRadius: '10px', marginBottom:'20px', marginLeft: '20px', backgroundColor: 'white'}}>
                 <Card style={{color:'#001833', backgroundColor: 'gold'}}>
                   <Typography
                   align="center"
@@ -328,13 +335,13 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {"$" + option.foodBudget}
+                   {"$" + option.foodBudget + " CAD"}
                 </Typography>
                 </Card>
                 </Grid>
 
                 <Grid item md={3}>
-                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{width: "300px", height: '150px', borderRadius: '10px', marginLeft: '20px'}}>
                 <Card style={{color:'#001833', backgroundColor: 'gold'}}>
                   <Typography
                   align="center"
@@ -352,13 +359,13 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
                 >
-                   {option.foodDistance + "M"}
+                   {option.foodDistance + "KM"}
                 </Typography>
                 </Card>
                 </Grid>
                 
                 <Grid item md={3}>
-                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{width: "300px", height: '150px', borderRadius: '10px', marginLeft: '20px'}}>
                 <Card style={{color:'#001833', backgroundColor: 'gold'}}>
                   <Typography
                   align="center"
@@ -377,7 +384,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.foodCusine}
+                   {option.foodCuisine}
                 </Typography>
                 </Card>
                 </Grid>
@@ -388,12 +395,16 @@ const Food = () => {
         </Card>
       </div>
       </div>
+        </>
+      )
+      })}
+      
+          
+        
 
-            </>
-          )
-        })}
 
-        </Grid>
+     
+      </Grid>
     </div>
   );
 };
