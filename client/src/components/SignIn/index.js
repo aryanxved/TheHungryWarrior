@@ -35,16 +35,16 @@ export default function SignIn() {
 
     try {
     setError('')
-    setSuccess('Login Success')
     setLoading(true)
     await signin(emailRef, passwordRef)
+    setSuccess('Login Success')
+    history.push("/Landing")
     }
     catch {
         setError("Sign in Failed")
         setSuccess('')
     }
     setLoading(false)
-    history.push("/Landing")
 
     //const data = new FormData(event.currentTarget);
     console.log({
