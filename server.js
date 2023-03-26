@@ -317,13 +317,13 @@ app.post('/api/getFood', (req, res) => {
 	connection.end();
 });
 
-app.post('/api/getPostsEntertainment', (req, res) => {
+app.post('/api/getPosts', (req, res) => {
 	let connection = mysql.createConnection(config);
 
 	let sql = `SELECT * FROM Entertainment WHERE entertainmentUserEmail = ?`;
 	console.log(sql)
 	
-	let data = [req.body.entertainmentUserEmail];
+	let data = [req.body.userEmailCurr];
 
 	console.log(data)
 	connection.query(sql, data, (error, results, fields) => {

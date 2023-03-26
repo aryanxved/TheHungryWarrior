@@ -115,7 +115,7 @@ const Entertainment = () => {
             <MenuItem value={40} >$40 & Under</MenuItem>
             <MenuItem value={50} >$50 & Under</MenuItem>
             <MenuItem value={60} >$60 & Under</MenuItem>
-            <MenuItem value={10000}>$60 or More</MenuItem>
+            <MenuItem value={10000}>Unrestricted</MenuItem>
           </Select>
       </FormControl>
     );
@@ -197,7 +197,7 @@ const Entertainment = () => {
             <MenuItem value={5}> Within 5 km</MenuItem>
             <MenuItem value={15}>Within 15 km</MenuItem>
             <MenuItem value={30}>Within 30 km</MenuItem>
-            <MenuItem value={10000}>Within 30 km or Further</MenuItem>
+            <MenuItem value={10000}>Unrestricted</MenuItem>
           </Select>
       </FormControl>
     );
@@ -419,12 +419,188 @@ const Entertainment = () => {
                 </Typography>
                 </Card>
                 </Grid>
+                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    Activity Level
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h4"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.entertainmentLevel}
+                </Typography>
+                </Card>
                 </Grid>
             </div>
-            
+            <Card style={{color:'#001833', backgroundColor: 'green', marginBottom: '20px', marginTop: '20px', width: '350px', borderRadius: '50px'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
+                  >
+                    Key Details About This Spot
+                  </Typography>
+                </Card>
+                
+            <Card style={{width: "1100px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    Location Address
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.entertainmentAddress}
+                </Typography>
+                </Card>
+                <Card style={{width: "1100px", height: '250px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    About this Spot!
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.entertainmentDest}
+                </Typography>
+                </Card>
+                <Card style={{color:'#001833', backgroundColor: 'green', marginBottom: '20px', marginTop: '20px', width: '250px', borderRadius: '50px'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
+                  >
+                    Contact the User
+                  </Typography>
+                </Card>
+
+                <div align='center'>
+              <Grid container spacing={24} justifyContent='center'>
+                
+
+                <Grid item md={3}>
+                <Card style={{width: "350px", height: '100px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    User Name
+                  </Typography>
+                </Card>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
+                >
+                   {option.entertainmentUserName}
+                </Typography>
+                </Card>
+                </Grid>
+                
+                <Grid item md={3}>
+                <Card style={{width: "350px", height: '100px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    User Email
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.entertainmentUserEmail}
+                </Typography>
+                </Card>
+                </Grid>
+                <Card style={{width: "350px", height: '100px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    User Phone
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.entertainmentUserPhone}
+                </Typography>
+                </Card>
+                </Grid>
+            </div>
           </div>
         </Card>
       </div>
+      <Card style={{color:'#001833', backgroundColor: '#FFD500', marginBottom: '20px', marginTop: '50px'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
+                  >
+                    
+                  </Typography>
+                </Card>
       </div>
         </>
       )
