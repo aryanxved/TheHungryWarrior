@@ -31,7 +31,6 @@ export default function SignOut(){
     const [user, setUser] = useState([])
     const history = useHistory()
     
-    
     async function handleLogout(){
         setError('')
 
@@ -64,16 +63,12 @@ export default function SignOut(){
             setPosts(parsed)
           });
       }
-    
-      const userEmailCurr = currentUser.email;
+
 
       const callApiGetPosts = async () => {
     
         const url = serverURL + "/api/getPosts";
         
-        const submittedPosts = {
-          "entertainmentUserEmail": userEmailCurr
-        }
         
         const response = await fetch(url, {
             method: "POST",
@@ -81,7 +76,7 @@ export default function SignOut(){
               "Content-Type": "application/json",
               //authorization: `Bearer ${this.state.token}`
             },
-            body: JSON.stringify(submittedPosts)
+            body: JSON.stringify({userEmailCurr: currentUser.email})
           });
           const body = await response.json();
           if (response.status !== 200) throw Error(body.message);
