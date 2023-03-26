@@ -62,35 +62,44 @@ export default function About() {
 
 </div>
 
+<p style={{marginTop: '25px'}}></p>
 
-        <div align="center" marginTop="250px">
-        </div>
-
-        <p style={{marginTop: '25px'}}></p>
-            <Typography
-              align="center"
-              variant="h5"
-              component="div"
-              gutterBottom
-              style={{
-                fontFamily: 'Roboto',
-                color: 'white',
-                opacity: '100%',
-                align: 'center',
-              }}
-            >
-              Budgeting for your term can be a pain...
-            </Typography>
+<div align='center'>
 
 
-            <Typography
+<Card style={{color: 'white',
+              backgroundColor: '#ffd500',
+              height: '500px',
+              width: '900px',
+              marginBottom: '50px'}}>
+
+    <div align="center" marginTop="250px">
+     </div>  
+
+    <p style={{marginTop: '25px'}}></p>
+              <Typography
+                align="center"
+                variant="h5"
+                component="div"
+                gutterBottom
+                style={{
+                  fontFamily: 'Roboto',
+                  color: 'black',
+                  opacity: '100%',
+                  align: 'center',
+                }}
+              >
+                <b>Budgeting for your term can be a pain...</b>
+              </Typography>
+
+              <Typography
               align="center"
               variant="h7"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -103,9 +112,7 @@ export default function About() {
               We created this program with the goal of helping University of Waterloo students just like you.
             </Typography>
            
-<p style={{marginTop: '25px'}}></p>
-
-
+          <p style={{marginTop: '25px'}}></p>
 <Typography
               align="center"
               variant="h5"
@@ -113,14 +120,13 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
             >
-              What does the Hungry Warrior do?
+              <b>What does the Hungry Warrior do?</b>
             </Typography>
-
 
             <Typography
               align="center"
@@ -129,7 +135,7 @@ export default function About() {
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -144,32 +150,30 @@ export default function About() {
 
             </Typography>
 
-
-            <p style={{marginTop: '25px'}}></p>
-            <Typography
-              align="center"
-              variant="h5"
-              component="div"
-              gutterBottom
-              style={{
-                fontFamily: 'Roboto',
-                color: 'white',
-                opacity: '100%',
-                align: 'center',
-              }}
-            >
-              How is our tool dfferent from others?
-            </Typography>
-
-
-            <Typography
+        <p style={{marginTop: '25px'}}></p>
+                    <Typography
+                      align="center"
+                      variant="h5"
+                      component="div"
+                      gutterBottom
+                      style={{
+                        fontFamily: 'Roboto',
+                        color: 'black',
+                        opacity: '100%',
+                        align: 'center',
+                      }}
+                    >
+                      <b>How is our tool dfferent from others?</b>
+                    </Typography>
+                    
+              <Typography
               align="center"
               variant="h7"
               component="div"
               gutterBottom
               style={{
                 fontFamily: 'Roboto',
-                color: 'white',
+                color: 'black',
                 opacity: '100%',
                 align: 'center',
               }}
@@ -185,6 +189,9 @@ export default function About() {
               and works to optimize their happiness throughout the term. Overall, this tool
               will allow you to properly forecast your finances to save time and money.
             </Typography>
+</Card>
+
+ </div>       
 
       </div>
     </div>
