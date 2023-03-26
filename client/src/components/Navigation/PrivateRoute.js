@@ -26,6 +26,7 @@ import SignUp from '../SignUp'
 import SignIn from '../SignIn'
 import SignOut from '../SignOut'
 import ForgotPassword from '../ForgetPassword';
+import ProfileUpdate from '../ProfileUpdate';
 
 import MapRaptors from '../MapRaptors'
 import MapRangers from '../MapRangers'
@@ -116,6 +117,7 @@ export default function PrivateRoute(
           <Route path="/SignUp" exact component={SignUp} />
           <Route path="/SignIn" exact component={SignIn} />
           <PrivateRouteAuth path="/Profile" exact component={SignOut} />
+          <PrivateRouteAuth path="/ProfileUpdate" exact component={ProfileUpdate} />
           <Route path="/ForgotPassword" exact component={ForgotPassword} />
 
           <Route path="/MapRaptors" exact component={MapRaptors} />
