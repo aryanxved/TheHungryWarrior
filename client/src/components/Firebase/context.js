@@ -36,6 +36,12 @@ export const withFirebase = Component => props =>
       )
     }
 
+    function forgotPassword(email) {
+      return (
+        auth.sendPasswordResetEmail(email)
+      )
+    }
+
 
 
     useEffect(() => {
@@ -52,7 +58,8 @@ export const withFirebase = Component => props =>
       currentUser,
       signin,
       signout,
-      signup
+      signup,
+      forgotPassword
     }
     
     return (

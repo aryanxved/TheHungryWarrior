@@ -20,10 +20,9 @@ import './index.css';
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function ForgotPassword() {
     const [emailRef, setEmailRef] = useState(null)
-    const [passwordRef, setPasswordRef] = useState(null)
-    const { signin, currentUser } = useAuth()
+    const { forgotPassword, currentUser } = useAuth()
     const [error, setError] = useState()
     const [success, setSuccess] = useState()
     const [status, setStatus] = useState()
@@ -34,22 +33,21 @@ export default function SignIn() {
     event.preventDefault();
 
     try {
+    setSuccess('')
     setError('')
-    setSuccess('Login Success')
     setLoading(true)
-    await signin(emailRef, passwordRef)
+    await forgotPassword(emailRef)
+    setSuccess('Link sent! Check your email to continue password reset')
     }
     catch {
-        setError("Sign in Failed")
+        setError("Password Reset Failed")
         setSuccess('')
     }
     setLoading(false)
-    history.push("/Landing")
 
     //const data = new FormData(event.currentTarget);
     console.log({
-      emailRef,
-      passwordRef
+      emailRef
     });
   };
 
@@ -57,7 +55,7 @@ export default function SignIn() {
 
   return (
     <ThemeProvider theme={theme}>
-       <div className='backdropSignIn'>
+       <div className='backdropForgot'>
           <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
@@ -66,7 +64,7 @@ export default function SignIn() {
               gutterBottom
               style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
-              Sign In
+              Forgot Password
             </Typography>
           </Card>
         </div>
@@ -87,13 +85,13 @@ export default function SignIn() {
             <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
             </Card>}
             {success && <Card style={{backgroundColor: 'green'}}>
-          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Woo Hoo! Welcome Back!</Typography>
+          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Yay! Good News!</Typography>
             <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{success}</Typography>
             </Card>}
           
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Secured Sign In</Typography>
-          <Typography align='center' style={{color: 'white', fontSize: '24px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px',  marginTop: '20px'}}>Please Sign In to your account:</Typography>
+          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '0px', marginRight: '0px'}}>Let's get you into your account</Typography>
+          <Typography align='center' style={{color: 'white', fontSize: '24px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px',  marginTop: '20px'}}>Please enter your email:</Typography>
 
             <TextField
               margin="normal"
@@ -108,19 +106,7 @@ export default function SignIn() {
               style={{backgroundColor: 'white', borderRadius: '50px', marginTop: '50px'}}
               onChange={(event) => setEmailRef(event.target.value)}
             />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              variant='filled'
-              style={{backgroundColor: 'white', borderRadius: '50px'}}
-              onChange={(event) => setPasswordRef(event.target.value)}
-            />
+           
             <Button
               type="submit"
               fullWidth
@@ -128,12 +114,12 @@ export default function SignIn() {
               style={{backgroundColor: '#FFD500', borderRadius: '50px', height: '50px', marginTop: '30px', fontSize: '18px'}}
               sx={{ mt: 3, mb: 2 }}
             >
-              <strong>Sign In</strong>
+              <strong>Reset Password</strong>
             </Button>
             <Grid container style={{marginTop: '10px'}}>
               <Grid item xs>
-              <Link href="/forgotPassword" variant="body2" style={{color: 'white'}}>
-                  {"Forgot your password?"}
+              <Link href="/SignIn" variant="body2" style={{color: 'white'}}>
+                  {"Login to your account"}
                 </Link>
               </Grid>
               <Grid item>
