@@ -56,7 +56,7 @@ function Title() {
               gutterBottom
               style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
-              Entertainment
+              Housing
             </Typography>
           </Card>
         </div>
