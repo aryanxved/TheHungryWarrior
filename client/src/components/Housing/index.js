@@ -29,7 +29,6 @@ import './index.css';
 
 const serverURL = ""; //enable for dev mode
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -83,82 +82,28 @@ function Title() {
                 </Typography>
             </div>
             </div>
-          </div>
-        )
-      }
-
+            </div>
+            )
+        }
 
 const Housing = () => {
   const classes = useStyles();
-
-
-  const SelectRoomType = (props) => {
-
-    const handleChange = (event) => {
-      props.handler(event.target.value);
-    };
-
-    return(
-      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', textAlign: "center"}}>
-        <InputLabel id="select-room-type" style={{color: '#001833', marginLeft: '10px'}}>Select Room Type</InputLabel>
-          <Select
-            value={housingRoomType}
-            lableID="select-room-type"
-            id="select-room-type"
-            label="Select Room Type"
-            variant='outlined'
-            align='center'
-            onChange={handleChange}
-          >
-            <MenuItem value={'Single'}>Single</MenuItem>
-            <MenuItem value={'Double'}>Double</MenuItem>
-            <MenuItem value={'Suite'}>Suite</MenuItem>
-          </Select>
-      </FormControl>
-    );
-  };
-
-  const SelectPeople = (props) => {
-    const handleChange = (event) => {
-      props.handler(event.target.value);
-    };
-
-    return(
-      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-people" style={{color: '#001833', marginLeft: '10px'}}>Select Number of People Per Unit</InputLabel>
-          <Select
-            value={housingPeople}
-            lableID="select-people"
-            id="select-people"
-            label="Number of People"
-            variant='outlined'
-            onChange={handleChange}
-          >
-            <MenuItem value={1}>1</MenuItem>
-            <MenuItem value={2}>2</MenuItem>
-            <MenuItem value={3}>3</MenuItem>
-            <MenuItem value={4}>4</MenuItem>
-            <MenuItem value={5}>5</MenuItem>
-          </Select>
-      </FormControl>
-    );
-  };
 
   const SelectBudget = (props) => {
     
     const handleChange = (event) => {
       props.handler(event.target.value);
     };
-
+  
     console.log(housingBudget);
     return(
-      <FormControl fullWidth style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', textAlign: "center"}} onChange={handleChange}>
-        <InputLabel id="select-budget" style={{color: '#001833', marginLeft: '10px'}}>Select your Monthly Budget</InputLabel>
+      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', textAlign: "center"}} onChange={handleChange}>
+        <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select your Monthly Budget</InputLabel>
           <Select
             value={housingBudget}
-            lableID="select-budget"
+            labelID="select-budget"
             id="select-budget"
-            lable="Select your Monthly Budget"
+            label="Select your Budget"
             variant="outlined"
             align="center"
             onChange={handleChange}
@@ -169,29 +114,83 @@ const Housing = () => {
             <MenuItem value={40}>$800 & Under</MenuItem>
             <MenuItem value={50}>$900 & Under</MenuItem>
             <MenuItem value={60}>$1000 & Under</MenuItem>
-            <MenuItem value={70}>$1100 or More</MenuItem>
+            <MenuItem value={10000}>$1100 or More</MenuItem>
           </Select>
       </FormControl>
     );
   };
-  
-  const SelectDistance = (props) => {
 
+  const SelectPeople = (props) => {
+    
+    const handleChange = (event) => {
+      props.handler(event.target.value);
+    };
+  
+    return(
+      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
+        <InputLabel id="select-people" style={{color: '#001833', marginLeft: '10px'}}>Select Number of People Per Unit</InputLabel>
+          <Select
+            value={housingPeople}
+            labelID="select-people"
+            id="select-people"
+            label="Number of People"
+            variant="outlined"
+            onChange={handleChange}
+          >
+            <MenuItem value={1}>1</MenuItem>
+            <MenuItem value={2}>2</MenuItem>
+            <MenuItem value={3}>3</MenuItem>
+            <MenuItem value={4}>4</MenuItem>
+            <MenuItem value={5}>5</MenuItem>
+            <MenuItem value={5}>6</MenuItem>
+          </Select>
+      </FormControl>
+    );
+  };
+
+  const SelectRoomType = (props) => {
+    
+    const handleChange = (event) => {
+      props.handler(event.target.value);
+    };
+  
+    return(
+      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
+        <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Select Room Type</InputLabel>
+          <Select
+            value={housingRoomType}
+            labelID="select-type"
+            id="selectType"
+            label="Select Room Type"
+            variant="outlined"
+            name='selectType'
+            onChange={handleChange}
+          >
+            <MenuItem value={'Single'}>Single</MenuItem>
+            <MenuItem value={'Double'}>Double</MenuItem>
+            <MenuItem value={'Suite'}>Suite</MenuItem>
+          </Select>
+      </FormControl>
+    );
+  };
+
+  const SelectDistance = (props) => {
+    
     const handleChange = (event) => {
       props.handler(event.target.value);
     };
 
-    return(
+  return(
       <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-distance"  style={{color: '#001833', marginLeft: '10px'}}>Select Distance from E7</InputLabel>
+        <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select Distance from E7</InputLabel>
           <Select
             value={housingDistance}
-            lableID="select-distance"
-            id="select-distacne"
-            lable="Select Distacne from E7"
+            labelID="select-distance"
+            id="select-distance"
+            label="Select Distance from E7"
             variant='outlined'
-            aling='center'
-            colour='white'
+            align='center'
+            color= 'white'
             onChange={handleChange}
           >
             <MenuItem value={200}>Within 200m</MenuItem>
@@ -200,32 +199,32 @@ const Housing = () => {
             <MenuItem value={800}>Within 800m</MenuItem>
             <MenuItem value={1000}>Within 1km</MenuItem>
             <MenuItem value={5000}>Within 5km</MenuItem>
-            <MenuItem value={5001}>5km or more</MenuItem>
+            <MenuItem value={500000}>5km or more</MenuItem>
           </Select>
       </FormControl>
     );
   };
+
   
   const SubmitButton = (props) => {
-
+    
     const handleChange = (event) => {
       props.handler(event.target.value);
     };  
-    
+
     return(
       <Button 
       onChange={handleChange}
-      variant="contained" 
-      color="primary"
+      variant="outlined" 
       onClick={submitButton}
       style={{backgroundColor: 'green', color: '#FFFFFF'}}
       >
-      Submit Your Filters
+      Search with Filters
       </Button>
     );
   };
 
-   const ClearButton = () => {
+  const ClearButton = () => {
     
     return(
       <Button 
@@ -238,208 +237,209 @@ const Housing = () => {
     );
   };
 
-  //---------------------------API---------------
-  const [housingDistance, setHousingDistance] = useState();
+  //----------------------API---------------
+    const [housingDistance, setHousingDistance] = useState()
+    
+    const [housingBudget, setHousingBudget] = useState()
+  
+    const [housingPeople, setHousingPeople] = useState("")
+    
+    const [housingRoomType, setHousingRoomType] = useState("")
+  
+    const [housings, setHousings] = useState([])
 
-  const [housingBudget, setHousingBudget] = useState();
-
-  const [housingPeople, setHousingPeople] = useState();
-
-  const [housingRoomType, setHousingRoomType] = useState("");
-
-  const [housings, setHousings] = ([]);
-
-  const [housingInfo, setHousingInfo] = useState("");
-
-  const handleAddHousing = () => {
-    callApiAddHousing()
-    .then(res =>{
-      var parsed = JSON.parse(res.express);
-      console.log("getHousings returned" + JSON.stringify(parsed))
-      setHousings(parsed)
-    });
-  }
-
-  const callApiAddHousing = async () => {
-    const url = serverURL + "/api/getHousing";
-
-    const submittedHousing = {
-      "housingBudget": housingBudget,
-      "housingDistance": housingDistance,
-      "housingPeople": housingPeople,
-      "housingRoomType": housingRoomType
+    const [entInfo, setEntInfo] = useState("")
+  
+    
+    const handleAddHousing = () => {
+      callApiAddHousing()
+        .then(res => {
+          var parsed = JSON.parse(res.express);
+          console.log("getHousings returned" + JSON.stringify(parsed))
+          setHousings(parsed)
+        });
     }
-
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        //authorization: `Bearer ${this.state.token}`
-      },
-      body: JSON.stringify(submittedHousing)
-    });
-    const body = await response.json();
+  
+    const callApiAddHousing = async () => {
+  
+      const url = serverURL + "/api/getHousing";
+  
+      const submittedHousing = {
+        "housingBudget": housingBudget,
+        "housingDistance": housingDistance,
+        "housingRoomType": housingRoomType,
+        "housingPeople": housingPeople
+      }
+  
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          //authorization: `Bearer ${this.state.token}`
+        },
+        body: JSON.stringify(submittedHousing)
+      });
+      const body = await response.json();
       if (response.status !== 200) throw Error(body.message);
       console.log("Found Housing: ", body);
       return body;
-  }
-
-  const submitButton = () => {
-    setHousingInfo(
-      <div className = "HousingPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Your review has been successfully submitted! 
+    }
+  
+    const submitButton = () => {
+      
+        setEntInfo(
+          <div className = "HousingPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Your review has been successfully submitted! 
           <div style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center"> Heres what we're searching: 
           <div style={{fontSize: "14px", marginTop: "10px"}}>Housing Distance<br/>{housingDistance}</div>
           <br/>
           <div style={{fontSize: "14px", marginTop: "10px"}}>Housing Budget <br/>{housingBudget}</div>
           <br/>
-          <div style={{fontSize: "14px", marginTop: "10px"}}>Number of People <br/>{housingPeople}</div>
+          <div style={{fontSize: "14px", marginTop: "10px"}}>Housing Level <br/>{housingPeople}</div>
           <br/>
-          <div style={{fontSize: "14px", marginTop: "10px"}}>Room Type <br/>{housingRoomType}</div>
+          <div style={{fontSize: "14px", marginTop: "10px"}}>Housing Activity <br/>{housingRoomType}</div>
           </div>
           </div>)
           handleAddHousing();
           console.log(housings);
-  }
+      }
+    
   
-
   return (
-      <div className='backdropEnt'>
-            <Grid item xs={12}>
-            <Title></Title>
-              <div style={{marginTop: '50px'}}>
-                <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: '100%'}}>
-                <div style={{marginTop: '20px'}}>
-                <PrefTitle></PrefTitle>
-                </div>
-                <div style={{marginTop: '20px'}}>
-                  <SelectBudget handler={setHousingBudget}/>
-                  <SelectDistance handler={setHousingDistance}/>
-                  <SelectPeople handler={setHousingPeople}/>
-                  <SelectRoomType handler={setHousingRoomType}/>
-                </div>
-                <div style={{marginTop: '30px', marginBottom: '30px'}}>
-                  <SubmitButton/>
-                  <ClearButton/>
-                </div>
-                <Typography variant="h5" component="div" gutterBottom>
+    <div className='backdropEnt'>
+      <Grid item xs={12}>
+      <Title></Title>
+          <div style={{marginTop: '50px'}}>
+          <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: '100%'}}>
+          <div style={{marginTop: '20px'}}>
+          <PrefTitle></PrefTitle>
+          </div>
+          <div style={{marginTop: '20px'}}>
+          <SelectBudget handler={setHousingBudget}/>
+          <SelectDistance handler={setHousingDistance}/>
+          <SelectRoomType handler={setHousingRoomType}/>
+          <SelectPeople handler={setHousingPeople}/>
+          </div>
+          <div style={{marginTop: '30px', marginBottom: '30px'}}>
+          <SubmitButton/>
+          <ClearButton/>
+          </div>
+          <Typography variant="h5" component="div" gutterBottom>
+      </Typography>
+        </Card>
+        </div>
+  
+          {housings.map(option => {
+      return(
+        <>
+          <div style={{marginTop: '20px'}}>
+        <div style={{marginTop: '50px'}}>
+          <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: "100%"}}>
+          <div style={{marginTop: '20px'}}>
+          <div>
+                <Typography
+                  align="left"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
+                >
+                  {option.housingName}
+                </Typography>
+            </div>
+            <div align='center'>
+              <Grid container spacing={24} justifyContent='center'>
+                
+              <Grid item md={3}>
+              <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginBottom:'20px', marginLeft: '20px', backgroundColor: 'white'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    Cost
+                  </Typography>
+                </Card>
+                <Typography
+                  variant="h4"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {"$" + option.housingBudget + " CAD"}
                 </Typography>
                 </Card>
-              </div>
+                </Grid>
 
-              
-            </Grid>
-
+                <Grid item md={3}>
+                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    Distance
+                  </Typography>
+                </Card>
+                <Typography
+                  variant="h4"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
+                >
+                   {option.housingDistance + "KM"}
+                </Typography>
+                </Card>
+                </Grid>
+                
+                <Grid item md={3}>
+                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    Activity
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h4"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.housingRoomType}
+                </Typography>
+                </Card>
+                </Grid>
+                </Grid>
+            </div>
             
+          </div>
+        </Card>
       </div>
-    
+      </div>
+        </>
+      )
+      })}
+      
+          
+        
+
+
+     
+      </Grid>
+    </div>
   );
 };
 
 export default Housing;
-
-/*
-{housings.map(option => {
-  return(
-    <>
-      <div style={{marginTop: '20px'}}>
-    <div style={{marginTop: '50px'}}>
-      <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: "100%"}}>
-      <div style={{marginTop: '20px'}}>
-      <div>
-            <Typography
-              align="left"
-              variant="h5"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
-            >
-              {option.housingName}
-            </Typography>
-        </div>
-        <div align='center'>
-          <Grid container spacing={24} justifyContent='center'>
-            
-          <Grid item md={3}>
-          <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginBottom:'20px', marginLeft: '20px', backgroundColor: 'white'}}>
-            <Card style={{color:'#001833', backgroundColor: 'gold'}}>
-              <Typography
-              align="center"
-              variant="h5"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
-              >
-                Cost
-              </Typography>
-            </Card>
-            <Typography
-              variant="h4"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
-            >
-               {"$" + option.housingBudget}
-            </Typography>
-            </Card>
-            </Grid>
-
-            <Grid item md={3}>
-            <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
-            <Card style={{color:'#001833', backgroundColor: 'gold'}}>
-              <Typography
-              align="center"
-              variant="h5"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
-              >
-                Distance
-              </Typography>
-            </Card>
-            <Typography
-              variant="h4"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
-            >
-               {option.housingDistance}
-            </Typography>
-            </Card>
-            </Grid>
-            
-            <Grid item md={3}>
-            <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
-            <Card style={{color:'#001833', backgroundColor: 'gold'}}>
-              <Typography
-              align="center"
-              variant="h5"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
-              >
-                Number of Roommates
-              </Typography>
-            </Card>
-            <Typography
-              align="center"
-              variant="h4"
-              component="div"
-              gutterBottom
-              style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
-            >
-               {option.housingPeople}
-            </Typography>
-            </Card>
-            </Grid>
-            </Grid>
-        </div>
-        
-      </div>
-    </Card>
-  </div>
-  </div>
-    </>
-  )
-  })}
-  */
- 

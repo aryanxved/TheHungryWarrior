@@ -50,7 +50,6 @@ export default function Landing() {
             </Typography>
           </Card>
         </div>
-        <p style={{marginTop: '75px'}}></p>
         <div align="center">
           <Card
             style={{

@@ -71,8 +71,8 @@ export default function SignOut(){
                 </Card>}
                 
               
-              <Box component="form" onSubmit={handleLogout} noValidate sx={{ mt: 1 }}>
-    
+              <Box component="form" noValidate sx={{ mt: 1 }}>
+              <Box component="form" noValidate sx={{ mt: 1 }}>
               <Typography component="h1" variant="h4" style={{ color: 'white'}}>
             Currently Signed in as:
           </Typography>
@@ -89,6 +89,8 @@ export default function SignOut(){
                 >
                   <strong>Update Profile</strong>
                 </Button>
+                </Box>
+                <Box component="form" onSubmit={handleLogout} noValidate sx={{ mt: 1 }}>
                 <Button
                   type="submit"
                   fullWidth
@@ -108,6 +110,7 @@ export default function SignOut(){
                     </Link>
                   </Grid>
                 </Grid>
+                </Box>
               </Box>
             </Box>
           </Container>
