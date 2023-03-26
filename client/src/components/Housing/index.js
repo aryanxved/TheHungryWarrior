@@ -423,7 +423,150 @@ const Housing = () => {
                 </Grid>
                 </Grid>
             </div>
-            
+            <Card style={{color:'#001833', backgroundColor: 'green', marginBottom: '20px', marginTop: '20px', width: '350px', borderRadius: '50px'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
+                  >
+                    Key Details About This Spot
+                  </Typography>
+                </Card>
+                
+            <Card style={{width: "1100px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    Location Address
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.housingAddress}
+                </Typography>
+                </Card>
+                <Card style={{width: "1100px", height: '250px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    About this Spot!
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.housingDesc}
+                </Typography>
+                </Card>
+                <Card style={{color:'#001833', backgroundColor: 'green', marginBottom: '20px', marginTop: '20px', width: '250px', borderRadius: '50px'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
+                  >
+                    Contact the User
+                  </Typography>
+                </Card>
+
+                <div align='center'>
+              <Grid container spacing={24} justifyContent='center'>
+                
+
+                <Grid item md={3}>
+                <Card style={{width: "350px", height: '100px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    User Name
+                  </Typography>
+                </Card>
+                <Typography
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
+                >
+                   {option.housingUserName}
+                </Typography>
+                </Card>
+                </Grid>
+                
+                <Grid item md={3}>
+                <Card style={{width: "350px", height: '100px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    User Email
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.housingUserEmail}
+                </Typography>
+                </Card>
+                </Grid>
+                <Card style={{width: "350px", height: '100px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
+                <Card style={{color:'#001833', backgroundColor: 'gold'}}>
+                  <Typography
+                  align="center"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                  >
+                    User Phone
+                  </Typography>
+                </Card>
+                <Typography
+                  align="center"
+                  variant="h6"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
+                >
+                   {option.housingUserPhone}
+                </Typography>
+                </Card>
+                </Grid>
+            </div>
           </div>
         </Card>
       </div>
