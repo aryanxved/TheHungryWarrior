@@ -126,7 +126,7 @@ const Food = () => {
   
     return(
       <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Select Activity Type</InputLabel>
+        <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Type of Cuisine</InputLabel>
           <Select
             value={foodCuisine}
             labelID="select-type"
