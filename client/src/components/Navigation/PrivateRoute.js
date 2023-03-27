@@ -103,9 +103,9 @@ export default function PrivateRoute(
           <PrivateRouteAuth path="/InfoHousing" exact component={InfoHousing} />
           <PrivateRouteAuth path="/InfoEntertainment" exact component={InfoEntertainment} />
           <PrivateRouteAuth path="/Review" exact component={Review} />
-          <PrivateRouteAuth path="/ReviewEntertainment" exact component={ReviewEntertainment} />
-          <PrivateRouteAuth path="/ReviewHousing" exact component={ReviewHousing} />
-          <PrivateRouteAuth path="/ReviewRestaurant" exact component={ReviewRestaurant} />
+          <Route path="/ReviewEntertainment" exact component={ReviewEntertainment} />
+          <Route path="/ReviewHousing" exact component={ReviewHousing} />
+          <Route path="/ReviewRestaurant" exact component={ReviewRestaurant} />
           <PrivateRouteAuth path="/Request" exact component={Request} />
           <PrivateRouteAuth path="/RequestEnt" exact component={RequestEnt} />
           <PrivateRouteAuth path="/RequestH" exact component={RequestH} />

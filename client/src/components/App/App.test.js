@@ -12,6 +12,12 @@ import Review from '../Review'
 import ReviewEntertainment from '../ReviewEntertainment'
 import ReviewHousing from '../ReviewHousing'
 import ReviewRestaurant from '../ReviewRestaurant'
+import RequestEnt from '../RequestEnt';
+import RequestFood from '../RequestFood';
+import RequestH from '../RequestH';
+import About from '../About'
+import Help from '../Help';
+import Team from '../Team';
 import '@testing-library/jest-dom/extend-expect';
 
 
@@ -25,18 +31,6 @@ test('Locates The Hungry Warrior Title', () => {
 
 test('Renders the Landing Page', () => {
   render(<Landing/>)
-});
-
-//----------Review Page Testing------------------
-test('Locates Review Title', () => {
-  render(<Review />);
-  const linkElement = screen.getByText(/Write a Review!/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-
-test('Renders the Review Page', () => {
-  render(<Review/>)
 });
 
 
@@ -78,20 +72,6 @@ test('Renders the ReviewRestaurant Page', () => {
   render(<ReviewRestaurant/>)
 });
 
-
-//----------Info Page Testing------------------
-test('Locates Info Title', () => {
-  render(<Info />);
-  const linkElement = screen.getByText(/Find Information!/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-
-test('Renders the Info Page', () => {
-  render(<Info/>)
-});
-
-
 //----------InfoEntertainment Page Testing------------------
 test('Locates InfoEntertainment Title', () => {
   render(<InfoEntertainment />);
@@ -130,4 +110,75 @@ test('Renders the InfoRestaurant Page', () => {
   render(<InfoRestaurant/>)
 });
 
+//----------RequestRestaurant Page Testing------------------
+test('Locates RequestRestaurant Title', () => {
+  render(<RequestFood/>);
+  const linkElement = screen.getByText(/Request Restaurant/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+test('Renders the RequestRestaurant Page', () => {
+  render(<RequestFood/>)
+});
+
+//----------RequestEntertainment Page Testing------------------
+test('Locates RequestEntertainment Title', () => {
+  render(<RequestEnt />);
+  const linkElement = screen.getByText(/Request Entertainment/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+test('Renders the RequestRestaurant Page', () => {
+  render(<RequestEnt/>)
+});
+
+//----------RequestHousing Page Testing------------------
+test('Locates RequestHousing Title', () => {
+  render(<RequestH />);
+  const linkElement = screen.getByText(/Request Housing/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+test('Renders the RequestHousing Page', () => {
+  render(<RequestH/>)
+});
+
+//----------About Page Testing------------------
+test('Locates About Title', () => {
+  render(<About/>);
+  const linkElement = screen.getByText(/How to Use the Tool/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+test('Renders the About Page', () => {
+  render(<About/>)
+});
+
+//----------About Page Testing------------------
+test('Locates Help Title', () => {
+  render(<Help/>);
+  const linkElement = screen.getByText(/How to Use the Tool/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+test('Renders the Help Page', () => {
+  render(<Help/>)
+});
+
+//----------About Page Testing------------------
+test('Locates Team Title', () => {
+  render(<Team/>);
+  const linkElement = screen.getByText(/Meet the Team/i);
+  expect(linkElement).toBeInTheDocument();
+});
+
+
+test('Renders the Help Page', () => {
+  render(<Team/>)
+});
 
