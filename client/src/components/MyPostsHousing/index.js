@@ -26,6 +26,11 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import { FormControl, MenuItem } from '@material-ui/core';
 import './index.css';
+import { useAuth } from '../Firebase/context'
+import { useHistory } from 'react-router-dom';
+
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
 const serverURL = ""; //enable for dev mode
 
@@ -55,7 +60,7 @@ function Title() {
               gutterBottom
               style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
-              Food
+              MyPosts Housing
             </Typography>
           </Card>
         </div>
@@ -78,7 +83,7 @@ function Title() {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
                 >
-                  Let's get your Food preferences:
+                  Let's get your Housing preferences:
                 </Typography>
             </div>
             </div>
@@ -86,97 +91,35 @@ function Title() {
             )
         }
 
-const Food = () => {
+        function TextByID(props) {
+  
+            const handleChange = (event) => {
+              props.handler(event.target.value);
+            };
+          
+            return (
+             
+              <div align="center">
+              
+              <TextField style={{width: "500px", marginTop: "30px", backgroundColor: "white", borderRadius: '50px'}}
+                    onChange={handleChange}
+                    id="outlined-multiline-static"
+                    label="Enter an Post ID value"
+                    multiline
+                    minRows={1}
+                    variant="filled"
+                    align="center"
+                  />
+            </div>
+             
+            )
+          }
+
+const MyPostsHousing = () => {
   const classes = useStyles();
-
-  const SelectBudget = (props) => {
-    
-    const handleChange = (event) => {
-      props.handler(event.target.value);
-    };
   
-    console.log(foodBudget);
-    return(
-      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', textAlign: "center"}} onChange={handleChange}>
-        <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select your Budget</InputLabel>
-          <Select
-            value={foodBudget}
-            labelID="select-budget"
-            id="select-budget"
-            label="Select your Budget"
-            variant="outlined"
-            align="center"
-            onChange={handleChange}
-          >
-            <MenuItem value={5}>$5 & Under</MenuItem>
-            <MenuItem value={10}>$10 & Under</MenuItem>
-            <MenuItem value={15}>$15 & Under</MenuItem>
-            <MenuItem value={20}>$20 & Under</MenuItem>
-            <MenuItem value={25}>Unrestricted</MenuItem>
-          </Select>
-      </FormControl>
-    );
-  };
+    const { currentUser, signout, userEmailCurrent } = useAuth()
 
-  const SelectCuisine = (props) => {
-    
-    const handleChange = (event) => {
-      props.handler(event.target.value);
-    };
-  
-    return(
-      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-type" style={{color: '#001833', marginLeft: '10px'}}>Select Activity Type</InputLabel>
-          <Select
-            value={foodCuisine}
-            labelID="select-type"
-            id="selectType"
-            label="Select Activity Type"
-            variant="outlined"
-            name='selectType'
-            onChange={handleChange}
-          >
-            <MenuItem value={'Fast Food'}>Fast Food</MenuItem>
-            <MenuItem value={'Casual Dine-In'}>Casual Dine-In</MenuItem>
-            <MenuItem value={'Specialty'}>Specialty </MenuItem>
-            <MenuItem value={'Mediterranean Food'}>Mediterranean Food</MenuItem>
-          </Select>
-      </FormControl>
-    );
-  };
-
-  const SelectDistance = (props) => {
-    
-    const handleChange = (event) => {
-      props.handler(event.target.value);
-    };
-
-  return(
-      <FormControl style={{backgroundColor: 'white', width: '300px', borderRadius: '15px', marginLeft: '20px'}}>
-        <InputLabel id="select-distance" style={{color: '#001833', marginLeft: '10px'}}>Select Distance from E7</InputLabel>
-          <Select
-            value={foodDistance}
-            labelID="select-distance"
-            id="select-distance"
-            label="Select Distance from E7"
-            variant='outlined'
-            align='center'
-            color= 'white'
-            onChange={handleChange}
-          >
-            <MenuItem value={200}>Within 200m</MenuItem>
-            <MenuItem value={400}>Within 400m</MenuItem>
-            <MenuItem value={600}>Within 600m</MenuItem>
-            <MenuItem value={800}>Within 800m</MenuItem>
-            <MenuItem value={1000}>Within 1km</MenuItem>
-            <MenuItem value={5000}>Within 5km</MenuItem>
-            <MenuItem value={50001}>Unrestricted</MenuItem>
-          </Select>
-      </FormControl>
-    );
-  };
-
-  
   const SubmitButton = (props) => {
     
     const handleChange = (event) => {
@@ -186,140 +129,187 @@ const Food = () => {
     return(
       <Button 
       onChange={handleChange}
-      variant="outlined" 
-      onClick={submitButton}
-      style={{backgroundColor: 'green', color: '#FFFFFF'}}
+      onClick={submitButtonAll}
+      type="submit"
+      fullWidth
+      variant="contained"
+      style={{backgroundColor: '#FFD500', borderRadius: '50px', height: '50px', marginTop: '30px', fontSize: '18px', width: '500px'}}
+      sx={{ mt: 3, mb: 2 }}
       >
-      Search with Filters
+      View All Posts
       </Button>
+           
     );
   };
 
-  const ClearButton = () => {
+  const SubmitButtonByID = (props) => {
     
+    const handleChange = (event) => {
+      props.handler(event.target.value);
+    };  
+
     return(
-      <Link to="/Food" style={{textDecoration:"none"}}>
       <Button 
-      variant="outlined" 
-      style={{backgroundColor: 'red', color: '#FFFFFF', marginLeft: "20px"}}
+      onChange={handleChange}
+      onClick={submitButtonByID}
+      type="submit"
+      fullWidth
+      variant="contained"
+      style={{backgroundColor: 'green', borderRadius: '50px', height: '50px', marginTop: '30px', fontSize: '18px', width: '240px', marginRight: '20px'}}
+      sx={{ mt: 3, mb: 2 }}
       >
-      Clear All Filters
+      View Posts By ID
       </Button>
-      </Link>
+           
+    );
+  };
+
+  const DeleteButtonByID = (props) => {
+    
+    const handleChange = (event) => {
+      props.handler(event.target.value);
+    };  
+
+    return(
+      <Button 
+      onChange={handleChange}
+      onClick={submitButtonByIDDelete}
+      type="submit"
+      fullWidth
+      variant="contained"
+      style={{backgroundColor: 'red', borderRadius: '50px', height: '50px', marginTop: '30px', fontSize: '18px', width: '240px'}}
+      sx={{ mt: 3, mb: 2 }}
+      >
+      Delete Posts By ID
+      </Button>
+           
     );
   };
 
   //----------------------API---------------
-    const [foodDistance, setFoodDistance] = useState()
     
-    const [foodBudget, setFoodBudget] = useState()
-  
-    const [foodLevel, setFoodLevel] = useState("")
-    
-    const [foodCuisine, setFoodCuisine] = useState("")
-  
-    const [foods, setFoods] = useState([])
+    const [posts, setPosts] = useState([])
 
     const [entInfo, setEntInfo] = useState("")
-  
-    const [error, setError] = useState()
 
+    const [ID, setID] = useState('')
+
+  
     
-    const handleAddFood = () => {
-      callApiAddFood()
-        .then(res => {
-          var parsed = JSON.parse(res.express);
-          console.log("getFoods returned" + JSON.stringify(parsed))
-          setFoods(parsed)
-        });
-    }
-  
-    const callApiAddFood = async () => {
-  
-      const url = serverURL + "/api/getFood";
-  
-      const submittedFood = {
-        "foodBudget": foodBudget,
-        "foodDistance": foodDistance,
-        "foodCuisine": foodCuisine
+    const handlePosts = () => {
+        callApiGetPosts()
+          .then(res => {
+            var parsed = JSON.parse(res.express);
+            console.log("getPosts returned" + JSON.stringify(parsed))
+            setPosts(parsed)
+          });
       }
-  
-      const response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          //authorization: `Bearer ${this.state.token}`
-        },
-        body: JSON.stringify(submittedFood)
-      });
-      const body = await response.json();
-      if (response.status !== 200) throw Error(body.message);
-      console.log("Found Food: ", body);
-      return body;
-    }
-  
-    const submitButton = () => {
-      setError("")
-        setEntInfo(
-          <div className = "FoodPosted" style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center">Your review has been successfully submitted! 
-          <div style={{marginTop: "30px", alignContent: "center", width: "55vh"}} align="center"> Heres what we're searching: 
-          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Distance<br/>{foodDistance}</div>
-          <br/>
-          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Budget <br/>{foodBudget}</div>
-          <br/>
-          <div style={{fontSize: "14px", marginTop: "10px"}}>Food Cuisine <br/>{foodCuisine}</div>
-          </div>
-          </div>)
-          handleAddFood();
-          console.log(foods);
-          //setTimeout(errorHandler, 1000);
-          //setFoods([])
-         
-      }
-    /*
-      const errorHandler = () => {
-        setError('')
-        if (!Array.isArray(foods) || !foods.length){
-          return (setError('No results found. Please change filter criteria and try again.')
 
-          )
+      const handlePostsByID = () => {
+        callApiGetPostsByID()
+          .then(res => {
+            var parsed = JSON.parse(res.express);
+            console.log("getPosts returned" + JSON.stringify(parsed))
+            setPosts(parsed)
+          });
       }
-      else if (foods.length >= 1) {
-        return (setError('')
-        )
-      } 
-      
+
+      const handlePostsByIDDelete = () => {
+        callApiGetPostsByIDDelete()
+          .then(res => {
+            var parsed = JSON.parse(res.express);
+            console.log("getPosts returned" + JSON.stringify(parsed))
+            setPosts(parsed)
+          });
       }
-      */
+  
+    const callApiGetPosts = async () => {
+    
+        const url = serverURL + "/api/getPostsHousing";
+        
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              //authorization: `Bearer ${this.state.token}`
+            },
+            body: JSON.stringify({userEmailCurr: currentUser.email})
+          });
+          const body = await response.json();
+          if (response.status !== 200) throw Error(body.message);
+          console.log("Found Posts: ", body);
+          return body;
+        }
+
+        const callApiGetPostsByID = async () => {
+    
+            const url = serverURL + "/api/getPostsHousingByID";
+            
+            const response = await fetch(url, {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  //authorization: `Bearer ${this.state.token}`
+                },
+                body: JSON.stringify({userEmailCurr: currentUser.email, userCurrentID: ID})
+              });
+              const body = await response.json();
+              if (response.status !== 200) throw Error(body.message);
+              console.log("Found Posts: ", body);
+              return body;
+            }
+
+        const callApiGetPostsByIDDelete = async () => {
+    
+                const url = serverURL + "/api/getPostsHousingByIDDelete";
+                
+                const response = await fetch(url, {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                      //authorization: `Bearer ${this.state.token}`
+                    },
+                    body: JSON.stringify({userEmailCurr: currentUser.email, userCurrentID: ID})
+                  });
+                  const body = await response.json();
+                  if (response.status !== 200) throw Error(body.message);
+                  console.log("Found Posts: ", body);
+                  return body;
+            }
+  
+    const submitButtonAll = () => {
+          handlePosts();
+          console.log(posts);
+      }
+
+    const submitButtonByID = () => {
+        handlePostsByID();
+        console.log(posts);
+    }
+
+    const submitButtonByIDDelete = () => {
+        handlePostsByIDDelete();
+        history.push('/SignOut');
+        console.log(posts);
+    }
+    
   
   return (
     <div className='backdropEnt'>
       <Grid item xs={12}>
       <Title></Title>
-      {error && <Card style={{backgroundColor: 'red', marginTop: '20px'}}>
-          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error Occurred.</Typography>
-            <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
-            </Card>}
-          <div style={{marginTop: '50px'}}>
-          <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: '100%'}}>
-          <div style={{marginTop: '20px'}}>
-          <PrefTitle></PrefTitle>
-          </div>
-          <div style={{marginTop: '20px'}}>
-          <SelectBudget handler={setFoodBudget}/>
-          <SelectDistance handler={setFoodDistance}/>
-          <SelectCuisine handler={setFoodCuisine}/>
-          </div>
-          <div style={{marginTop: '30px', marginBottom: '30px'}}>
-          <SubmitButton/>
-          <ClearButton/>
-          </div>
-          <Typography variant="h5" component="div" gutterBottom>
-      </Typography>
-        </Card>
-        </div>
-  
-          {foods.map(option => {
+    <div align='center'>
+    <SubmitButton></SubmitButton> 
+    </div>
+    <div align='center'>
+<TextByID handler={setID}></TextByID>
+    </div>
+    <div align='center'>
+<SubmitButtonByID></SubmitButtonByID>
+ 
+   <DeleteButtonByID></DeleteButtonByID>
+    </div>
+          {posts.map(option => {
       return(
         <>
           <div style={{marginTop: '20px'}}>
@@ -327,6 +317,7 @@ const Food = () => {
           <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: "100%"}}>
           <div style={{marginTop: '20px'}}>
           <div>
+            <div>
                 <Typography
                   align="left"
                   variant="h5"
@@ -334,14 +325,28 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"white", marginLeft: '20px'}}
                 >
-                  {option.foodName}
+                  {option.housingName}
                 </Typography>
+                </div>
+                <div align='left' style={{marginLeft: '20px', marginBottom: '20px'}}>
+                <Card style={{backgroundColor: '#FFD500', width: '300px', borderRadius: '50px'}}>
+                <Typography
+                  align="left"
+                  variant="h5"
+                  component="div"
+                  gutterBottom
+                  style={{fontFamily: 'Roboto', color:"black", marginLeft: '40px'}}
+                >
+                  Post ID Number: {option.housingID}
+                </Typography>
+                </Card>
+                </div>
             </div>
             <div align='center'>
               <Grid container spacing={24} justifyContent='center'>
                 
               <Grid item md={3}>
-              <Card style={{width: "300px", height: '150px', borderRadius: '10px', marginBottom:'20px', marginLeft: '20px', backgroundColor: 'white'}}>
+              <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginBottom:'20px', marginLeft: '20px', backgroundColor: 'white'}}>
                 <Card style={{color:'#001833', backgroundColor: 'gold'}}>
                   <Typography
                   align="center"
@@ -359,13 +364,13 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {"$" + option.foodBudget + " CAD"}
+                   {"$" + option.housingBudget + " CAD"}
                 </Typography>
                 </Card>
                 </Grid>
 
                 <Grid item md={3}>
-                <Card style={{width: "300px", height: '150px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
                 <Card style={{color:'#001833', backgroundColor: 'gold'}}>
                   <Typography
                   align="center"
@@ -383,13 +388,13 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
                 >
-                   {option.foodDistance + "M"}
+                   {option.housingDistance + "M"}
                 </Typography>
                 </Card>
                 </Grid>
                 
                 <Grid item md={3}>
-                <Card style={{width: "300px", height: '150px', borderRadius: '10px', marginLeft: '20px'}}>
+                <Card style={{width: "300px", height: '100px', borderRadius: '10px', marginLeft: '20px'}}>
                 <Card style={{color:'#001833', backgroundColor: 'gold'}}>
                   <Typography
                   align="center"
@@ -398,7 +403,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                   >
-                    Cuisine
+                    Room Type
                   </Typography>
                 </Card>
                 <Typography
@@ -408,7 +413,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.foodCuisine}
+                   {option.housingRoomType}
                 </Typography>
                 </Card>
                 </Grid>
@@ -445,7 +450,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.foodAddress}
+                   {option.housingAddress}
                 </Typography>
                 </Card>
                 <Card style={{width: "1100px", height: '250px', borderRadius: '10px', marginLeft: '20px', marginTop: '20px'}}>
@@ -467,7 +472,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.foodDesc}
+                   {option.housingDesc}
                 </Typography>
                 </Card>
                 <Card style={{color:'#001833', backgroundColor: 'green', marginBottom: '20px', marginTop: '20px', width: '250px', borderRadius: '50px'}}>
@@ -505,7 +510,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px', marginLeft: '20px'}}
                 >
-                   {option.foodUserName}
+                   {option.housingUserName}
                 </Typography>
                 </Card>
                 </Grid>
@@ -530,7 +535,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.foodUserEmail}
+                   {option.housingUserEmail}
                 </Typography>
                 </Card>
                 </Grid>
@@ -553,7 +558,7 @@ const Food = () => {
                   gutterBottom
                   style={{fontFamily: 'Roboto', color:"black", marginLeft: '20px'}}
                 >
-                   {option.foodUserPhone}
+                   {option.housingUserPhone}
                 </Typography>
                 </Card>
                 </Grid>
@@ -576,4 +581,5 @@ const Food = () => {
   );
 };
 
-export default Food;
+export default MyPostsHousing;
+

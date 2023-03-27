@@ -54,6 +54,17 @@ export default function SignOut(){
         }
     }
 
+    async function handleViewPost(){
+        setError('')
+
+        try {
+            history.push('/MyPosts')
+        }
+        catch {
+            setError('Unauthorized. Please try again later')
+        }
+    }
+
     
     const handlePosts = () => {
         callApiGetPosts()
@@ -137,7 +148,7 @@ export default function SignOut(){
                 </Button>
                 </Box>
                 
-                <Box component="form" onSubmit={handlePosts} noValidate sx={{ mt: 1 }}>
+                <Box component="form" onSubmit={handleViewPost} noValidate sx={{ mt: 1 }}>
           <Button
                   type="submit"
                   fullWidth
