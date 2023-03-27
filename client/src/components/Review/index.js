@@ -98,6 +98,7 @@ export default function Review() {
 
 
         <div align="center" marginTop="250px">
+        <Link to="/ReviewEntertainment" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -113,6 +114,8 @@ export default function Review() {
           >
             Review Entertainment
           </Button>
+          </Link>
+          <Link to="/ReviewHousing" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -125,10 +128,11 @@ export default function Review() {
             type="submit"
             color="primary"
             variant="contained"
-            href='/ReviewHousing'
           >
             Review Housing
           </Button>
+          </Link>
+          <Link to="/ReviewRestaurant" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -145,6 +149,7 @@ export default function Review() {
           >
             Review Restaurant
           </Button>
+          </Link>
         </div>
       </div>
     </div>

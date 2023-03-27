@@ -317,13 +317,189 @@ app.post('/api/getFood', (req, res) => {
 	connection.end();
 });
 
-app.post('/api/getPosts', (req, res) => {
+app.post('/api/getPostsHousing', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `SELECT * FROM Housing WHERE housingUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsHousingByID', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `SELECT * FROM Housing WHERE housingID = ? and housingUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userCurrentID, req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsHousingByIDDelete', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `DELETE From Housing Where housingID = ? and housingUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userCurrentID, req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsEntertainment', (req, res) => {
 	let connection = mysql.createConnection(config);
 
 	let sql = `SELECT * FROM Entertainment WHERE entertainmentUserEmail = ?`;
 	console.log(sql)
 	
 	let data = [req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsEntertainmentByID', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `SELECT * FROM Entertainment WHERE entertainmentID = ? and entertainmentUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userCurrentID, req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsEntertainmentByIDDelete', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `DELETE From Entertainment Where entertainmentID = ? and entertainmentUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userCurrentID, req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsFood', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `SELECT * FROM Food WHERE foodUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsFoodByID', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `SELECT * FROM Food WHERE foodID = ? and foodUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userCurrentID, req.body.userEmailCurr];
+
+	console.log(data)
+	connection.query(sql, data, (error, results, fields) => {
+		if (error) {
+			return console.error(error.message);
+		}
+
+		console.log(results);
+		let string = JSON.stringify(results);
+		let obj = JSON.parse(string);
+		res.send({ express: string });
+	});
+	connection.end();
+});
+
+app.post('/api/getPostsFoodByIDDelete', (req, res) => {
+	let connection = mysql.createConnection(config);
+
+	let sql = `DELETE From Food Where foodID = ? and foodUserEmail = ?`;
+	console.log(sql)
+	
+	let data = [req.body.userCurrentID, req.body.userEmailCurr];
 
 	console.log(data)
 	connection.query(sql, data, (error, results, fields) => {

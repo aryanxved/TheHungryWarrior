@@ -98,6 +98,7 @@ export default function Post() {
 
 
         <div align="center" marginTop="250px">
+        <Link to="/PostEntertainment" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -113,6 +114,8 @@ export default function Post() {
           >
             Post Entertainment
           </Button>
+          </Link>
+          <Link to="/PostHousing" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -129,6 +132,8 @@ export default function Post() {
           >
             Post Housing
           </Button>
+          </Link>
+          <Link to="/PostFood" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -145,6 +150,7 @@ export default function Post() {
           >
             Post Restaurant
           </Button>
+          </Link>
         </div>
       </div>
     </div>

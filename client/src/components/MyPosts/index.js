@@ -20,8 +20,8 @@ import {
   CssBaseline,
 } from '@material-ui/core/';
 import {makeStyles} from '@material-ui/styles';
+//import './index.css';
 import {Link} from 'react-router-dom';
-import './index.css';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,22 +32,23 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Info() {
+export default function MyPosts() {
   const classes = useStyles();
+  
   return (
-    <div style={{backgroundColor: '#FFFFFFF'}} className='backdropEnt'>
-      <div>
+    <div style={{backgroundColor: '#FFFFFFF'}}>
+      <div className='backdropEnt'>
         <CssBaseline />
         <div>
-          <Card style={{color: 'white', backgroundColor: '#ffd500'}}>
+          <Card style={{color: 'white', backgroundColor: '#FFD500'}}>
             <Typography
               align="center"
               variant="h3"
               component="div"
               gutterBottom
-              style={{fontFamily: 'Impact', letterSpacing: '2px', color: 'black'}}
+              style={{fontFamily: 'Impact', color: 'black', letterSpacing: '2px'}}
             >
-              Find Information!
+              View My Posts!
             </Typography>
           </Card>
         </div>
@@ -55,10 +56,11 @@ export default function Info() {
         <div align="center">
           
          
+        <div align="center">
           
             <Typography
               align="center"
-              variant="h4"
+              variant="h3"
               component="div"
               gutterBottom
               style={{
@@ -68,14 +70,18 @@ export default function Info() {
                 align: 'center',
               }}
             >
-              Learn about information near you!
+              View All Your Currently Active Posts
             </Typography>
+        
+        </div>
           
         </div>
 <div>
 <p style={{marginTop: '25px'}}></p>
 
-<Typography
+<div align="center">
+         
+            <Typography
               align="center"
               variant="h5"
               component="div"
@@ -87,13 +93,14 @@ export default function Info() {
                 align: 'center',
               }}
             >
-              Select one of the options to view a category!
+              Select one of the options below to view your posts.
             </Typography>
+        </div>
 </div>
 
 
-        <div align="center" style={{marginTop: "50px"}}>
-        <Link to="/InfoEntertainment" style={{textDecoration:"none"}}>
+        <div align="center" marginTop="250px">
+        <Link to="/MyPostsEntertainment" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -105,11 +112,12 @@ export default function Info() {
             type="submit"
             color="primary"
             variant="contained"
+           
           >
-            Entertainment Info
+            View Entertainment
           </Button>
           </Link>
-          <Link to="/InfoHousing" style={{textDecoration:"none"}}>
+          <Link to="/MyPostsHousing" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -123,10 +131,10 @@ export default function Info() {
             color="primary"
             variant="contained"
           >
-            Housing Info
+            View Housing
           </Button>
           </Link>
-          <Link to="/InfoRestaurant" style={{textDecoration:"none"}}>
+          <Link to="/MyPostsFood" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -135,12 +143,13 @@ export default function Info() {
               width: '300px',
               fontSize: '20px',
               marginLeft: '20px'
+              
             }}
             type="submit"
             color="primary"
             variant="contained"
           >
-            Restaurant Info
+            View Restaurant
           </Button>
           </Link>
         </div>

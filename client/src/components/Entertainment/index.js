@@ -225,13 +225,14 @@ const Entertainment = () => {
   const ClearButton = () => {
     
     return(
+      <Link to="/Entertainment" style={{textDecoration:"none"}}>
       <Button 
       variant="outlined" 
       style={{backgroundColor: 'red', color: '#FFFFFF', marginLeft: "20px"}}
-      href='/Entertainment'
       >
       Clear All Filters
       </Button>
+      </Link>
     );
   };
 

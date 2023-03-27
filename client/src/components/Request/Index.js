@@ -100,6 +100,7 @@ export default function Request() {
 
 
         <div align="center" marginTop="250px">
+        <Link to="/RequestEnt" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -111,11 +112,12 @@ export default function Request() {
             type="submit"
             color="primary"
             variant="contained"
-            href='/RequestEnt'
            
           >
             Request Entertainment
           </Button>
+          </Link>
+          <Link to="/RequestH" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -128,10 +130,11 @@ export default function Request() {
             type="submit"
             color="primary"
             variant="contained"
-            href='/RequestH'
           >
             Request Housing
           </Button>
+          </Link>
+          <Link to="/RequestFood" style={{textDecoration:"none"}}>
           <Button
             style={{
               color: 'black',
@@ -145,10 +148,10 @@ export default function Request() {
             type="submit"
             color="primary"
             variant="contained"
-            href='/RequestFood'
           >
             Request Restaurant
           </Button>
+          </Link>
         </div>
       </div>
     </div>

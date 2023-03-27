@@ -227,13 +227,14 @@ const Housing = () => {
   const ClearButton = () => {
     
     return(
+      <Link to="/Housing" style={{textDecoration:"none"}}>
       <Button 
       variant="outlined" 
       style={{backgroundColor: 'red', color: '#FFFFFF', marginLeft: "20px"}}
-      href='/Housing'
       >
       Clear All Filters
       </Button>
+      </Link>
     );
   };
 

@@ -23,6 +23,8 @@ import {
 } from '@material-ui/core/';
 import {makeStyles} from '@material-ui/styles';
 import {Link} from 'react-router-dom';
+import { useAuth } from '../Firebase/context'
+
 
 
 const serverURL = ""; //enable for dev mode
@@ -266,6 +268,7 @@ function PostContactEmail(props) {
   const handleChange = (event) => {
     props.handler(event.target.value);
   };
+  const { currentUser } = useAuth()
 
   return (
 
@@ -275,6 +278,8 @@ function PostContactEmail(props) {
         label="Email"
         variant="outlined"
         align="center"
+        defaultValue={currentUser.email.toString()}
+        
       /> 
   )
 }
@@ -339,7 +344,6 @@ function SelectBudget (props) {
 
 function PostHousing() {
   
-    
       const SelectActivityLevel = (props) => {
         
         const handleChange = (event) => {
@@ -396,7 +400,7 @@ function PostHousing() {
     
     
       
-    
+  const { currentUser } = useAuth()
 
   const [housingAddress, setPostLocation] = useState("")
   
@@ -410,7 +414,7 @@ function PostHousing() {
 
   const [housingUserName, setPostName] = useState("")
 
-  const [housingUserEmail, setPostEmail] = useState("")
+  const [housingUserEmail, setPostEmail] = useState(currentUser.email)
 
   const [housingUserPhone, setPostPhone] = useState("")
 

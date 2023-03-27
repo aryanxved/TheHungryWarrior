@@ -72,6 +72,11 @@ import Post from '../Post'
 import PostEntertainment from '../PostEntertainment'
 import PostHousing from '../PostHousing'
 import PostFood from '../PostFood'
+import MyPosts from '../MyPosts'
+import MyPostsHousing from '../MyPostsHousing';
+import MyPostsEntertainment from '../MyPostsEntertainment';
+import MyPostsFood from '../MyPostsFood';
+
 import { AuthProvider, useAuth } from '../Firebase/context';
 
 
@@ -94,24 +99,24 @@ export default function PrivateRoute(
           <PrivateRouteAuth path="/Entertainment" exact component={Entertainment} />
           <PrivateRouteAuth path="/Housing" exact component={Housing} />
           <PrivateRouteAuth path="/Info" exact component={Info} />
-          <Route path="/InfoRestaurant" exact component={InfoRestaurant} />
-          <Route path="/InfoHousing" exact component={InfoHousing} />
-          <Route path="/InfoEntertainment" exact component={InfoEntertainment} />
+          <PrivateRouteAuth path="/InfoRestaurant" exact component={InfoRestaurant} />
+          <PrivateRouteAuth path="/InfoHousing" exact component={InfoHousing} />
+          <PrivateRouteAuth path="/InfoEntertainment" exact component={InfoEntertainment} />
           <PrivateRouteAuth path="/Review" exact component={Review} />
-          <Route path="/ReviewEntertainment" exact component={ReviewEntertainment} />
-          <Route path="/ReviewHousing" exact component={ReviewHousing} />
-          <Route path="/ReviewRestaurant" exact component={ReviewRestaurant} />
+          <PrivateRouteAuth path="/ReviewEntertainment" exact component={ReviewEntertainment} />
+          <PrivateRouteAuth path="/ReviewHousing" exact component={ReviewHousing} />
+          <PrivateRouteAuth path="/ReviewRestaurant" exact component={ReviewRestaurant} />
           <PrivateRouteAuth path="/Request" exact component={Request} />
-          <Route path="/RequestEnt" exact component={RequestEnt} />
-          <Route path="/RequestH" exact component={RequestH} />
-          <Route path="/RequestFood" exact component={RequestFood} />
+          <PrivateRouteAuth path="/RequestEnt" exact component={RequestEnt} />
+          <PrivateRouteAuth path="/RequestH" exact component={RequestH} />
+          <PrivateRouteAuth path="/RequestFood" exact component={RequestFood} />
           <Route path="/About" exact component={About} />
           <Route path="/Help" exact component={Help} />
           <Route path="/Team" exact component={Team} />
           <PrivateRouteAuth path="/Post" exact component={Post} />
-          <Route path="/PostEntertainment" exact component={PostEntertainment} />
-          <Route path="/PostHousing" exact component={PostHousing} />
-          <Route path="/PostFood" exact component={PostFood} />
+          <PrivateRouteAuth path="/PostEntertainment" exact component={PostEntertainment} />
+          <PrivateRouteAuth path="/PostHousing" exact component={PostHousing} />
+          <PrivateRouteAuth path="/PostFood" exact component={PostFood} />
 
 
           <Route path="/SignUp" exact component={SignUp} />
@@ -160,6 +165,12 @@ export default function PrivateRoute(
           <Route path="/MapMels" exact component={MapMels} />
           <Route path="/MapPita" exact component={MapPita} />
          
+          <Route path="/MyPosts" exact component={MyPosts} />
+          <Route path="/MyPostsHousing" exact component={MyPostsHousing} />
+          <Route path="/MyPostsEntertainment" exact component={MyPostsEntertainment} />
+          <Route path="/MyPostsFood" exact component={MyPostsFood} />
+
+
           <Route path="*">
             <Redirect to="/Landing"/>
           </Route>
