@@ -55,7 +55,7 @@ const InfoHousing = () => {
             <Grid item xs={5}>
                 <div align='left'>
                     <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                        <img src="/images/elora.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                        <img src="/images/elora.png" style={{WebkitTransform: 'scale(1.6)'}}/>
                     </Card>
                 </div>
             </Grid>
@@ -136,7 +136,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Fergus.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/Fergus.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -212,12 +212,12 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '53vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/icon.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/icon.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -294,7 +294,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -381,7 +381,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Accomodate8u.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/Accomodate8u.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -540,7 +540,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '53vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -627,7 +627,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/uwp.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/uwp.png" style={{WebkitTransform: 'scale(1.9)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -703,7 +703,7 @@ const InfoHousing = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
@@ -956,7 +956,7 @@ const InfoHousing = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/v1.png" style={{WebkitTransform: 'scale(4.5)'}}/>
+                            <img src="/images/v1.png" style={{WebkitTransform: 'scale(5.0)'}}/>
                         </Card>
                     </div>
                 </Grid>
