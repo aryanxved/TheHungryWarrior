@@ -35,6 +35,5 @@ export default function Weather() {
   const classes = useStyles();
   return (
     <iframe src="https://www.meteoblue.com/en/weather/widget/three/waterloo_canada_6176823?geoloc=fixed&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image" width="1519" height="675" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
     );
 }
