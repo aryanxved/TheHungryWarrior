@@ -76,6 +76,7 @@ import MyPosts from '../MyPosts'
 import MyPostsHousing from '../MyPostsHousing';
 import MyPostsEntertainment from '../MyPostsEntertainment';
 import MyPostsFood from '../MyPostsFood';
+import Weather from '../Weather';
 
 import { AuthProvider, useAuth } from '../Firebase/context';
 
@@ -169,6 +170,7 @@ export default function PrivateRoute(
           <Route path="/MyPostsHousing" exact component={MyPostsHousing} />
           <Route path="/MyPostsEntertainment" exact component={MyPostsEntertainment} />
           <Route path="/MyPostsFood" exact component={MyPostsFood} />
+          <Route path="/Weather" exact component={Weather} />
 
 
           <Route path="*">

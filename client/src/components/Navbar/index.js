@@ -13,7 +13,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import {Link} from 'react-router-dom';
 
 
-const pages = ['About', 'Food', 'Entertainment', 'Housing', 'Info', 'Review', "Request", "Profile", "Help", "Team", "Post"];
+const pages = ['About', 'Food', 'Entertainment', 'Housing', 'Info', 'Review', "Request", "Profile", "Help", "Team", "Post", "Weather"];
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
