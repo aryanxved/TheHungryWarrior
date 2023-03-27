@@ -320,7 +320,6 @@ const Entertainment = () => {
           </div>
           <div style={{marginTop: '30px', marginBottom: '30px'}}>
           <SubmitButton/>
-          <ClearButton/>
           </div>
           <Typography variant="h5" component="div" gutterBottom>
       </Typography>
