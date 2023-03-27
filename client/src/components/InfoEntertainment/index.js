@@ -140,7 +140,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Rangergame.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/Rangergame.png" style={{WebkitTransform: 'scale(1.6)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -219,12 +219,12 @@ const InfoEntertainment = () => {
 
     <div align='center'>
     <Box>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '53vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/KingPin.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/KingPin.png" style={{WebkitTransform: 'scale(1.6)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -308,12 +308,12 @@ const InfoEntertainment = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/AdventureRooms.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/AdventureRooms.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -393,12 +393,12 @@ const InfoEntertainment = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Clay.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/Clay.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -561,12 +561,12 @@ const InfoEntertainment = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '54vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/ctrlv.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/ctrlv.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -650,7 +650,7 @@ const InfoEntertainment = () => {
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/galaxy.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/galaxy.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -891,12 +891,12 @@ const InfoEntertainment = () => {
     </div></>
 
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '56vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/Butterfly.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/Butterfly.png" style={{WebkitTransform: 'scale(1.7)'}}/>
                         </Card>
                     </div>
                 </Grid>
@@ -975,12 +975,12 @@ const InfoEntertainment = () => {
     
     
     <div align='center'>
-        <Card style={{ color: 'black', backgroundColor: 'white', height: '54vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
+        <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '200vh', marginTop: '50px', marginBottom: '20px', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
             <Grid container spacing={2} columns={12}>
                 <Grid item xs={5}>
                     <div align='left'>
                         <Card style={{ color: 'black', backgroundColor: 'white', height: '50vh', width: '80vh', boxShadow: "0 8px 40px -12px rgba(0,0,0,0.3)" }}>
-                            <img src="/images/cannoe.png" style={{WebkitTransform: 'scale(1.3)'}}/>
+                            <img src="/images/cannoe.png" style={{WebkitTransform: 'scale(2.3)'}}/>
                         </Card>
                     </div>
                 </Grid>
