@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function MapWilliams() {
+export default function Weather() {
   const classes = useStyles();
   return (
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2895.433872054018!2d-80.54084798473015!3d43.47241507212043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882bf406cedcdd7f%3A0x77cb1c19ddcba9d9!2sWilliams%20Fresh%20Cafe!5e0!3m2!1sen!2sca!4v1679522891036!5m2!1sen!2sca" width="1519" height="675" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- 
+    <iframe src="https://www.meteoblue.com/en/weather/widget/three/waterloo_canada_6176823?geoloc=fixed&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=image" width="1519" height="675" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
     );
 }
