@@ -250,6 +250,8 @@ const Housing = () => {
     const [housings, setHousings] = useState([])
 
     const [entInfo, setEntInfo] = useState("")
+
+    const [error, setError] = useState()
   
     
     const handleAddHousing = () => {
@@ -300,7 +302,14 @@ const Housing = () => {
           <div style={{fontSize: "14px", marginTop: "10px"}}>Housing Activity <br/>{housingRoomType}</div>
           </div>
           </div>)
+          if (housingDistance == null || housingBudget == null || housingPeople == "" || housingRoomType == ""){
+            setError('Cannot complete search')
+          }
+          
+          else{
           handleAddHousing();
+            setError('')
+          }
           console.log(housings);
       }
     
@@ -309,6 +318,14 @@ const Housing = () => {
     <div className='backdropEnt'>
       <Grid item xs={12}>
       <Title></Title>
+      {error && <Card style={{backgroundColor: 'red'}}>
+              <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error: Search Failed</Typography>
+              <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
+              <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>---</Typography>
+                <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>Ensure all fields are selected with a value</Typography>
+                <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>Try changing your filter parameters</Typography>
+
+                </Card>}
           <div style={{marginTop: '50px'}}>
           <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: '100%'}}>
           <div style={{marginTop: '20px'}}>
