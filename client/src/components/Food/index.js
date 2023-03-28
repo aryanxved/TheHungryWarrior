@@ -270,11 +270,16 @@ const Food = () => {
           <div style={{fontSize: "14px", marginTop: "10px"}}>Food Cuisine <br/>{foodCuisine}</div>
           </div>
           </div>)
+           if (foodDistance == null || foodBudget == null || foodCuisine == ""){
+            setError('Cannot complete search')
+          }
+          
+          else{
           handleAddFood();
+          setError('')
+          }
           console.log(foods);
-          //setTimeout(errorHandler, 1000);
-          //setFoods([])
-         
+          
       }
     /*
       const errorHandler = () => {
@@ -296,10 +301,14 @@ const Food = () => {
     <div className='backdropEnt'>
       <Grid item xs={12}>
       <Title></Title>
-      {error && <Card style={{backgroundColor: 'red', marginTop: '20px'}}>
-          <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error Occurred.</Typography>
-            <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
-            </Card>}
+      {error && <Card style={{backgroundColor: 'red'}}>
+              <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>Uh Oh! Error: Search Failed</Typography>
+              <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>{error}</Typography>
+              <Typography align='center' style={{color: 'white', fontSize: '28px', fontFamily: 'Roboto', marginLeft: '20px', marginRight: '20px'}}>---</Typography>
+                <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>Ensure all fields are selected with a value</Typography>
+                <Typography align='center' style={{color: 'white', fontSize: '16px', marginLeft: '20px', marginRight: '20px'}}>Try changing your filter parameters</Typography>
+
+                </Card>}
           <div style={{marginTop: '50px'}}>
           <Card align="center" style={{color:'#001833', backgroundColor: 'black', opacity: '100%'}}>
           <div style={{marginTop: '20px'}}>
